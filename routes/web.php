@@ -14,10 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $nav =   DB::table('sh_nav')->first();
-    $services = DB::table('sh_services')->first();
-
-    return view('welcome', compact('nav', 'services'));
+    return view('welcome');
 });
 
 Auth::routes();
