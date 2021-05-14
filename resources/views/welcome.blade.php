@@ -599,7 +599,6 @@
             font-size: 1.1rem !important;
             word-spacing: 0.2rem;
             line-height: 2rem;
-            overflow: hidden;
         }
 
         .s-title {
