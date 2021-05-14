@@ -11,6 +11,7 @@
     <title>Blog</title>
 
     <!-- Bootstrap core CSS -->
+
     <link href="{{asset('css/app.css')}}" rel="stylesheet">
 
     <!-- Custom styles for this template -->
@@ -22,6 +23,11 @@
             height: 100%;
             margin: 0px;
             padding: 0px;
+            font-family: "Poppins", sans-serif;
+            line-height: 1.15;
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
             overflow-x: hidden;
         }
 
@@ -29,14 +35,6 @@
         *::before,
         *::after {
             box-sizing: border-box;
-        }
-
-        html {
-            font-family: "Poppins", sans-serif;
-            line-height: 1.15;
-            scroll-behavior: smooth;
-            -webkit-text-size-adjust: 100%;
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         }
     </style>
     <style>
@@ -700,7 +698,7 @@
 
                                     <!-- Post Content -->
                                     <p class="lead">
-                                        Please choose another blog from the featured panel
+                                        Please choose another blog from the featured blog panel.
                                     </p>
 
                                     {{--                <blockquote class="blockquote">--}}
