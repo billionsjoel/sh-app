@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Sgit cribehouse</title>
+    <title>Scribehouse</title>
 
     <!-- Fonts -->
     {{-- <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> --}}
@@ -850,51 +850,55 @@
     </section>
 
     <section class="t-team" id="team">
-        <div class="title text-white">
-            <h1>Our Team</h1>
+        <div class="title text-white mt-4">
+            <h1 class="mt-4">Our Team</h1>
             <div class="t-border"></div>
         </div>
 
-        <div class="t-cards">
-            <div class="t-card">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{asset('images/member1.JPG')}}" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text text-danger">Crystal</p>
-                        <p class="card-text">Publishing Director</p>
+        <div class="row">
+            <div class="d-flex flex-column flex-md-row justfiy-content-center t-cards">
+                <div class="col-sm-3">
+                    <div class="card mb-4" style="width: 18rem;">
+                        <img class="card-img-top" src="{{asset('images/member1.JPG')}}" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text text-danger">Crystal</p>
+                            <p class="card-text">Publishing Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card mb-4" style="width: 18rem;">
+                        <img class="card-img-top" src="{{asset('images/member2.jpg')}}" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text text-danger">Carole</p>
+                            <p class="card-text">Administrative Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="card mb-4" style="width: 18rem;">
+                        <img class="card-img-top" src="{{asset('images/member4.jpeg')}}" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text text-danger">Faith</p>
+                            <p class="card-text">Managing Editor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-3">
+                    <div class="card mb-4" style="width: 18rem;">
+                        <img class="card-img-top" src="{{asset('images/member3.jpeg')}}" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text text-danger">Charles</p>
+                            <p class="card-text">Junior Scribes Coordinator</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="t-card">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{asset('images/member2.jpg')}}" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text text-danger">Carole</p>
-                        <p class="card-text">Administrative Director</p>
-                    </div>
-                </div>
-            </div>
-            <div class="t-card">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{asset('images/member4.jpeg')}}" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text text-danger">Faith</p>
-                        <p class="card-text">Managing Editor</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="t-card">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{asset('images/member3.jpeg')}}" alt="Card image cap">
-                    <div class="card-body">
-                        <p class="card-text text-danger">Charles</p>
-                        <p class="card-text">Junior Scribes Coordinator</p>
-                    </div>
-                </div>
-            </div>
         </div>
+
+
     </section>
 
     <section class="blogs" id="blogs">
