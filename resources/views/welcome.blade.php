@@ -582,7 +582,6 @@
         }
 
         .service-card {
-            height: 40rem;
             background-color: rgba(241, 235, 235, 0.993);
             border-radius: 10px;
             display: flex;
