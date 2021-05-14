@@ -36,7 +36,6 @@
             transition: background-color 200ms linear;
         }
 
-        section,
         .services,
         .about,
         .team,
