@@ -26,6 +26,7 @@
             margin: 0px;
             padding: 0px;
             overflow-x: hidden;
+            scroll-behavior: smooth !important;
         }
 
         *,
@@ -37,7 +38,7 @@
         html {
             font-family: "Poppins", sans-serif;
             line-height: 1.15;
-            scroll-behavior: smooth;
+            scroll-behavior: smooth !important;
             -webkit-text-size-adjust: 100%;
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         }
