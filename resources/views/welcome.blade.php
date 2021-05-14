@@ -36,10 +36,7 @@
             transition: background-color 200ms linear;
         }
 
-        .services,
-        .about,
-        .team,
-        .blogs {
+        section {
             font-family: "Poppins", sans-serif,  !important;
             font-size: 0.9rem;
             font-weight: lighter;
@@ -91,7 +88,6 @@
             background: #fff;
             margin-top: 10%;
             margin-bottom: 5%;
-            width: 70%;
         }
 
         .contact-form .form-control {
@@ -705,12 +701,11 @@
 
     <style>
         .blogs {
-            height: 80vh;
-            background-color: #fff;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            margin-top: 14rem;
         }
 
         .b-border {
@@ -930,14 +925,14 @@
 
     </section>
 
-    <section class="blogs" id="blogs">
-        <div class="title bg-white">
-            <h1 class="text-center ">Latest News</h1>
+    <section class="blogs mt-4" id="blogs">
+        <div class="title">
+            <h1 class="text-center mt-4">Latest News</h1>
             <div class="b-border "></div>
         </div>
-        <div class="row p-4 bg-white justify-content-center">
+        <div class="row p-4 justify-content-center">
             <div class="col-sm-2">
-                <div class="card">
+                <div class="card mb-4">
                     {{-- <img src="{{asset('images/blog1.jpeg')}}" class="card-img-top" alt="..."> --}}
                     <div class="card-body">
                         <h5 class="card-title">THE JOURNEY TO SCRIBE HOUSE (ONLINE): Part 1</h5>
@@ -953,7 +948,7 @@
                 </div>
             </div>
             <div class="col-sm-2">
-                <div class="card">
+                <div class="card mb-4">
                     {{-- <img src="{{asset('images/blog2.jpeg')}}" class="card-img-top" alt="..." height="360px"> --}}
                     <div class="card-body">
                         <h5 class="card-title">THE JOURNEY TO SCRIBE HOUSE (ONLINE): Part 2</h5>
@@ -968,7 +963,7 @@
                 </div>
             </div>
             <div class="col-sm-2">
-                <div class="card">
+                <div class="card mb-4">
                     {{-- <img src="{{asset('images/blog3.jpeg')}}" class="card-img-top" alt="..."> --}}
                     <div class="card-body">
                         <h5 class="card-title">THE JOURNEY TO SCRIBE HOUSE (ONLINE): Part 3</h5>
