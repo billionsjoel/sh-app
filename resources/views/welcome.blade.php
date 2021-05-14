@@ -562,6 +562,7 @@
             align-items: center;
             flex-direction: column;
             justify-content: center;
+            margin-top: 2rem;
         }
 
         .s-border {
@@ -575,12 +576,12 @@
         .service-cards {
             display: flex;
             align-items: center;
-            justify-content: space-evenly;
-            margin-top: 5rem;
+            justify-content: center;
+            margin: 1rem;
+            margin-left: 1rem;
         }
 
         .service-card {
-            width: 25%;
             height: 40rem;
             background-color: rgba(241, 235, 235, 0.993);
             border-radius: 10px;
@@ -777,56 +778,82 @@
         </nav>
     </section>
 
-    <section class="services" id="services">
-        <div class="title">
-            <h1 class="text-center">Our Services</h1>
+    <section class="services mb-4" id="services">
+        <div class="title mt-4">
+            <h1 class="text-center mt-4">Our Services</h1>
             <div class="s-border"></div>
         </div>
 
         <div class="service-cards">
-            <div class="service-card">
-                <i class="fas fa-couch s-icon"></i>
-                <h4 class="s-title">Consultancy</h4>
-                <p>
-                    You have written. You would like to package your content well, and sell it. But you don’t know
-                    how to. Scribe House will
-                    tell you how, and do it for you even, at an affordable cost. We will link you up with competent
-                    service providers for
-                    each step of the publishing process, right from the time we receive your manuscript, to the time
-                    it is published and
-                    positioned at strategic selling points. We will help you budget and cost your work, and create
-                    and follow through with a
-                    marketing plan.
-                    {{-- {!! $services->services1 ?? "" !!} --}}
-                </p>
+            <div class="row">
+                <div class="d-flex justify-content-center flex-column flex-md-row">
+                    <div class="col-sm-3">
+                        <div class="service-card mb-4">
+                            <i class="fas fa-couch s-icon"></i>
+                            <h4 class="s-title">Consultancy</h4>
+                            <p>
+                                You have written. You would like to package your content well, and sell it. But you
+                                don’t
+                                know
+                                how to. Scribe House will
+                                tell you how, and do it for you even, at an affordable cost. We will link you up with
+                                competent
+                                service providers for
+                                each step of the publishing process, right from the time we receive your manuscript, to
+                                the
+                                time
+                                it is published and
+                                positioned at strategic selling points. We will help you budget and cost your work, and
+                                create
+                                and follow through with a
+                                marketing plan.
+                                {{-- {!! $services->services1 ?? "" !!} --}}
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="col-sm-3 mb-4">
+                        <div class="service-card">
+                            <i class="fas fa-pen-nib s-icon"></i>
+                            <h4 class="s-title">Editorial</h4>
+                            <p>
+                                We offer a wide range of editorial solutions for print and online copy. We edit fiction
+                                and
+                                general non-fiction books,
+                                short stories, magazines, poetry, reports, academic papers, and any other publication in
+                                line
+                                with our values.
+                                {{-- {!! $services->services2 ?? "" !!} --}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 mb-4">
+                        <div class="service-card">
+                            <i class="fas fa-baby s-icon"></i>
+                            <h4 class="s-title">Junior Scribes</h4>
+                            <p>
+                                The cry of many over the years has been ‘Africans have a poor reading culture.’ Putting
+                                aside
+                                the arguments justifying
+                                or defying this cry, we are firm believers that charity starts at home. What better way
+                                to
+                                grow
+                                and encourage the
+                                reading culture in this country and continent, than by starting with our children?
+                                Scribe
+                                House
+                                promotes and publishes
+                                literature for youths from 0-14yrs. We have partnered with TWOG Games, a company that
+                                creates
+                                word games for toddlers
+                                and ‘tweens’ to provide fun, interactive ‘word-ertainment’ for children and tweens.
+                                {{-- {!! $services->services3 ?? "" !!} --}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="service-card">
-                <i class="fas fa-pen-nib s-icon"></i>
-                <h4 class="s-title">Editorial</h4>
-                <p>
-                    We offer a wide range of editorial solutions for print and online copy. We edit fiction and
-                    general non-fiction books,
-                    short stories, magazines, poetry, reports, academic papers, and any other publication in line
-                    with our values.
-                    {{-- {!! $services->services2 ?? "" !!} --}}
-                </p>
-            </div>
-            <div class="service-card">
-                <i class="fas fa-baby s-icon"></i>
-                <h4 class="s-title">Junior Scribes</h4>
-                <p>
-                    The cry of many over the years has been ‘Africans have a poor reading culture.’ Putting aside
-                    the arguments justifying
-                    or defying this cry, we are firm believers that charity starts at home. What better way to grow
-                    and encourage the
-                    reading culture in this country and continent, than by starting with our children? Scribe House
-                    promotes and publishes
-                    literature for youths from 0-14yrs. We have partnered with TWOG Games, a company that creates
-                    word games for toddlers
-                    and ‘tweens’ to provide fun, interactive ‘word-ertainment’ for children and tweens.
-                    {{-- {!! $services->services3 ?? "" !!} --}}
-                </p>
-            </div>
+
         </div>
 
     </section>
