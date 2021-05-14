@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="{{asset('fontawesome/css/all.css')}}">
     <!-- Styles -->
     <style>
+        body {
+            overflow-x: hidden;
+        }
+
         html {
             font-family: "Poppins", sans-serif;
             line-height: 1.15;
@@ -25,7 +29,8 @@
             -webkit-text-size-adjust: 100%;
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         }
-
+    </style>
+    <style>
         .navbar-fixed-top.scrolled {
             background-image: linear-gradient(to right, rgba(3, 90, 166, 0.85), rgba(64, 186, 213, 0.85)) !important;
             transition: background-color 200ms linear;
