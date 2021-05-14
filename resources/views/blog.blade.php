@@ -676,7 +676,7 @@
                                 <div class="col-lg-8">
 
                                     <!-- Title -->
-                                    <h1 class="mt-4">Sorry!! Sorry!!</h1>
+                                    <h1 class="mt-4 text-center">Oops.. Sorry!</h1>
 
                                     <!-- Author -->
                                     <p class="lead">
