@@ -588,7 +588,7 @@
             justify-content: center;
             flex-direction: column;
             align-items: center;
-            padding: 2rem 4rem;
+            padding: 4rem 2rem;
             border: none;
             box-shadow: #2e2e2e;
         }
