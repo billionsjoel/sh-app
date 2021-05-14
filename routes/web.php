@@ -23,7 +23,7 @@ Route::get('/blogs', function () {
     // retrieve latest blog
 
     $blogs = blog::where('id', request('id'))->get();
-    $titles = blog::first()->orderBy('id', 'desc')->take(10)->get();
+    $titles = blog::latest()->take(10)->get();
 
 
     return view('blog', compact('blogs', 'titles'));
