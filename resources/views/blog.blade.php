@@ -630,8 +630,11 @@
                 <hr>
 
                 <!-- Date/Time -->
-                <p>Posted on {{$blog->created_at ?? ""}}</p>
-
+                <p>Posted on
+                    <span class="text-primary">
+                        {{ $blog->created_at ?? ""}} <span class="text-dark">Category : </span>
+                        {{ $blog->category ?? ""}}</span></p>
+                </span>
                 <hr>
 
                 <!-- Preview Image -->
@@ -853,11 +856,14 @@
                         </div>
 
                         <!-- Side Widget -->
-                        <div class="card my-4">
+                        <div class="card my-4 mb-4">
                             <h5 class="card-header">Featured Blogs</h5>
                             <div class="card-body">
                                 @foreach($titles as $title)
-                                <p><a href="{{url('blogs?id='.$title->id)}}" class="mt-4">{{$title->title}}</a></p>
+                                <p><a href="{{url('blogs?id='.$title->id)}}" class="mt-4"><span
+                                            class="text-dark">{{$title->id}}.</span>
+                                        {{$title->title}}</a></p>
+                                <hr>
                                 @endforeach
                             </div>
                         </div>
@@ -871,7 +877,7 @@
             <!-- /.container -->
 
             <!-- Footer -->
-            <footer id="dk-footer" class="dk-footer text-white">
+            <footer id="dk-footer" class="dk-footer text-white mt-4">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 col-lg-4">

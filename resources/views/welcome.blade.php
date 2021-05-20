@@ -17,6 +17,19 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('js/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('fontawesome/css/all.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+
     <!-- Styles -->
     <style>
         html,
@@ -43,6 +56,7 @@
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         }
     </style>
+
     <style>
         .navbar-fixed-top.scrolled {
             background-image: linear-gradient(to right, rgba(3, 90, 166, 0.85), rgba(64, 186, 213, 0.85)) !important;
@@ -728,6 +742,7 @@
             margin: 2rem;
         }
     </style>
+
 </head>
 
 <body>
@@ -886,7 +901,56 @@
         </div>
     </section>
 
-    <section class="t-team" id="team">
+
+    {{-- <section class="container testimonial" style="height: 80vh; margin-bottom:15rem;">
+        <div class="title mt-4 d-flex justify-content-center align-items-center flex-column">
+            <h1 class="text-center mt-4 mb-4">What client's say ...</h1>
+            <div class="s-border"></div>
+        </div>
+        <div class="slider mt-4 mb-4 pb-4" style="height: 500px; width:100%; ">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner ">
+                    <div class="carousel-item active">
+                        <div class="d-block w-100 bg-success d-flex justify-content-center align-items-center"
+                            style="height: 800px">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, illo!
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-block w-100 bg-warning d-flex justify-content-center align-items-center p-4"
+                            style="height: 800px">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, animi excepturi. Magnam fugit
+                            similique ratione, repudiandae tenetur fugiat quibusdam. Ex repellendus magnam non enim
+                            fugiat eum mollitia ad necessitatibus doloremque.
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="d-block w-100 bg-primary d-flex justify-content-center align-items-center p-4"
+                            style="height: 800px">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eos velit ut sunt amet,
+                            facilis quidem aut inventore voluptatem autem dolor doloremque animi maiores.
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </section> --}}
+
+
+    <section class="t-team mt-4 pt-4 py-4" id="team">
         <div class="title text-white mt-4">
             <h1 class="mt-4">Our Team</h1>
             <div class="t-border"></div>
@@ -1235,12 +1299,6 @@
     </footer>
 
 
-
-
-
-
-
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
@@ -1251,9 +1309,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
 </body>
-
-
-
 
 <script>
     $(function () {

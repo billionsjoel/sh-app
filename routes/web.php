@@ -29,6 +29,15 @@ Route::get('/blogs', function () {
     return view('blog', compact('blogs', 'titles'));
 });
 
+Route::get('/create-article', function () {
+    return view('admin.createBlog');
+});
+Route::get('/home', function () {
+    return view('home');
+});
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/publish', [App\Http\Controllers\AdminController::class, 'publishBlog']);
