@@ -29,7 +29,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
+        integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Styles -->
     <style>
         html,
@@ -741,6 +743,59 @@
             width: 2rem;
             margin: 2rem;
         }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 14rem;
+        }
+
+        .bks-border {
+            background-color: #e24d48;
+            height: 0.3rem;
+            width: 3rem;
+        }
+    </style>
+
+    <style>
+        .test-say {
+            background-image: linear-gradient(to bottom left, rgb(64, 183, 213), rgb(3, 90, 166)), url('../images/agency.jpeg');
+            background-size: cover;
+            background-position: top;
+            /* clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%); */
+        }
+
+        .test-img {
+            height: 12em;
+            width: 35em;
+            border-radius: 100%;
+        }
+
+        .test-img2 {
+            height: 12em;
+            width: 18em;
+            border-radius: 100%;
+        }
+
+        .btn:focus,
+        .btn:active,
+        button:focus,
+        button:active {
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        #image-gallery .modal-footer {
+            display: block;
+        }
+
+        .thumb {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
     </style>
 
 </head>
@@ -902,52 +957,84 @@
     </section>
 
 
-    {{-- <section class="container testimonial" style="height: 80vh; margin-bottom:15rem;">
-        <div class="title mt-4 d-flex justify-content-center align-items-center flex-column">
-            <h1 class="text-center mt-4 mb-4">What client's say ...</h1>
-            <div class="s-border"></div>
-        </div>
-        <div class="slider mt-4 mb-4 pb-4" style="height: 500px; width:100%; ">
-            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner ">
-                    <div class="carousel-item active">
-                        <div class="d-block w-100 bg-success d-flex justify-content-center align-items-center"
-                            style="height: 800px">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, illo!
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-block w-100 bg-warning d-flex justify-content-center align-items-center p-4"
-                            style="height: 800px">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, animi excepturi. Magnam fugit
-                            similique ratione, repudiandae tenetur fugiat quibusdam. Ex repellendus magnam non enim
-                            fugiat eum mollitia ad necessitatibus doloremque.
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="d-block w-100 bg-primary d-flex justify-content-center align-items-center p-4"
-                            style="height: 800px">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati eos velit ut sunt amet,
-                            facilis quidem aut inventore voluptatem autem dolor doloremque animi maiores.
-                        </div>
-                    </div>
+    <section class="testimonial">
+        <div class="row bg-danger text-white">
+            <div class="col-sm-12">
+                <div class="title mt-4 d-flex justify-content-center align-items-center flex-column">
+                    <h1 class="text-center mt-4 mb-4">What client's say ...</h1>
+                    <div class="s-border"></div>
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
             </div>
         </div>
-    </section> --}}
+
+        <div class="row mt-4 d-flex justify-content-center align-items-center test-say text-white">
+            <div class="col-sm-12">
+                <div class="slider">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="d-block w-100 d-flex justify-content-center align-items-center p-4">
+                                    <p class="mx-auto d-flex justify-content-center align-items-center"
+                                        style="width: 1000px; height:80vh;">
+                                        <img class="test-img mr-4" src="{{url('images/agency.jpeg')}}" alt="">
+                                        <span class="ml-4">“I’ve been working with Scribe House for three years now
+                                            and I am just
+                                            thrilled,
+                                            very delighted, with the thorough
+                                            scrutiny, quick responsiveness of their service and high-quality editorial
+                                            and
+                                            publication skills.
+                                            Crystal’s abilities
+                                            as the team lead have been a great value add to my journey as a published
+                                            poet!”<br /><br />
+                                            — Ronald K Ssekajja, Poet & Author. </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="d-block w-100 d-flex justify-content-center align-items-center p-4">
+                                    <p class="mx-auto d-flex justify-content-center align-items-center"
+                                        style="width: 1000px; height:80vh;">
+                                        <img class="test-img2 mr-4" src="{{url('images/agency.jpeg')}}" alt="">
+                                        <span>"I am so grateful to have had my book done through a professional and
+                                            competant
+                                            publisher as Scribe House.. It is
+                                            excellent and my book is doing so well.." <br> <br>
+                                            - Phlynne.</span>
+                                    </p>
+                                </div>
+                            </div>
+                            {{-- <div class="carousel-item">
+                                <div
+                                    class="d-block w-100 bg-primary d-flex justify-content-center align-items-center p-4">
+                                    <p class="mx-auto d-flex justify-content-center align-items-center"
+                                        style="width: 1000px; height:400px;">
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, illo!
+                                    </p>
+                                </div>
+                            </div> --}}
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+                            data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+                            data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
 
 
     <section class="t-team mt-4 pt-4 py-4" id="team">
@@ -955,7 +1042,6 @@
             <h1 class="mt-4">Our Team</h1>
             <div class="t-border"></div>
         </div>
-
         <div class="row">
             <div class="d-flex flex-column flex-md-row justfiy-content-center t-cards">
                 <div class="col-sm-3">
@@ -998,8 +1084,6 @@
             </div>
 
         </div>
-
-
     </section>
 
     <section class="blogs mt-4" id="blogs">
@@ -1065,7 +1149,119 @@
             </div>
         </div>
     </section>
+    <section class="gallery">
+        <div class="title">
+            <h1 class="text-center mt-4 mb-2">Latest Books</h1>
+            <div class="bks-border mb-4"></div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="row mb-4">
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                            data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            data-target="#image-gallery">
+                            <img class="img-thumbnail" src="{{url('images/bookcovers/book1.jpg')}}"
+                                alt="Another alt text">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                            data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            data-target="#image-gallery">
+                            <img class="img-thumbnail" src="{{url('images/bookcovers/book2.jpg')}}"
+                                alt="Another alt text">
+                        </a>
+                    </div>
 
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                            data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            data-target="#image-gallery">
+                            <img class="img-thumbnail" src="{{url('images/bookcovers/book3.jpg')}}"
+                                alt="Another alt text">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Test1"
+                            data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            data-target="#image-gallery">
+                            <img class="img-thumbnail" src="{{url('images/bookcovers/book4.jpg')}}"
+                                alt="Another alt text">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                            data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            data-target="#image-gallery">
+                            <img class="img-thumbnail" src="{{url('images/bookcovers/book5.jpg')}}"
+                                alt="Another alt text">
+                        </a>
+                    </div>
+
+
+
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                            data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            data-target="#image-gallery">
+                            <img class="img-thumbnail" src="{{url('images/bookcovers/book6.jpg')}}"
+                                alt="Another alt text">
+                        </a>
+                    </div>
+                    {{-- <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                            data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            data-target="#image-gallery">
+                            <img class="img-thumbnail"
+                                src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                alt="Another alt text">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                            data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            data-target="#image-gallery">
+                            <img class="img-thumbnail"
+                                src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                alt="Another alt text">
+                        </a>
+                    </div>
+
+
+
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                            data-image="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            data-target="#image-gallery">
+                            <img class="img-thumbnail"
+                                src="https://images.pexels.com/photos/305070/pexels-photo-305070.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                alt="Another alt text">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                            data-image="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            data-target="#image-gallery">
+                            <img class="img-thumbnail"
+                                src="https://images.pexels.com/photos/853168/pexels-photo-853168.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                alt="Another alt text">
+                        </a>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                        <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title="Im so nice"
+                            data-image="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                            data-target="#image-gallery">
+                            <img class="img-thumbnail"
+                                src="https://images.pexels.com/photos/158971/pexels-photo-158971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+                                alt="Another alt text">
+                        </a>
+                    </div> --}}
+                </div>
+
+            </div>
+        </div>
+    </section>
     <section class="contact">
         <div class="body p-4" id="contact">
             <div class="container contact-form">
@@ -1097,13 +1293,14 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="submit" class="btn btn-primary" value="Send Message" />
+                            <input type="submit" id="sendMessage" class="btn btn-primary" value="Send Message" />
                         </div>
                     </div>
                 </form>
             </div>
         </div>
     </section>
+
 
     <footer id="dk-footer" class="dk-footer text-white">
         <div class="container">
@@ -1308,6 +1505,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+
 </body>
 
 <script>
@@ -1317,6 +1515,99 @@
                 $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
             });
         });
+
+let modalId = $('#image-gallery');
+
+$(document)
+.ready(function () {
+
+loadGallery(true, 'a.thumbnail');
+
+//This function disables buttons when needed
+function disableButtons(counter_max, counter_current) {
+$('#show-previous-image, #show-next-image')
+.show();
+if (counter_max === counter_current) {
+$('#show-next-image')
+.hide();
+} else if (counter_current === 1) {
+$('#show-previous-image')
+.hide();
+}
+}
+
+/**
+*
+* @param setIDs Sets IDs when DOM is loaded. If using a PHP counter, set to false.
+* @param setClickAttr Sets the attribute for the click handler.
+*/
+
+function loadGallery(setIDs, setClickAttr) {
+let current_image,
+selector,
+counter = 0;
+
+$('#show-next-image, #show-previous-image')
+.click(function () {
+if ($(this)
+.attr('id') === 'show-previous-image') {
+current_image--;
+} else {
+current_image++;
+}
+
+selector = $('[data-image-id="' + current_image + '"]');
+updateGallery(selector);
+});
+
+function updateGallery(selector) {
+let $sel = selector;
+current_image = $sel.data('image-id');
+$('#image-gallery-title')
+.text($sel.data('title'));
+$('#image-gallery-image')
+.attr('src', $sel.data('image'));
+disableButtons(counter, $sel.data('image-id'));
+}
+
+if (setIDs == true) {
+$('[data-image-id]')
+.each(function () {
+counter++;
+$(this)
+.attr('data-image-id', counter);
+});
+}
+$(setClickAttr)
+.on('click', function () {
+updateGallery($(this));
+});
+}
+});
+
+// build key actions
+$(document)
+.keydown(function (e) {
+switch (e.which) {
+case 37: // left
+if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
+$('#show-previous-image')
+.click();
+}
+break;
+
+case 39: // right
+if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
+$('#show-next-image')
+.click();
+}
+break;
+
+default:
+return; // exit this handler for other keys
+}
+e.preventDefault(); // prevent the default action (scroll / move caret)
+});
 </script>
 
 </html>
