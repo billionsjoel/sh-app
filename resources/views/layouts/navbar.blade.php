@@ -19,7 +19,10 @@
                     <a class="dropdown-item" href="#!">Change Password</a>
                     <a class="dropdown-item" href="#!">Add User</a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#!">Logout</a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                        @csrf
+                        <button class="dropdown-item" type="submit" href="#!">Log Out</button>
+                    </form>
                 </div>
             </li>
         </ul>

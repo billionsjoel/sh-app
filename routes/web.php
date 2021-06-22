@@ -37,8 +37,15 @@ Route::get('/home', function () {
 });
 
 
-Auth::routes();
+Auth::routes([
 
+  'register' => false, // Register Routes...
+
+//   'reset' => false, // Reset Password Routes...
+
+//   'verify' => false, // Email Verification Routes...
+
+]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('/publish', [App\Http\Controllers\AdminController::class, 'publishBlog']);
 
