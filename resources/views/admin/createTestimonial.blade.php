@@ -7,32 +7,17 @@
 
         <div class="col-md-8 col-md-offset-2">
 
-            <h1 class="mt-4">Create Article</h1>
+            <h1 class="mt-4">Publish New Testimonial</h1>
 
-            <form action="/publish-blog" method="POST" enctype="multipart/form-data">
+            <form action="/create-testimonial" method="POST" enctype="multipart/form-data">
                 @csrf
-                <div class="form-group">
-                    <label for="title">Title <span class="require">*</span></label>
-                    <input type="text" class="form-control" name="title" />
-                </div>
 
                 <div class="form-group">
-                    <label for="description">Description</label>
-                    <textarea rows="5" class="form-control" name="body" id="mytextarea"></textarea>
+                    <label for="description">Testimony</label>
+                    <textarea rows="5" class="form-control" name="description" id="mytextarea"></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="category">category</label>
-                    <select class="form-select form-select-sm form-control" name="category"
-                        aria-label=".form-select-sm example">
-                        <option selected>Select category</option>
-                        <option value="1" name="editing">Editing</option>
-                        <option value="2" name="authoring">Authoring</option>
-                        <option value="3" name="publishing">Publishing</option>
-                        <option value="4" name="others">Others</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="title">Author <span class="require">*</span></label>
+                    <label for="title">Testifier's name <span class="require">*</span></label>
                     <input type="text" class="form-control" name="author" />
                 </div>
 
@@ -60,23 +45,24 @@
                 <thead class="thead-dark">
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Title</th>
+                        <th scope="col">Testimony</th>
                         <th scope="col">Author</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse ($blogs as $blog)
+                    @forelse ($testimonials as $testimony)
                     <tr>
-                        <th scope="row">{{ $blog->id }}</th>
-                        <td>{{ $blog->title }}</td>
-                        <td>{{ $blog->author }}</td>
+                        <th scope="row">{{ $testimony->id }}</th>
+                        <td>{{ $testimony->text }}</td>
+                        <td>{{ $testimony->author }}</td>
                         <td><span class="btn btn-sm bg-warning">Edit</span>
                             <span class="btn btn-sm bg-danger"> <a class="text-dark"
-                                    href="{{ url('delete-blog/'.$blog->id) }}">
+                                    href="{{ url('delete-cover/'.$testimony->id) }}">
                                     delete</a></span>
                         </td>
                     </tr>
+
                     @empty
                     <tr>
                         <th scope="row">#</th>
@@ -84,9 +70,10 @@
                     </tr>
 
                     @endforelse
+
                 </tbody>
             </table>
-            {{ $blogs->links() }}
+            {{ $testimonials->links() }}
         </div>
     </div>
 </div>

@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Blog;
+use App\Models\BookCover;
+use App\Models\Messages;
+use App\Models\subscriptions;
+use App\Models\Testimonials;
 
 class AdminController extends Controller
 {
@@ -12,6 +16,7 @@ class AdminController extends Controller
     {
         $this->middleware('auth');
     }
+
     public function publishBlog(Request $request)
     {
         $blog = new Blog;
@@ -45,7 +50,135 @@ class AdminController extends Controller
             $blog->save();
         }
 
-//        $blog->save();
-        return view('home');
+        session()->flash('message', 'Article published successfully! ✅');
+
+        return redirect('/create-article');
+    }
+
+
+    public function publishBookCover(Request $request)
+    {
+        $bookCover = new BookCover;
+
+        $bookCover->title = request()->title;
+
+        $bookCover->description = request()->description;
+
+        $bookCover->author = request()->author;
+
+        $this->validate($request, [
+
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+
+        ]);
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+
+            $name = time().'.'.$image->getClientOriginalExtension();
+
+            $destinationPath = public_path('/images/bookcovers');
+
+            $image->move($destinationPath, $name);
+
+            $bookCover->image = $name;
+
+            $bookCover->save();
+        }
+
+        session()->flash('message', 'Book Cover added successfully! ✅ ');
+
+        // $covers = BookCover::paginate(5);
+
+        return redirect('/create-book-cover');
+    }
+
+    public function deleteCover($id)
+    {
+        BookCover::destroy($id);
+
+        session()->flash('message', 'Book Cover deleted! ✅ ');
+
+        return redirect('/create-book-cover');
+    }
+
+    public function deleteBlog($id)
+    {
+        Blog::destroy($id);
+
+        session()->flash('message', 'Blog deleted successfully! ✅ ');
+
+        return redirect('/create-article');
+    }
+
+    public function getMessages(Request $request)
+    {
+        $message = new Messages();
+
+        $message->name = request()->name;
+        $message->email = request()->email;
+        $message->phone = request()->phone;
+        $message->message = request()->message;
+
+        $message->save();
+
+        session()->flash('message', 'Your Message has been sent successfully! ✅ ');
+
+        return redirect('/');
+    }
+
+    public function subscribe(Request $request)
+    {
+        $subscribe = new subscriptions();
+
+        $subscribe->email = request()->email;
+
+        $subscribe->save();
+
+        session()->flash('message', 'Your Email subscription is successfull! ✅ ');
+
+        return redirect('/');
+    }
+
+    public function viewSubscriptions()
+    {
+        $subscriptions = new subscriptions();
+
+        $subscriptions = subscriptions::all();
+
+        return view('admin.viewSubscriptions', compact('subscriptions'));
+    }
+
+    public function createTestimonial(Request $request)
+    {
+        $testimonials = new Testimonials();
+
+        $testimonials->text = request()->description;
+
+        $testimonials->author = request()->author;
+
+        $this->validate($request, [
+
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+
+        ]);
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+
+            $name = time().'.'.$image->getClientOriginalExtension();
+
+            $destinationPath = public_path('/images');
+
+            $image->move($destinationPath, $name);
+
+            $testimonials->image = $name;
+
+            $testimonials->save();
+        }
+
+        session()->flash('message', 'Testimonial added successfully! ✅ ');
+
+        return redirect('/create-testimonial');
     }
 }

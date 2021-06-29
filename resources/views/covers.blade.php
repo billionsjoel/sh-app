@@ -798,39 +798,9 @@
         }
     </style>
 
-    <style>
-        .flash-message {
-            position: absolute;
-            top: 70px;
-            right: 20px;
-            z-index: 100;
-        }
-    </style>
 </head>
 
 <body>
-    @if( $flash = session('message') )
-
-    <div id="flash-message" class="alert alert-success flash-message mt-4" role="alert">
-
-        {{ $flash }}
-
-    </div>
-
-    @endif
-    <header id="home">
-        <div class="row header" id="home">
-            <div class="col-sm-12">
-                <div class="center">
-                    <span class="heading-main">Scribe House</span>
-                    <span class="heading-sub mb-4 border-bottom border-teal">PUBLISHING AGENCY.</span>
-                    <span class="heading-sub P-4">"A fast and efficient way to get your publications right."</span></p>
-                    <a class="btn btn-light btn-lg" style="width:13rem; border-radius: 100px;" href="#services">Get
-                        started</a>
-                </div>
-            </div>
-        </div>
-    </header>
     <section>
         <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top scrolled fixed-top shadow-lg small"
             id="header">
@@ -875,415 +845,36 @@
         </nav>
     </section>
 
-    <section class="services mb-4" id="services">
-        <div class="title mt-4">
-            <h1 class="text-center mt-4">Our Services</h1>
-            <div class="s-border"></div>
-        </div>
-
-        <div class="service-cards">
+    <section style="margin-top:150px; margin-bottom:150px;">
+        <div class="container">
             <div class="row">
-                <div class="d-flex justify-content-center flex-column flex-md-row">
-                    <div class="col-sm-3">
-                        <div class="service-card mb-4">
-                            <i class="fas fa-couch s-icon"></i>
-                            <h4 class="s-title">Consultancy</h4>
-                            <p>
-                                You have written. You would like to package your content well, and sell it. But you
-                                don’t
-                                know
-                                how to. Scribe House will
-                                tell you how, and do it for you even, at an affordable cost. We will link you up with
-                                competent
-                                service providers for
-                                each step of the publishing process, right from the time we receive your manuscript, to
-                                the
-                                time
-                                it is published and
-                                positioned at strategic selling points. We will help you budget and cost your work, and
-                                create
-                                and follow through with a
-                                marketing plan.
-                                {{-- {!! $services->services1 ?? "" !!} --}}
-                            </p>
+                @forelse ($covers as $cover)
+                <div class="col-sm-6 py-2">
+                    <div class="card" style="width: 35rem;">
+                        <div class="card-body">
+                            <h4 class="card-title">{{$cover->title}}</h4>
                         </div>
-
-                    </div>
-                    <div class="col-sm-3 mb-4">
-                        <div class="service-card">
-                            <i class="fas fa-pen-nib s-icon"></i>
-                            <h4 class="s-title">Editorial</h4>
-                            <p>
-                                We offer a wide range of editorial solutions for print and online copy. We edit fiction
-                                and
-                                general non-fiction books,
-                                short stories, magazines, poetry, reports, academic papers, and any other publication in
-                                line
-                                with our values.
-                                {{-- {!! $services->services2 ?? "" !!} --}}
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-sm-3 mb-4">
-                        <div class="service-card">
-                            <i class="fas fa-baby s-icon"></i>
-                            <h4 class="s-title">Junior Scribes</h4>
-                            <p>
-                                The cry of many over the years has been ‘Africans have a poor reading culture.’ Putting
-                                aside
-                                the arguments justifying
-                                or defying this cry, we are firm believers that charity starts at home. What better way
-                                to
-                                grow
-                                and encourage the
-                                reading culture in this country and continent, than by starting with our children?
-                                Scribe
-                                House
-                                promotes and publishes
-                                literature for youths from 0-14yrs. We have partnered with TWOG Games, a company that
-                                creates
-                                word games for toddlers
-                                and ‘tweens’ to provide fun, interactive ‘word-ertainment’ for children and tweens.
-                                {{-- {!! $services->services3 ?? "" !!} --}}
-                            </p>
+                        <img class="card-img-top" src="{{asset('images/bookcovers/'.$cover->image)}}"
+                            alt="Card image cap" style="height: 100%; width: 100%; object-fit: contain">
+                        <div class="card-body">
+                            <h5 class="card-title">Description</h5>
+                            <p class="card-text">{{$cover->description}}</p>
+                            <a href="#" class="i small"> {{$cover->author}}</a> <br>
+                            <a href="#" class="btn btn-primary">Buy This Book</a>
                         </div>
                     </div>
                 </div>
+                @empty
+                <div class="col-sm-12">
+                    <h4>No book covers at the moment. Come back later!</h4>
+                    <img class="mt-4" src="{{url('images/sorry.png')}}" alt="" style="height:50rem; width:50rem;">
+                </div>
+
+                @endforelse
             </div>
-
-        </div>
-
-    </section>
-
-    <section class="about" id="about">
-        <h1 class="text-center s-title">About Us</h1>
-        <div class="ab-border"></div>
-        <div class="about-info container">
-            <p>Recognising the scarcity of excellent, affordable editors in Uganda and Africa, Scribe House
-                provides specialised
-                editing and book production services. We offer publishing and promotional advice to firms and
-                individuals across the
-                continent. Publishing consultancies and editorial services are comfortably transacted online,
-                making it easy for us to
-                serve you wherever you are.
-                <p> We are a home for scribes.<br>
-                    A scribe’s house.<br>
-                    Scribe House.</p>
-                {{-- {!! $services->about ?? "" !!} --}}
         </div>
     </section>
 
-
-    <section class="testimonial">
-        <div class="row bg-danger text-white">
-            <div class="col-sm-12">
-                <div class="title mt-4 d-flex justify-content-center align-items-center flex-column">
-                    <h1 class="text-center mt-4 mb-4">What client's say ...</h1>
-                    <div class="s-border"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-4 d-flex justify-content-center align-items-center test-say text-white">
-            <div class="col-sm-12">
-                <div class="slider">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="d-block w-100 d-flex justify-content-center align-items-center p-4">
-                                    <p class="mx-auto d-flex justify-content-center align-items-center"
-                                        style="width: 1000px; height:80vh;">
-                                        <img class="test-img mr-4" src="{{url('images/agency.jpeg')}}" alt="">
-                                        <span class="ml-4">“I’ve been working with Scribe House for three years now
-                                            and I am just
-                                            thrilled,
-                                            very delighted, with the thorough
-                                            scrutiny, quick responsiveness of their service and high-quality editorial
-                                            and
-                                            publication skills.
-                                            Crystal’s abilities
-                                            as the team lead have been a great value add to my journey as a published
-                                            poet!”<br /><br />
-                                            — Ronald K Ssekajja, Poet & Author. </span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="d-block w-100 d-flex justify-content-center align-items-center p-4">
-                                    <p class="mx-auto d-flex justify-content-center align-items-center"
-                                        style="width: 1000px; height:80vh;">
-                                        <img class="test-img2 mr-4" src="{{url('images/agency.jpeg')}}" alt="">
-                                        <span>"I am so grateful to have had my book done through a professional and
-                                            competant
-                                            publisher as Scribe House.. It is
-                                            excellent and my book is doing so well.." <br> <br>
-                                            - Phlynne.</span>
-                                    </p>
-                                </div>
-                            </div>
-                            {{-- <div class="carousel-item">
-                                <div
-                                    class="d-block w-100 bg-primary d-flex justify-content-center align-items-center p-4">
-                                    <p class="mx-auto d-flex justify-content-center align-items-center"
-                                        style="width: 1000px; height:400px;">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, illo!
-                                    </p>
-                                </div>
-                            </div> --}}
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-                            data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
-                            data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-
-    <section class="t-team mt-4 pt-4 py-4" id="team">
-        <div class="title text-white mt-4">
-            <h1 class="mt-4">Our Team</h1>
-            <div class="t-border"></div>
-        </div>
-        <div class="row">
-            <div class="d-flex flex-column flex-md-row justfiy-content-center t-cards">
-                <div class="col-sm-3">
-                    <div class="card mb-4" style="width: 18rem;">
-                        <img class="card-img-top" src="{{asset('images/member1.JPG')}}" alt="Card image cap">
-                        <div class="card-body">
-                            <p class="card-text text-danger">Crystal</p>
-                            <p class="card-text">Publishing Director</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="card mb-4" style="width: 18rem;">
-                        <img class="card-img-top" src="{{asset('images/member2.jpg')}}" alt="Card image cap">
-                        <div class="card-body">
-                            <p class="card-text text-danger">Carole</p>
-                            <p class="card-text">Administrative Director</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="card mb-4" style="width: 18rem;">
-                        <img class="card-img-top" src="{{asset('images/member4.jpeg')}}" alt="Card image cap">
-                        <div class="card-body">
-                            <p class="card-text text-danger">Faith</p>
-                            <p class="card-text">Managing Editor</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-sm-3">
-                    <div class="card mb-4" style="width: 18rem;">
-                        <img class="card-img-top" src="{{asset('images/member3.jpeg')}}" alt="Card image cap">
-                        <div class="card-body">
-                            <p class="card-text text-danger">Charles</p>
-                            <p class="card-text">Junior Scribes Coordinator</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="blogs mt-4" id="blogs">
-        <div class="title">
-            <h1 class="text-center mt-4">Latest News</h1>
-            <div class="b-border "></div>
-        </div>
-        <div class="row p-4 justify-content-center">
-            <div class="col-sm-2">
-                <div class="card mb-4">
-                    {{-- <img src="{{asset('images/blog1.jpeg')}}" class="card-img-top" alt="..."> --}}
-                    <div class="card-body">
-                        <h5 class="card-title">THE JOURNEY TO SCRIBE HOUSE (ONLINE): Part 1</h5>
-                        <span class="posted-on small mb-4">Posted on <span class="text-danger small">March 6,
-                                2021 | Work</span></span>
-                        <p class="card-text mt-2">It started in 2015. In Scotland. We were at the end of our second
-                            semester,
-                            of our
-                            Master’s in Publishing Studies.
-                        </p>
-                        <a href="{{url('/blogs?id=1')}}" class="text-primary">Read more ...</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="card mb-4">
-                    {{-- <img src="{{asset('images/blog2.jpeg')}}" class="card-img-top" alt="..." height="360px"> --}}
-                    <div class="card-body">
-                        <h5 class="card-title">THE JOURNEY TO SCRIBE HOUSE (ONLINE): Part 2</h5>
-                        <span class="posted-on small mb-4">Posted on <span class="text-danger small">Jan 16,
-                                2021 | Publishing</span></span>
-                        <p class="card-text mt-2">In High School, I was always singled out in our English classes, for
-                            having
-                            the
-                            best ‘summaries’ in the class.</p>
-                        <a href="{{url('/blogs?id=2')}}" class="text-primary">Read more ...</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-2">
-                <div class="card mb-4">
-                    {{-- <img src="{{asset('images/blog3.jpeg')}}" class="card-img-top" alt="..."> --}}
-                    <div class="card-body">
-                        <h5 class="card-title">THE JOURNEY TO SCRIBE HOUSE (ONLINE): Part 3</h5>
-                        <span class="posted-on small mb-4">Posted on <span class="text-danger small">Feb 2,
-                                2021 | Editing</span></span>
-                        <p class="card-text mt-2">One evening a few years ago, during a fellowship of young Christian
-                            friends, a
-                            lady’s turn came to introduce herself.</p>
-                        <a href="{{url('/blogs?id=3')}}" class="text-primary">Read more ...</a>
-                    </div>
-                </div>
-            </div>
-            <div class="cta p-4 text-center w-100">
-                <div class="btn border-bottom text-center text-primary">
-                    <a href="{{url('/blogs?id=1')}}">See all our Blogs <svg width="1em" height="1em" viewBox="0 0 16 16"
-                            class="bi bi-arrow-right-circle-fill" fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8.354 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L9.793 7.5H5a.5.5 0 0 0 0 1h4.793l-2.147 2.146z" />
-                        </svg> </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="gallery">
-        <div class="title">
-            <h1 class="text-center">Latest Books</h1>
-            <div class="bks-border mb-4"></div>
-        </div>
-        <div class="">
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{{url('images/bookcovers/book1.jpeg')}}" alt="Card image cap"
-                            style="height: 100%; width: 100%; object-fit: contain">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's
-                                content.</p>
-                            <a href="#" class="i small"> Author ~ John Doe</a>
-                            <a href="#" class="btn btn-primary">Buy Book Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{{url('images/bookcovers/book2.jpeg')}}" alt="Card image cap"
-                            style="height: 100%; width: 100%; object-fit: contain">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's
-                                content.</p>
-                            <a href="#" class="i small"> Author ~ John Doe</a>
-                            <a href="#" class="btn btn-primary">Buy Book Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{{url('images/bookcovers/book3.jpeg')}}" alt="Card image cap"
-                            style="height: 100%; width: 100%; object-fit: contain">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's
-                                content.</p>
-                            <a href="#" class="i small"> Author ~ John Doe</a>
-                            <a href="#" class="btn btn-primary">Buy Book Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{{url('images/bookcovers/book4.jpeg')}}" alt="Card image cap"
-                            style="height: 100%; width: 100%; object-fit: contain">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's
-                                content.</p>
-                            <a href="#" class="i small"> Author ~ John Doe</a>
-                            <a href="#" class="btn btn-primary">Buy Book Now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="cta p-4 text-center w-100">
-                <div class="btn border-bottom text-center text-primary">
-                    <a href="{{url('/covers')}}">See all books <svg width="1em" height="1em" viewBox="0 0 16 16"
-                            class="bi bi-arrow-right-circle-fill" fill="currentColor"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd"
-                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8.354 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L9.793 7.5H5a.5.5 0 0 0 0 1h4.793l-2.147 2.146z" />
-                        </svg> </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="contact">
-        <div class="body p-4" id="contact">
-            <div class="container contact-form">
-                <div class="contact-image">
-                    <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact" />
-                </div>
-                <form method="POST" action="{{url('/messages')}}">
-                    @csrf
-                    <h3>Drop Us a Message</h3>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <input type="text" name="name" class="form-control" placeholder="Your Name *"
-                                    value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="email" class="form-control" placeholder="Your Email *"
-                                    value="" />
-                            </div>
-                            <div class="form-group">
-                                <input type="text" name="phone" class="form-control" placeholder="Your Phone Number *"
-                                    value="" />
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <textarea name="message" class="form-control" placeholder="Your Message *"
-                                    style="width: 100%; height: 150px;"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" id="sendMessage" class=i small"" Authour - value="Send Message" />
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </section>
 
 
     <footer id="dk-footer" class="dk-footer text-white">
@@ -1413,12 +1004,10 @@
                                 <p>
                                     <!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
                                     Subscribe to our news-letter to receive more updates and offers.</p>
-                                <form method="POST" action="{{ url('/subscribe') }}">
-                                    @csrf
+                                <form action="#">
                                     <div class="form-row">
                                         <div class="col dk-footer-form">
-                                            <input type="email" name="email" class="form-control"
-                                                placeholder="Email Address">
+                                            <input type="email" class="form-control" placeholder="Email Address">
                                             <button type="submit">
                                                 <i class="fa fa-send"></i>
                                             </button>
@@ -1491,14 +1080,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 </body>
-<script>
-    setTimeout(function() {
-            $('#flash-message').fadeOut('slow');
-            }, 2000);
-</script>
 
 <script>
     $(function () {

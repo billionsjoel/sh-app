@@ -7,9 +7,9 @@
 
         <div class="col-md-8 col-md-offset-2">
 
-            <h1 class="mt-4">Create Article</h1>
+            <h1 class="mt-4">Publish Book Cover</h1>
 
-            <form action="/publish-blog" method="POST" enctype="multipart/form-data">
+            <form action="/publish-book-cover" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="form-group">
                     <label for="title">Title <span class="require">*</span></label>
@@ -18,18 +18,7 @@
 
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <textarea rows="5" class="form-control" name="body" id="mytextarea"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="category">category</label>
-                    <select class="form-select form-select-sm form-control" name="category"
-                        aria-label=".form-select-sm example">
-                        <option selected>Select category</option>
-                        <option value="1" name="editing">Editing</option>
-                        <option value="2" name="authoring">Authoring</option>
-                        <option value="3" name="publishing">Publishing</option>
-                        <option value="4" name="others">Others</option>
-                    </select>
+                    <textarea rows="5" class="form-control" name="description" id="mytextarea"></textarea>
                 </div>
                 <div class="form-group">
                     <label for="title">Author <span class="require">*</span></label>
@@ -37,7 +26,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="image">Choose Image</label>
+                    <label for="image">Choose Book Image</label>
                     <input id="image" type="file" name="image">
                 </div>
 
@@ -66,17 +55,18 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @forelse ($blogs as $blog)
+                    @forelse ($covers as $cover)
                     <tr>
-                        <th scope="row">{{ $blog->id }}</th>
-                        <td>{{ $blog->title }}</td>
-                        <td>{{ $blog->author }}</td>
+                        <th scope="row">{{ $cover->id }}</th>
+                        <td>{{ $cover->title }}</td>
+                        <td>{{ $cover->author }}</td>
                         <td><span class="btn btn-sm bg-warning">Edit</span>
                             <span class="btn btn-sm bg-danger"> <a class="text-dark"
-                                    href="{{ url('delete-blog/'.$blog->id) }}">
+                                    href="{{ url('delete-cover/'.$cover->id) }}">
                                     delete</a></span>
                         </td>
                     </tr>
+
                     @empty
                     <tr>
                         <th scope="row">#</th>
@@ -84,9 +74,10 @@
                     </tr>
 
                     @endforelse
+
                 </tbody>
             </table>
-            {{ $blogs->links() }}
+            {{ $covers->links() }}
         </div>
     </div>
 </div>

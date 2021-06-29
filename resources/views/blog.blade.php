@@ -859,13 +859,15 @@
                         <div class="card my-4 mb-4">
                             <h5 class="card-header">Featured Blogs</h5>
                             <div class="card-body">
-                                @foreach($titles as $title)
-                                <p><a href="{{url('blogs?id='.$title->id)}}" class="mt-4"><span
-                                            class="text-dark">{{$title->id}}.</span>
+                                @forelse($titles as $title)
+                                <p><a href="{{url('blogs?id='.$title->id)}}" class="mt-4">
                                         {{$title->title}}</a></p>
                                 <hr>
-                                @endforeach
+                                @empty
+                                <p>No featured blogs at the moment!</p>
+                                @endforelse
                             </div>
+                            {{ $titles->links() }}
                         </div>
 
                     </div>
