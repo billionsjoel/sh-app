@@ -78,7 +78,8 @@ Route::get('/view-messages', function () {
 
 
 
-
+Route::post('/subscribe', [App\Http\Controllers\GuestController::class, 'subscribe']);
+Route::post('/messages', [App\Http\Controllers\GuestController::class, 'getMessages']);
 
 
 Auth::routes([
@@ -101,10 +102,8 @@ Route::get('/delete-cover/{id}', [App\Http\Controllers\AdminController::class, '
 
 Route::get('/delete-blog/{id}', [App\Http\Controllers\AdminController::class, 'deleteBlog']);
 
-Route::post('/messages', [App\Http\Controllers\AdminController::class, 'getMessages']);
+
 
 Route::get('/view-subscriptions', [App\Http\Controllers\AdminController::class, 'viewSubscriptions']);
 
 Route::post('/create-testimonial', [App\Http\Controllers\AdminController::class, 'createTestimonial']);
-
-Route::post('/subscribe', [App\Http\Controllers\AdminController::class, 'subscribe']);

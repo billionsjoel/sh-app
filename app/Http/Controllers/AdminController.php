@@ -111,35 +111,6 @@ class AdminController extends Controller
         return redirect('/create-article');
     }
 
-    public function getMessages(Request $request)
-    {
-        $message = new Messages();
-
-        $message->name = request()->name;
-        $message->email = request()->email;
-        $message->phone = request()->phone;
-        $message->message = request()->message;
-
-        $message->save();
-
-        session()->flash('message', 'Your Message has been sent successfully! ✅ ');
-
-        return redirect('/');
-    }
-
-    public function subscribe(Request $request)
-    {
-        $subscribe = new subscriptions();
-
-        $subscribe->email = request()->email;
-
-        $subscribe->save();
-
-        session()->flash('message', 'Your Email subscription is successfull! ✅ ');
-
-        return redirect('/');
-    }
-
     public function viewSubscriptions()
     {
         $subscriptions = new subscriptions();

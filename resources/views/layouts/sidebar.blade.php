@@ -9,5 +9,10 @@
     <a class="list-group-item list-group-item-action bg-light" href="{{ url('create-testimonial') }}">Testimonial</a>
     <a class="list-group-item list-group-item-action bg-light" href="{{ url('view-messages') }}">Messages</a>
     <a class="list-group-item list-group-item-action bg-light" href="#!">Add User Account</a>
-    <a class="list-group-item list-group-item-action bg-light mt-4" href="#!">Logout</a>
+    <li class="list-group-item list-group-item-action bg-light mt-4">
+        <form id="logout-form" action="{{ route('logout') }}" method="POST">
+            @csrf
+            <button class="dropdown-item" type="submit" href="#!">Log Out</button>
+        </form>
+    </li>
 </div>
