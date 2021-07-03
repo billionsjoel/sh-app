@@ -859,7 +859,8 @@
                         <div class="card-body">
                             <h5 class="card-title">Description</h5>
                             <p class="card-text">{{$cover->description}}</p>
-                            <a href="#" class="i small"> {{$cover->author}}</a> <br>
+                            <a href="#" class="i small">Author :  {{$cover->author}}</a> <br>
+                            <a href="#" class="i small">Genre :  {{ $cover->genre }}</a> <br>
                             <a href="#" class="btn btn-primary">Buy This Book</a>
                         </div>
                     </div>

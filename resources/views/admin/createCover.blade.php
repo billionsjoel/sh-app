@@ -24,7 +24,10 @@
                     <label for="title">Author <span class="require">*</span></label>
                     <input type="text" class="form-control" name="author" />
                 </div>
-
+                <div class="form-group">
+                    <label for="genre">genre <span class="require">*</span></label>
+                    <input type="text" class="form-control" name="genre" />
+                </div>
                 <div class="form-group">
                     <label for="image">Choose Book Image</label>
                     <input id="image" type="file" name="image">

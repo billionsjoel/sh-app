@@ -66,6 +66,8 @@ class AdminController extends Controller
 
         $bookCover->author = request()->author;
 
+        $bookCover->genre = request()->genre;
+
         $this->validate($request, [
 
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
