@@ -19,9 +19,13 @@
         <p class="mb-0">{{$message->email}}</p>
         <p class="mb-0">{{$message->phone}}</p>
         <p class="mb-0">{{$message->created_at}}</p>
-        <p class="mb-0"><a href="" class="btn btn-info btn-sm text-white mt-1">Forward</a> <a href=""
-                class="btn btn-info btn-sm text-white mt-1">Send Email</a> <a href=""
-                class="btn btn-danger btn-sm text-white mt-1">Delete</a></p>
+        <p class="mb-0"><a href="" class="btn btn-info btn-sm text-white mt-1">Forward <i
+                    class="fas fa-forward"></i></a> <a href="" class="btn btn-info btn-sm text-white mt-1">Send Email
+                <i class="fas fa-paper-plane"></i> </a> <a href=""
+                class="btn btn-danger btn-sm text-white mt-1 ml-2">&nbsp;
+                Delete <i class="fas fa-trash-alt"></i>
+                &nbsp;</a>
+        </p>
     </div>
     @empty
 

@@ -21,10 +21,10 @@
     <link href="{{ asset('dashboard/css/styles.css') }}" rel="stylesheet">
     {{-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.css" />
     <link rel="stylesheet" type="text/css"
-        href="https://cdn.datatables.net/autofill/2.3.7/css/autoFill.bootstrap4.min.css" />
+        href="https://cdn.datatables.net/autofill/2.3.7/css/autoFill.bootstrap4.min.css" /> --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.datatables.net/v/bs4/dt-1.10.25/b-1.7.1/datatables.min.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.7.1/css/buttons.dataTables.min.css"
