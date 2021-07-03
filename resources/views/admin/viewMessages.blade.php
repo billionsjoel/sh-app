@@ -10,43 +10,23 @@
             </div>
         </div>
     </div>
-    <table id="example" class="display nowrap table table-striped table-bordered" style="width:100%">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Message</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Date</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            @forelse ($messages as $message)
-            <tr>
-                <td>{{$message->name}}</td>
-                <td>{{$message->message}}</td>
-                <td>{{$message->email}}</td>
-                <td>{{$message->phone}}</td>
-                <td>{{$message->created_at}}</td>
-                <td><a href="" class="btn btn-danger btn-sm text-white">Delete</a></td>
-            </tr>
-            @empty
-            <tr>
-                <td>No Data found in the Database</td>
-            </tr>
-            @endforelse
-        </tbody>
-        <tfoot>
-            <tr>
-                <th>Name</th>
-                <th>Message</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Date</th>
-                <th>Action</th>
-            </tr>
-        </tfoot>
+
+    @forelse ($messages as $message)
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">{{$message->name}}</h4>
+        <p>{{$message->message}}</p>
+        <hr>
+        <p class="mb-0">{{$message->email}}</p>
+        <p class="mb-0">{{$message->phone}}</p>
+        <p class="mb-0">{{$message->created_at}}</p>
+        <p class="mb-0"><a href="" class="btn btn-danger btn-sm text-white mt-1">Delete</a></p>
+    </div>
+    @empty
+
+    <div>No Data found in the Database</div>
+
+    @endforelse
+    </tbody>
     </table>
 </div>
 @endsection

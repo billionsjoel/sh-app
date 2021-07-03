@@ -25,7 +25,7 @@
                     <input type="text" class="form-control" name="author" />
                 </div>
                 <div class="form-group">
-                    <label for="genre">genre <span class="require">*</span></label>
+                    <label for="genre">Genre <span class="require">*</span></label>
                     <input type="text" class="form-control" name="genre" />
                 </div>
                 <div class="form-group">
