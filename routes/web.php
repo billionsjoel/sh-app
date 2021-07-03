@@ -58,7 +58,7 @@ Route::get('/create-book-cover', function () {
 //
     $covers = BookCover::paginate(5);
 
-    return view('admin.createBookCover', compact('covers'));
+    return view('admin.createCover', compact('covers'));
 });
 
 Route::get('/create-testimonial', function () {
