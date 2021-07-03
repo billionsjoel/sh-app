@@ -58,7 +58,7 @@
                         <td>{{ $testimony->author }}</td>
                         <td><span class="btn btn-sm bg-warning">Edit</span>
                             <span class="btn btn-sm bg-danger"> <a class="text-dark"
-                                    href="{{ url('delete-cover/'.$testimony->id) }}">
+                                    href="{{ url('delete-testimonial/'.$testimony->id) }}">
                                     delete</a></span>
                         </td>
                     </tr>

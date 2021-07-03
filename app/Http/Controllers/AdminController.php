@@ -154,4 +154,22 @@ class AdminController extends Controller
 
         return redirect('/create-testimonial');
     }
+
+    public function deleteTestimony($id)
+    {
+        Testimonials::destroy($id);
+
+        session()->flash('message', 'Testimonial deleted successfully! ✅ ');
+
+        return redirect('/create-testimonial');
+    }
+
+    public function deleteMessage($id)
+    {
+        Messages::destroy($id);
+
+        session()->flash('message', 'Message deleted successfully! ✅ ');
+
+        return redirect('/view-messages');
+    }
 }

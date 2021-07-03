@@ -105,6 +105,10 @@ Route::get('/delete-cover/{id}', [App\Http\Controllers\AdminController::class, '
 Route::get('/delete-blog/{id}', [App\Http\Controllers\AdminController::class, 'deleteBlog']);
 
 
+Route::get('/delete-testimonial/{id}', [App\Http\Controllers\AdminController::class, 'deleteTestimony']);
+Route::get('/delete-message/{id}', [App\Http\Controllers\AdminController::class, 'deleteMessage']);
+
+
 
 Route::get('/view-subscriptions', [App\Http\Controllers\AdminController::class, 'viewSubscriptions']);
 
