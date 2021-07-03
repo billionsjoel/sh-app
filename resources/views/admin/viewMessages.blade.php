@@ -5,7 +5,7 @@
 <div class="mt-4">
     <div class="row mb-2">
         <div class="col-sm-12">
-            <div class="btn btn-primary float-right"><span>
+            <div class="btn btn-primary float-right" onclick="print();"><span>
                     Print File <i class="fas fa-file-download"></i></span>
             </div>
         </div>
