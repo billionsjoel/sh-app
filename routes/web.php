@@ -73,7 +73,9 @@ Route::get('/view-messages', function () {
 //
     $messages = Messages::all();
 
-    return view('admin.viewMessages', compact('messages'));
+    $count = Messages::count();
+
+    return view('admin.viewMessages', compact('messages', 'count'));
 });
 
 

@@ -8,6 +8,9 @@
             <div class="btn btn-primary float-right" onclick="print();"><span>
                     Print File <i class="fas fa-file-download"></i></span>
             </div>
+            <div class="float-right mr-4 text-primary"><span>
+                    Messages <span class="text-danger"> ( {{ $count }} ) </span> </span>
+            </div>
         </div>
     </div>
 
