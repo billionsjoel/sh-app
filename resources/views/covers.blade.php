@@ -870,7 +870,8 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <h4>No book covers at the moment. Come back later!</h4>
-                            <img class="mt-4" src="{{url('images/sorry.png')}}" alt="No book covers">
+                            <img class="mt-4" src="{{url('images/sorry.png')}}" alt="No book covers"
+                                style="width: 25rem;">
                         </div>
                     </div>
                 </div>
