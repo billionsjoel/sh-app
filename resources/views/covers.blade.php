@@ -859,18 +859,21 @@
                         <div class="card-body">
                             <h5 class="card-title">Description</h5>
                             <p class="card-text">{{$cover->description}}</p>
-                            <a href="#" class="i small">Author :  {{$cover->author}}</a> <br>
-                            <a href="#" class="i small">Genre :  {{ $cover->genre }}</a> <br>
+                            <a href="#" class="i small">Author : {{$cover->author}}</a> <br>
+                            <a href="#" class="i small">Genre : {{ $cover->genre }}</a> <br>
                             <a href="#" class="btn btn-primary">Buy This Book</a>
                         </div>
                     </div>
                 </div>
                 @empty
-                <div class="col-sm-12">
-                    <h4>No book covers at the moment. Come back later!</h4>
-                    <img class="mt-4" src="{{url('images/sorry.png')}}" alt="" style="height:50rem; width:50rem;">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h4>No book covers at the moment. Come back later!</h4>
+                            <img class="mt-4" src="{{url('images/sorry.png')}}" alt="No book covers">
+                        </div>
+                    </div>
                 </div>
-
                 @endforelse
             </div>
         </div>
