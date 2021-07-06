@@ -88,7 +88,7 @@
     <script>
         setTimeout(function() {
             jQuery('#flash-message').fadeOut('slow');
-            }, 2000);
+            }, 3000);
     </script>
     <script>
         $(document).ready(function() {
