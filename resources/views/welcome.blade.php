@@ -806,6 +806,47 @@
             z-index: 100;
         }
     </style>
+
+    <style>
+        .home-newsletter {
+            padding: 80px 0;
+            background: #f84e77;
+        }
+
+        .home-newsletter .single {
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .home-newsletter .single h2 {
+            font-size: 22px;
+            color: white;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+        }
+
+        .home-newsletter .single .form-control {
+            height: 50px;
+            background: rgba(255, 255, 255, 0.6);
+            border-color: transparent;
+            border-radius: 20px 0 0 20px;
+        }
+
+        .home-newsletter .single .form-control:focus {
+            box-shadow: none;
+            border-color: #243c4f;
+        }
+
+        .home-newsletter .single .btn {
+            min-height: 50px;
+            border-radius: 0 20px 20px 0;
+            background: #243c4f;
+            color: #fff;
+        }
+    </style>
 </head>
 
 <body>
@@ -1242,6 +1283,26 @@
                             <path fill-rule="evenodd"
                                 d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8.354 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L9.793 7.5H5a.5.5 0 0 0 0 1h4.793l-2.147 2.146z" />
                         </svg> </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="home-newsletter">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="single">
+                        <h2>Subscribe to our Newsletter</h2>
+                        <form method="POST" action="{{ url('/subscribe') }}">
+                            @csrf
+                            <div class=" input-group">
+                                <input type="email" name="email" class="form-control" placeholder="Enter your email">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-theme" type="submit">Subscribe</button>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
