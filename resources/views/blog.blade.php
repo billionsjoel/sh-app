@@ -638,7 +638,7 @@
                 <hr>
 
                 <!-- Preview Image -->
-                <img class="img-fluid rounded" src="{{asset('images/'.$blog->image)}}" alt="blog image">
+                <img class="img-fluid rounded" src="{{asset('/images/'.$blog->image)}}" alt="blog image">
                 <hr>
 
                 <!-- Post Content -->
