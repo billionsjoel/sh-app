@@ -854,11 +854,11 @@
                         <div class="card-body">
                             <h4 class="card-title">{{$cover->title}}</h4>
                         </div>
-                        <img class="card-img-top" src="{{asset('images/bookcovers/'.$cover->image)}}"
-                            alt="Card image cap" style="height: 100%; width: 100%; object-fit: contain">
+                        <img class="card-img-top" src="{{asset('images/'.$cover->image)}}" alt="Card image cap"
+                            style="height: 100%; width: 100%; object-fit: contain">
                         <div class="card-body">
                             <h5 class="card-title">Description</h5>
-                            <p class="card-text">{{$cover->description}}</p>
+                            <p class="card-text">{!! $cover->description !!}</p>
                             <a href="#" class="i small">Author : {{$cover->author}}</a> <br>
                             <a href="#" class="i small">Genre : {{ $cover->genre }}</a> <br>
                             <a href="#" class="btn btn-primary">Buy This Book</a>

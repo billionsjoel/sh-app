@@ -79,7 +79,7 @@ class AdminController extends Controller
 
             $name = time().'.'.$image->getClientOriginalExtension();
 
-            $destinationPath = public_path('/images/bookcovers');
+            $destinationPath = public_path('/images');
 
             $image->move($destinationPath, $name);
 
