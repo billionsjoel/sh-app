@@ -62,6 +62,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Title</th>
                         <th scope="col">Author</th>
+                        <th scope="col">Category</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -71,6 +72,7 @@
                         <th scope="row">{{ $blog->id }}</th>
                         <td>{{ $blog->title }}</td>
                         <td>{{ $blog->author }}</td>
+                        <td>{{ $blog->category }}</td>
                         <td><span class="btn btn-sm bg-warning">Edit</span>
                             <span class="btn btn-sm bg-danger"> <a class="text-dark"
                                     href="{{ url('delete-blog/'.$blog->id) }}">
