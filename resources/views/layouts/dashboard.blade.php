@@ -37,6 +37,10 @@
             right: 20px;
             z-index: 10;
         }
+
+        .tox-notification {
+            display: none !important
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.25/b-1.7.1/datatables.min.js"></script>
@@ -49,6 +53,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
     {{-- <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script> --}}
+    <script src="https://cdn.tiny.cloud/1/ta3av7a1vaj8pa9dkb4lf9biy3nwnolyoj14hxzlzye3hn3p/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+    @yield('scripts')
 </head>
 
 <body>

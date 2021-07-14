@@ -1,5 +1,15 @@
 @extends('../layouts.dashboard')
 
+@section('scripts')
+<script>
+    tinymce.init({
+      selector: 'textarea',
+      plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+      toolbar_mode: 'floating',
+   });
+</script>
+@endsection
+
 @section('content')
 
 <div class="container">
@@ -74,7 +84,7 @@
                         <td>{{ $blog->author }}</td>
                         <td>{{ $blog->category }}</td>
                         <td><span class="btn btn-sm bg-warning">Edit</span>
-                            <span class="btn btn-sm bg-danger"> <a class="text-dark"
+                            <span class="btn btn-sm bg-danger"> <a class="text-white"
                                     href="{{ url('delete-blog/'.$blog->id) }}">
                                     delete</a></span>
                         </td>
