@@ -31,15 +31,8 @@
                     <textarea rows="5" class="form-control" name="body" id="mytextarea"></textarea>
                 </div>
                 <div class="form-group">
-                    <label for="category">category</label>
-                    <select class="form-select form-select-sm form-control" name="category"
-                        aria-label=".form-select-sm example">
-                        <option selected>Select category</option>
-                        <option value="1" name="editing">Editing</option>
-                        <option value="2" name="authoring">Authoring</option>
-                        <option value="3" name="publishing">Publishing</option>
-                        <option value="4" name="others">Others</option>
-                    </select>
+                    <label for="title">Category <span class="require">*</span></label>
+                    <input type="text" class="form-control" name="category" />
                 </div>
                 <div class="form-group">
                     <label for="title">Author <span class="require">*</span></label>
@@ -64,49 +57,49 @@
         </div>
 
     </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Author</th>
-                        <th scope="col">Category</th>
-                        <th scope="col">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @forelse ($blogs as $blog)
-                    <tr>
-                        <th scope="row">{{ $blog->id }}</th>
-                        <td>{{ $blog->title }}</td>
-                        <td>{{ $blog->author }}</td>
-                        <td>{{ $blog->category }}</td>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @forelse ($blogs as $blog)
+                <tr>
+                    <th scope="row">{{ $blog->id }}</th>
+                    <td>{{ $blog->title }}</td>
+                    <td>{{ $blog->author }}</td>
+                    <td>{{ $blog->category }}</td>
 
-                        <td><span class="btn btn-sm bg-info"><a class="text-white"
-                                    href="{{ url('view-edit-blog/'.$blog->id) }}">Change Image <i
-                                        class="fa fa-user"></i></a></span>
-                            <span class="btn btn-sm bg-warning"><a class="text-white"
-                                    href="{{ url('view-edit-blog/'.$blog->id) }}">Edit <i
-                                        class="fa fa-pen"></i></a></span>
-                            <span class="btn btn-sm bg-danger"> <a class="text-white"
-                                    href="{{ url('delete-blog/'.$blog->id) }}">
-                                    delete <i class="fa fa-trash"></i></a></span>
-                        </td>
-                    </tr>
-                    @empty
-                    <tr>
-                        <th scope="row">#</th>
-                        <td colspan="3" class="text-secondary">No records found !</td>
-                    </tr>
+                    <td><span class="btn btn-sm bg-info"><a class="text-white"
+                                href="{{ url('view-edit-blog/'.$blog->id) }}">Change Image <i
+                                    class="fa fa-user"></i></a></span>
+                        <span class="btn btn-sm bg-warning"><a class="text-white"
+                                href="{{ url('view-edit-blog/'.$blog->id) }}">Edit <i class="fa fa-pen"></i></a></span>
+                        <span class="btn btn-sm bg-danger"> <a class="text-white"
+                                href="{{ url('delete-blog/'.$blog->id) }}">
+                                delete <i class="fa fa-trash"></i></a></span>
+                    </td>
+                </tr>
+                @empty
+                <tr>
+                    <th scope="row">#</th>
+                    <td colspan="3" class="text-secondary">No records found !</td>
+                </tr>
 
-                    @endforelse
-                </tbody>
-            </table>
-            {{ $blogs->links() }}
-        </div>
+                @endforelse
+            </tbody>
+        </table>
+        {{ $blogs->links() }}
     </div>
 </div>
+
 
 @endsection

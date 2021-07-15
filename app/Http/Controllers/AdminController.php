@@ -23,18 +23,7 @@ class AdminController extends Controller
         $blog->title = request()->title;
         $blog->body = request()->body;
         $blog->author = request()->author;
-
-        if (request()->category == 1) {
-            $blog->category = "Editing";
-        } elseif ((request()->category == 2)) {
-            $blog->category = "Authoring";
-        } elseif ((request()->category == 3)) {
-            $blog->category = "Publishing";
-        } elseif ((request()->category == 4)) {
-            $blog->category = "others";
-        } else {
-            $blog->category = "uncategorized";
-        }
+        $blog->category = request()->category;
 
         $this->validate($request, [
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',

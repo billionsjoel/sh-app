@@ -32,16 +32,8 @@
                     <textarea rows="5" class="form-control" name="body" id="mytextarea">{{ $blog->body }}</textarea>
                 </div>
                 <div class="form-group">
-                    <label for="category">category</label>
-                    <select class="form-select form-select-sm form-control" name="category"
-                        aria-label=".form-select-sm example">
-                        <option selected>{{ $blog->category }}</option>
-                        <option value="Editing" name="editing">Editing
-                        </option>
-                        <option value="Authoring" name="authoring">Authoring</option>
-                        <option value="Publishing" name="publishing">Publishing</option>
-                        <option value="Others" name="others">Others</option>
-                    </select>
+                    <label for="title">Category <span class="require">*</span></label>
+                    <input type="text" class="form-control" value="{{ $blog->category }}" name="category" />
                 </div>
                 <div class="form-group">
                     <label for="title">Author <span class="require">*</span></label>
