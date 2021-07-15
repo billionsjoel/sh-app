@@ -623,16 +623,17 @@
 
                 <!-- Author -->
                 <p class="lead">
-                    by
+                    By :
                     <a href="#">{{$blog->author ?? ""}}</a>
                 </p>
 
                 <hr>
 
                 <!-- Date/Time -->
-                <p>Posted on
+                <p>Posted on :
                     <span class="text-primary">
-                        {{ $blog->created_at ?? ""}} <span class="text-dark">Category : </span>
+                        {{ date('d-m-Y', strtotime($blog->created_at)) ?? ""}} <span class="text-dark ml-4">Category :
+                        </span>
                         {{ $blog->category ?? ""}}</span></p>
                 </span>
                 <hr>
@@ -826,27 +827,27 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <ul class="list-unstyled mb-0">
-                                            <li>
+                                        <ul class="list-unstyled mb-0 ">
+                                            <li class="p-2">
                                                 <a href="#">Poems</a>
                                             </li>
-                                            <li>
+                                            <li class="p-2">
                                                 <a href="#">Publishing</a>
                                             </li>
-                                            <li>
+                                            <li class="p-2">
                                                 <a href="#">Editing</a>
                                             </li>
                                         </ul>
                                     </div>
                                     <div class="col-lg-6">
                                         <ul class="list-unstyled mb-0">
-                                            <li>
+                                            <li class="p-2">
                                                 <a href="#">Fiction</a>
                                             </li>
-                                            <li>
+                                            <li class="p-2">
                                                 <a href="#">Proof Reading</a>
                                             </li>
-                                            <li>
+                                            <li class="p-2">
                                                 <a href="#">Journeys</a>
                                             </li>
                                         </ul>
