@@ -83,10 +83,16 @@
                         <td>{{ $blog->title }}</td>
                         <td>{{ $blog->author }}</td>
                         <td>{{ $blog->category }}</td>
-                        <td><span class="btn btn-sm bg-warning">Edit</span>
+
+                        <td><span class="btn btn-sm bg-info"><a class="text-white"
+                                    href="{{ url('view-edit-blog/'.$blog->id) }}">Change Image <i
+                                        class="fa fa-user"></i></a></span>
+                            <span class="btn btn-sm bg-warning"><a class="text-white"
+                                    href="{{ url('view-edit-blog/'.$blog->id) }}">Edit <i
+                                        class="fa fa-pen"></i></a></span>
                             <span class="btn btn-sm bg-danger"> <a class="text-white"
                                     href="{{ url('delete-blog/'.$blog->id) }}">
-                                    delete</a></span>
+                                    delete <i class="fa fa-trash"></i></a></span>
                         </td>
                     </tr>
                     @empty

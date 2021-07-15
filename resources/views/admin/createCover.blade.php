@@ -73,8 +73,9 @@
                         <th scope="row">{{ $cover->id }}</th>
                         <td>{{ $cover->title }}</td>
                         <td>{{ $cover->author }}</td>
-                        <td><span class="btn btn-sm bg-warning">Edit</span>
-                            <span class="btn btn-sm bg-danger"> <a class="text-dark"
+                        <td><span class="btn btn-sm bg-warning"><a class="text-dark"
+                                    href="{{ url('view-edit-book-cover/'.$cover->id) }}">Edit</a></span>
+                            <span class="btn btn-sm bg-danger"> <a class="text-white"
                                     href="{{ url('delete-cover/'.$cover->id) }}">
                                     delete</a></span>
                         </td>

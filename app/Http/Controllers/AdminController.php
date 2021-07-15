@@ -55,6 +55,41 @@ class AdminController extends Controller
         return redirect('/create-article');
     }
 
+    public function editBlog(Request $request, $id)
+    {
+        $blog = Blog::find($id);
+
+        Blog::where('id', $id)
+      ->update([
+                'title' => request()->title,
+                'body' => request()->body,
+                'author' => request()->author,
+                'category' => request()->category,
+                ]);
+
+
+        session()->flash('message', 'Blog Updated Successfully! ✅');
+
+        return redirect('/create-article');
+    }
+    public function editBookCover(Request $request, $id)
+    {
+        $bookCover = BookCover::find($id);
+
+        BookCover::where('id', $id)
+      ->update([
+                'title' => request()->title,
+                'description' => request()->description,
+                'author' => request()->author,
+                'genre' => request()->genre,
+                ]);
+
+
+        session()->flash('message', 'Book Cover Updated Successfully! ✅');
+
+        return redirect('/create-article');
+    }
+
 
     public function publishBookCover(Request $request)
     {

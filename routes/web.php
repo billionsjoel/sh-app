@@ -78,6 +78,20 @@ Route::get('/view-messages', function () {
     return view('admin.viewMessages', compact('messages', 'count'));
 });
 
+Route::get('/view-edit-blog/{id}', function ($id) {
+//
+    $blogs = Blog::where('id', $id)->get();
+
+    return view('admin.editBlog', compact('blogs'));
+});
+
+Route::get('/view-edit-book-cover/{id}', function ($id) {
+//
+    $bookCovers = BookCover::where('id', $id)->get();
+
+    return view('admin.editCover', compact('bookCovers'));
+});
+
 
 
 Route::post('/subscribe', [App\Http\Controllers\GuestController::class, 'subscribe']);
@@ -103,6 +117,11 @@ Route::post('/publish-book-cover', [App\Http\Controllers\AdminController::class,
 Route::get('/delete-cover/{id}', [App\Http\Controllers\AdminController::class, 'deleteCover']);
 
 Route::get('/delete-blog/{id}', [App\Http\Controllers\AdminController::class, 'deleteBlog']);
+
+Route::post('/edit-blog/{id}', [App\Http\Controllers\AdminController::class, 'editBlog']);
+
+Route::post('/edit-book-cover/{id}', [App\Http\Controllers\AdminController::class, 'editBookCover']);
+
 
 
 Route::get('/delete-testimonial/{id}', [App\Http\Controllers\AdminController::class, 'deleteTestimony']);
