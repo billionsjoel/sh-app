@@ -1161,8 +1161,8 @@
                                 {{  now()->weekOfYear }}, {{  now()->year }}
                                 |
                                 {{ $blog->category }}</span></span>
-                        <span class="card-text">{!! \Illuminate\Support\Str::limit($blog->body, 600) !!}
-                        </span> <br>
+                        <p class="card-text">{!! \Illuminate\Support\Str::limit($blog->body, 150) !!}
+                        </p> <br>
                         <a href="{{ url('/blogs?id='.$blog->id )}}"
                             class="text-primary btn btn-secondary-outline btn-block"> Read
                             more
