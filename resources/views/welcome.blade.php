@@ -1150,51 +1150,32 @@
             <div class="b-border "></div>
         </div>
         <div class="row p-4 justify-content-center">
+            @forelse ($blogs as $blog)
             <div class="col-sm-2">
                 <div class="card mb-4">
                     {{-- <img src="{{asset('images/blog1.jpeg')}}" class="card-img-top" alt="..."> --}}
                     <div class="card-body">
-                        <h5 class="card-title">THE JOURNEY TO SCRIBE HOUSE (ONLINE): Part 1</h5>
-                        <span class="posted-on small mb-4">Posted on <span class="text-danger small">March 6,
-                                2021 | Work</span></span>
-                        <p class="card-text mt-2">It started in 2015. In Scotland. We were at the end of our second
-                            semester,
-                            of our
-                            Master’s in Publishing Studies.
-                        </p>
-                        <a href="{{url('/blogs?id=1')}}" class="text-primary">Read more ...</a>
+                        <h5 class="card-title">{{ $blog->title }}</h5>
+                        <span class="posted-on small">Posted on <span
+                                class="text-danger small">{{ date("F", mktime(0, 0, 0, now()->month, 1)) }}
+                                {{  now()->weekOfYear }}, {{  now()->year }}
+                                |
+                                {{ $blog->category }}</span></span>
+                        <span class="card-text">{!! \Illuminate\Support\Str::limit($blog->body, 600) !!}
+                        </span> <br>
+                        <a href="{{ url('/blogs?id='.$blog->id )}}"
+                            class="text-primary btn btn-secondary-outline btn-block"> Read
+                            more
+                            ...</a>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-2">
-                <div class="card mb-4">
-                    {{-- <img src="{{asset('images/blog2.jpeg')}}" class="card-img-top" alt="..." height="360px"> --}}
-                    <div class="card-body">
-                        <h5 class="card-title">THE JOURNEY TO SCRIBE HOUSE (ONLINE): Part 2</h5>
-                        <span class="posted-on small mb-4">Posted on <span class="text-danger small">Jan 16,
-                                2021 | Publishing</span></span>
-                        <p class="card-text mt-2">In High School, I was always singled out in our English classes, for
-                            having
-                            the
-                            best ‘summaries’ in the class.</p>
-                        <a href="{{url('/blogs?id=2')}}" class="text-primary">Read more ...</a>
-                    </div>
-                </div>
+            @empty
+            <div class="col-sm-12">
+                <p>There are no blogs at the moment</p>
             </div>
-            <div class="col-sm-2">
-                <div class="card mb-4">
-                    {{-- <img src="{{asset('images/blog3.jpeg')}}" class="card-img-top" alt="..."> --}}
-                    <div class="card-body">
-                        <h5 class="card-title">THE JOURNEY TO SCRIBE HOUSE (ONLINE): Part 3</h5>
-                        <span class="posted-on small mb-4">Posted on <span class="text-danger small">Feb 2,
-                                2021 | Editing</span></span>
-                        <p class="card-text mt-2">One evening a few years ago, during a fellowship of young Christian
-                            friends, a
-                            lady’s turn came to introduce herself.</p>
-                        <a href="{{url('/blogs?id=3')}}" class="text-primary">Read more ...</a>
-                    </div>
-                </div>
-            </div>
+
+            @endforelse
             <div class="cta p-4 text-center w-100">
                 <div class="btn border-bottom text-center text-primary">
                     <a href="{{url('/blogs?id=1')}}">See all our Blogs <svg width="1em" height="1em" viewBox="0 0 16 16"
@@ -1214,67 +1195,26 @@
         </div>
         <div class="">
             <div class="row">
-                <div class="col-sm-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{{url('images/bookcovers/book1.jpeg')}}" alt="Card image cap"
-                            style="height: 100%; width: 100%; object-fit: contain">
+                @forelse ($covers as $cover)
+                <div class="col-sm-4">
+                    <div class="card" style="width: 28rem;">
+                        <img class="card-img-top" src="{{url('images/bookcovers/'.$cover->image) }}"
+                            alt="Card image cap" style="height: 100%; width: 100%; object-fit: contain">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's
-                                content.</p>
-                            <a href="#" class="i small"> Author ~ John Doe</a>
-                            <a href="#" class="btn btn-primary">Buy Book Now</a>
+                            <h5 class="card-title">{{ $cover->title }}</h5>
+                            <p class="card-text">{!! $cover->description !!}</p>
+                            <a href="#" class="i small">Author : <span class="text-info">{{ $cover->author }}</span></a>
+                            <a href="#" class="btn btn-primary btn-block">Buy Book Now</a>
                         </div>
                     </div>
                 </div>
+                @empty
                 <div class="col-sm-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{{url('images/bookcovers/book2.jpeg')}}" alt="Card image cap"
-                            style="height: 100%; width: 100%; object-fit: contain">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's
-                                content.</p>
-                            <a href="#" class="i small"> Author ~ John Doe</a>
-                            <a href="#" class="btn btn-primary">Buy Book Now</a>
-                        </div>
-                    </div>
+                    There are no book covers at the moment.
                 </div>
-                <div class="col-sm-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{{url('images/bookcovers/book3.jpeg')}}" alt="Card image cap"
-                            style="height: 100%; width: 100%; object-fit: contain">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's
-                                content.</p>
-                            <a href="#" class="i small"> Author ~ John Doe</a>
-                            <a href="#" class="btn btn-primary">Buy Book Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-3">
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" src="{{url('images/bookcovers/book4.jpeg')}}" alt="Card image cap"
-                            style="height: 100%; width: 100%; object-fit: contain">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of
-                                the card's
-                                content.</p>
-                            <a href="#" class="i small"> Author ~ John Doe</a>
-                            <a href="#" class="btn btn-primary">Buy Book Now</a>
-                        </div>
-                    </div>
-                </div>
+                @endforelse
             </div>
+
             <div class="cta p-4 text-center w-100">
                 <div class="btn border-bottom text-center text-primary">
                     <a href="{{url('/covers')}}">See all books <svg width="1em" height="1em" viewBox="0 0 16 16"

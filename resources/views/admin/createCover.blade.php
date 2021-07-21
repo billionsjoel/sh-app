@@ -47,53 +47,56 @@
                     <button type="submit" class="btn btn-sm btn-primary ml-2">
                         Publish
                     </button>
-                    <button class="btn btn-sm btn-danger">
+                    <a class="btn btn-sm btn-danger" href="{{url('/create-book-cover')}}">
                         Cancel
-                    </button>
+                    </a>
                 </div>
 
             </form>
         </div>
-
-    </div>
-    <div class="row">
-        <div class="col-sm-12">
-            <table class="table">
-                <thead class="thead-dark">
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Author</th>
-                        <th scope="col">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @forelse ($covers as $cover)
-                    <tr>
-                        <th scope="row">{{ $cover->id }}</th>
-                        <td>{{ $cover->title }}</td>
-                        <td>{{ $cover->author }}</td>
-                        <td><span class="btn btn-sm bg-warning"><a class="text-dark"
-                                    href="{{ url('view-edit-book-cover/'.$cover->id) }}">Edit</a></span>
-                            <span class="btn btn-sm bg-danger"> <a class="text-white"
-                                    href="{{ url('delete-cover/'.$cover->id) }}">
-                                    delete</a></span>
-                        </td>
-                    </tr>
-
-                    @empty
-                    <tr>
-                        <th scope="row">#</th>
-                        <td colspan="3" class="text-secondary">No records found !</td>
-                    </tr>
-
-                    @endforelse
-
-                </tbody>
-            </table>
-            {{ $covers->links() }}
-        </div>
     </div>
 </div>
+<div class="row">
+    <div class="col-sm-12">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @forelse ($covers as $cover)
+                <tr>
+                    <th scope="row">{{ $cover->id }}</th>
+                    <td>{{ $cover->title }}</td>
+                    <td>{{ $cover->author }}</td>
+                    <td><span class="btn btn-sm bg-info"><a class="text-white"
+                                href="{{ url('view-edit-blog/'.$cover->id) }}"> Change Image <i
+                                    class="fa fa-user"></i></a></span> <span class="btn btn-sm bg-warning"><a
+                                class="text-dark" href="{{ url('view-edit-book-cover/'.$cover->id) }}">
+                                Edit <i class="fa fa-pen"></i> </a></span>
+                        <span class="btn btn-sm bg-danger"> <a class="text-white"
+                                href="{{ url('delete-cover/'.$cover->id) }}">
+                                delete <i class="fa fa-trash"></i> </a></span>
+                    </td>
+                </tr>
+
+                @empty
+                <tr>
+                    <th scope="row">#</th>
+                    <td colspan="3" class="text-secondary">No records found !</td>
+                </tr>
+
+                @endforelse
+
+            </tbody>
+        </table>
+        {{ $covers->links() }}
+    </div>
+</div>
+
 
 @endsection

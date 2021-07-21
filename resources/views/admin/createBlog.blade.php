@@ -48,9 +48,9 @@
                     <button type="submit" class="btn btn-sm btn-primary ml-2">
                         Publish
                     </button>
-                    <button class="btn btn-sm btn-danger">
+                    <a class="btn btn-sm btn-danger" href="{{url('/create-article')}}">
                         Cancel
-                    </button>
+                    </a>
                 </div>
 
             </form>

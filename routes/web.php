@@ -5,6 +5,8 @@ use App\Models\Blog;
 use App\Models\BookCover;
 use App\Models\Messages;
 use App\Models\Testimonials;
+use Carbon\Carbon;
+
 use Doctrine\DBAL\Driver\SQLSrv\LastInsertId;
 
 /*
@@ -19,8 +21,14 @@ use Doctrine\DBAL\Driver\SQLSrv\LastInsertId;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+//
+    $covers = BookCover::all()->take(3);
+    $blogs = blog::all()->take(3);
+    $now = Carbon::now();
+
+    return view('welcome', compact('covers', 'blogs'));
 });
+
 Route::get('/home', function () {
     return view('home');
 });
