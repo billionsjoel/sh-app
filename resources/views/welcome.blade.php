@@ -34,6 +34,11 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- Styles -->
     <style>
+        a {
+            text-decoration: none;
+        }
+    </style>
+    <style>
         html,
         body {
             width: 100%;
@@ -928,23 +933,19 @@
                     <div class="col-sm-3">
                         <div class="service-card mb-4">
                             <i class="fas fa-couch s-icon"></i>
-                            <h4 class="s-title">Consultancy</h4>
+                            <h4 class="s-title">Product Management</h4>
                             <p>
-                                You have written. You would like to package your content well, and sell it. But you
-                                don’t
-                                know
-                                how to. Scribe House will
-                                tell you how, and do it for you even, at an affordable cost. We will link you up with
-                                competent
-                                service providers for
-                                each step of the publishing process, right from the time we receive your manuscript, to
-                                the
-                                time
-                                it is published and
-                                positioned at strategic selling points. We will help you budget and cost your work, and
-                                create
-                                and follow through with a
-                                marketing plan.
+                                You have written. We have edited. You would like to produce your content in the best
+                                possible format, and sell it. But
+                                you don’t know how to. Scribe House will tell you how, and do it for you even, at an
+                                affordable cost. We will link you
+                                up with competent service providers at each step of production, overseeing the book
+                                design and printing processes (or
+                                digital book development). We can walk you through your publishing journey, right from
+                                the time we receive your
+                                manuscript, to the time it is positioned at strategic selling points.
+                                Contact us for details about our
+                                rates. <br><br>
                                 {{-- {!! $services->services1 ?? "" !!} --}}
                             </p>
                         </div>
@@ -956,11 +957,16 @@
                             <h4 class="s-title">Editorial</h4>
                             <p>
                                 We offer a wide range of editorial solutions for print and online copy. We edit fiction
-                                and
-                                general non-fiction books,
-                                short stories, magazines, poetry, reports, academic papers, and any other publication in
-                                line
-                                with our values.
+                                and general non-fiction trade
+                                books, short stories, magazines, poetry, reports, and academic papers. ‘Editing’
+                                includes the full works; development
+                                editing, copy-editing, proofreading, fact-checking, cross-checking permissions,
+                                indexing, transcribing audios; all the
+                                editorial steps needed to prepare your publication for the international market. Our
+                                team also includes professional
+                                writers who are able to undertake ghost-writing projects. Our values are founded on
+                                Christian principles, and thus we
+                                work with any fiction or non-fiction content that does not conflict Biblical theism.
                                 {{-- {!! $services->services2 ?? "" !!} --}}
                             </p>
                         </div>
@@ -971,20 +977,16 @@
                             <h4 class="s-title">Junior Scribes</h4>
                             <p>
                                 The cry of many over the years has been ‘Africans have a poor reading culture.’ Putting
-                                aside
-                                the arguments justifying
+                                aside the arguments justifying
                                 or defying this cry, we are firm believers that charity starts at home. What better way
-                                to
-                                grow
-                                and encourage the
+                                to grow and encourage the
                                 reading culture in this country and continent, than by starting with our children?
-                                Scribe
-                                House
-                                promotes and publishes
+                                Scribe House promotes and publishes
                                 literature for youths from 0-14yrs. We have partnered with TWOG Games, a company that
-                                creates
-                                word games for toddlers
-                                and ‘tweens’ to provide fun, interactive ‘word-ertainment’ for children and tweens.
+                                creates word games for toddlers
+                                and ‘tweens’. The Junior Scribes programmes and TWOG games provide fun, interactive
+                                ‘word-ertainment’ for children and
+                                tweens.
                                 {{-- {!! $services->services3 ?? "" !!} --}}
                             </p>
                         </div>
@@ -1000,17 +1002,22 @@
         <h1 class="text-center s-title">About Us</h1>
         <div class="ab-border"></div>
         <div class="about-info container">
-            <p>Recognising the scarcity of excellent, affordable editors in Uganda and Africa, Scribe House
-                provides specialised
-                editing and book production services. We offer publishing and promotional advice to firms and
+            <p>We love books. We love books good books. We love words, and the different ways in which words can be
+                published. That’s
+                why our mission is to help you publish your content well.</p>
+
+            <p> Recognising the scarcity of excellent, affordable editors in Uganda and Africa, Scribe House provides
+                professional
+                editing, and book production services. We offer publishing and promotional advice to firms and
                 individuals across the
-                continent. Publishing consultancies and editorial services are comfortably transacted online,
-                making it easy for us to
-                serve you wherever you are.
-                <p> We are a home for scribes.<br>
-                    A scribe’s house.<br>
-                    Scribe House.</p>
-                {{-- {!! $services->about ?? "" !!} --}}
+                continent. Publishing consultancies and editorial services are comfortably transacted online, making it
+                easy for us to
+                serve you wherever you are.</p>
+
+            <p>We are a home for scribes.<br>
+                A scribe’s house.<br>
+                Scribe House.</p>
+            {{-- {!! $services->about ?? "" !!} --}}
         </div>
     </section>
 
@@ -1039,7 +1046,7 @@
                                 <div class="d-block w-100 d-flex justify-content-center align-items-center p-4">
                                     <p class="mx-auto d-flex justify-content-center align-items-center"
                                         style="width: 1000px; height:80vh;">
-                                        <img class="test-img mr-4" src="{{url('images/agency.jpeg')}}" alt="">
+                                        <img class="test-img mr-4" src="{{url('images/Ronald.jpeg')}}" alt="">
                                         <span class="ml-4">“I’ve been working with Scribe House for three years now
                                             and I am just
                                             thrilled,
@@ -1160,11 +1167,10 @@
                                 class="text-danger small">{{ date("F", mktime(0, 0, 0, now()->month, 1)) }}
                                 {{  now()->weekOfYear }}, {{  now()->year }}
                                 |
-                                {{ $blog->category }}</span></span>
+                                {{ $blog->category }}</span></span> <br>
                         <p class="card-text">{!! \Illuminate\Support\Str::limit($blog->body, 150) !!}
                         </p> <br>
-                        <a href="{{ url('/blogs?id='.$blog->id )}}"
-                            class="text-primary btn btn-secondary-outline btn-block"> Read
+                        <a href="{{ url('/blogs?id='.$blog->id )}}" class="text-primary"> Read
                             more
                             ...</a>
                     </div>
@@ -1341,7 +1347,7 @@
                                 <div class="contact-info">
                                     {{--                                <h2>Kiira</h2>--}}
                                     <h5>Kampala, Uganda.</h5>
-                                    <p> scribehouse.ug@gmail.com.</p>
+                                    <p> scribehouse.ug@gmail.com. | info@scribehouse.ug</p>
                                 </div>
                                 <!-- End Contact Info -->
                             </div>
@@ -1355,7 +1361,7 @@
                                 </div>
                                 <!-- End contact Icon -->
                                 <div class="contact-info">
-                                    <h3>(+256)782-682-678.</h3>
+                                    <h3>+256(0)781 887 520.</h3>
                                     {{--                                <h3>(+256)-702-152894</h3>--}}
                                     <p>Give us a call.</p>
                                 </div>
