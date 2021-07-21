@@ -1208,9 +1208,9 @@
                             alt="Card image cap" style="height: 100%; width: 100%; object-fit: contain">
                         <div class="card-body">
                             <h5 class="card-title">{{ $cover->title }}</h5>
-                            <p class="card-text">{!! $cover->description !!}</p>
                             <a href="#" class="i small">Author : <span class="text-info">{{ $cover->author }}</span></a>
-                            <a href="#" class="btn btn-primary btn-block">Buy Book Now</a>
+                            <a href="{{ url('/covers?id='.$cover->id) }}"
+                                class="btn btn-primary btn-block">Intrested</a>
                         </div>
                     </div>
                 </div>
