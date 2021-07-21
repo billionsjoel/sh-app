@@ -1065,7 +1065,7 @@
                                 <div class="d-block w-100 d-flex justify-content-center align-items-center p-4">
                                     <p class="mx-auto d-flex justify-content-center align-items-center"
                                         style="width: 1000px; height:80vh;">
-                                        <img class="test-img2 mr-4" src="{{url('images/agency.jpeg')}}" alt="">
+                                        <img class="test-img2 mr-4" src="{{url('images/size3-book`.jpeg')}}" alt="">
                                         <span>"I am so grateful to have had my book done through a professional and
                                             competant
                                             publisher as Scribe House.. It is
