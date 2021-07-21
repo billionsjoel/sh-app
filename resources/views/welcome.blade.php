@@ -933,7 +933,7 @@
                     <div class="col-sm-3">
                         <div class="service-card mb-4">
                             <i class="fas fa-couch s-icon"></i>
-                            <h4 class="s-title">Product Management</h4>
+                            <h4 class="s-title">Production Management</h4>
                             <p>
                                 You have written. We have edited. You would like to produce your content in the best
                                 possible format, and sell it. But
@@ -1026,7 +1026,7 @@
         <div class="row bg-danger text-white">
             <div class="col-sm-12">
                 <div class="title mt-4 d-flex justify-content-center align-items-center flex-column">
-                    <h1 class="text-center mt-4 mb-4">What client's say ...</h1>
+                    <h1 class="text-center mt-4 mb-4">What clients say ...</h1>
                     <div class="s-border"></div>
                 </div>
             </div>
@@ -1347,7 +1347,7 @@
                                 <div class="contact-info">
                                     {{--                                <h2>Kiira</h2>--}}
                                     <h5>Kampala, Uganda.</h5>
-                                    <p> scribehouse.ug@gmail.com. | info@scribehouse.ug</p>
+                                    <p> scribehouse.ug@gmail.com <br> info@scribehouse.ug</p>
                                 </div>
                                 <!-- End Contact Info -->
                             </div>
