@@ -1156,7 +1156,7 @@
                     {{-- <img src="{{asset('images/blog1.jpeg')}}" class="card-img-top" alt="..."> --}}
                     <div class="card-body">
                         <h5 class="card-title">{{ $blog->title }}</h5>
-                        <span class="posted-on small">Posted on <span
+                        <span class="posted-on small">Posted on : <br> <span
                                 class="text-danger small">{{ date("F", mktime(0, 0, 0, now()->month, 1)) }}
                                 {{  now()->weekOfYear }}, {{  now()->year }}
                                 |
