@@ -37,6 +37,15 @@
         a {
             text-decoration: none;
         }
+
+        .avatar {
+            width: 100px;
+            margin: 10px;
+            border: 4px solid #F7F9F8;
+            border-radius: 500px;
+            -webkit-border-radius: 500px;
+            -moz-border-radius: 500px;
+        }
     </style>
     <style>
         html,
@@ -1021,87 +1030,6 @@
         </div>
     </section>
 
-
-    <section class="testimonial">
-        <div class="row bg-danger text-white">
-            <div class="col-sm-12">
-                <div class="title mt-4 d-flex justify-content-center align-items-center flex-column">
-                    <h1 class="text-center mt-4 mb-4">What clients say ...</h1>
-                    <div class="s-border"></div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-4 d-flex justify-content-center align-items-center test-say text-white">
-            <div class="col-sm-12">
-                <div class="slider">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                        <ol class="carousel-indicators">
-                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                        </ol>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="d-block w-100 d-flex justify-content-center align-items-center p-4">
-                                    <p class="mx-auto d-flex justify-content-center align-items-center"
-                                        style="width: 1000px; height:80vh;">
-                                        <img class="test-img mr-4" src="{{url('images/Ronald.jpeg')}}" alt="">
-                                        <span class="ml-4">“I’ve been working with Scribe House for three years now
-                                            and I am just
-                                            thrilled,
-                                            very delighted, with the thorough
-                                            scrutiny, quick responsiveness of their service and high-quality editorial
-                                            and
-                                            publication skills.
-                                            Crystal’s abilities
-                                            as the team lead have been a great value add to my journey as a published
-                                            poet!”<br /><br />
-                                            — Ronald K Ssekajja, Poet & Author. </span>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="d-block w-100 d-flex justify-content-center align-items-center p-4">
-                                    <p class="mx-auto d-flex justify-content-center align-items-center"
-                                        style="width: 1000px; height:80vh;">
-                                        <img class="test-img2 mr-4" src="{{url('images/size3-book.jpeg')}}" alt="">
-                                        <span>"I am so grateful to have had my book done through a professional and
-                                            competant
-                                            publisher as Scribe House.. It is
-                                            excellent and my book is doing so well.." <br> <br>
-                                            - Phlynne.</span>
-                                    </p>
-                                </div>
-                            </div>
-                            {{-- <div class="carousel-item">
-                                <div
-                                    class="d-block w-100 bg-primary d-flex justify-content-center align-items-center p-4">
-                                    <p class="mx-auto d-flex justify-content-center align-items-center"
-                                        style="width: 1000px; height:400px;">
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, illo!
-                                    </p>
-                                </div>
-                            </div> --}}
-                        </div>
-                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
-                            data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
-                            data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-
     <section class="t-team mt-4 pt-4 py-4" id="team">
         <div class="title text-white mt-4">
             <h1 class="mt-4">Our Team</h1>
@@ -1192,6 +1120,118 @@
                         </svg> </a>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="clients mb-4 ">
+        <div class="row bg-danger text-white">
+            <div class="col-sm-12">
+                <div class="title mt-4 d-flex justify-content-center align-items-center flex-column">
+                    <h1 class="text-center mt-4 mb-4">What People Say ...</h1>
+                    <div class="s-border"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-4 mb-4 ml-2 mr-2">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="panels ml-4 mt-4 shadow-lg mb-5 bg-white rounded">
+                        <div class="up">
+                            <div class="icon ml-2 mt-4">
+                                <i class="fas fa-quote-left text-secondary p-2"
+                                    style="font-size: 2rem; opacity:0.2"></i>
+                            </div>
+                            <p class="display-5 p-4">I’ve been working with Scribe House for three years now
+                                and I am just
+                                thrilled,
+                                very delighted, with the thorough
+                                scrutiny, quick responsiveness of their service and high-quality editorial
+                                and
+                                publication skills.
+                                Crystal’s abilities
+                                as the team lead have been a great value add to my journey as a published
+                                poet!</p>
+                        </div>
+                        <div class="down bg-primary text-white d-flex align-items-center w-auto rounded"
+                            style="height: 100px;">
+                            <div class="client_image ml-4">
+                                <img class="avatar" src="images/ronald.jpeg" alt=""
+                                    style="height: 80px; width: 80px; border-radius: 100%">
+                            </div>
+                            <div class="info ml-2 p-2">
+                                <span class="small big">Ronald K Ssekajja,</span> <br><span class="big">Poet &
+                                    Author.</span>
+                            </div>
+                            <div class="link ml-auto mr-4">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panels ml-4 mt-4 shadow-lg mb-5 bg-white rounded">
+                        <div class="up">
+                            <div class="icon ml-2 mt-4">
+                                <i class="fas fa-quote-left text-secondary p-2"
+                                    style="font-size: 2rem; opacity:0.2"></i>
+                            </div>
+                            <p class="display-5 p-4">I am so grateful to have had my book done through a professional
+                                and
+                                competant
+                                publisher as Scribe House.. It is
+                                excellent and my book is doing so well..</p>
+                        </div>
+                        <div class="down bg-success text-white d-flex align-items-center w-auto rounded"
+                            style="height: 100px;">
+                            <div class="client_image ml-4">
+                                <img class="avatar" src="images/size3-book.jpeg" alt=""
+                                    style="height: 80px; width: 80px; border-radius: 100%">
+                            </div>
+                            <div class="info ml-2 p-2">
+                                <span class="small big">Phlynne,</span> <br><span class="big">
+                                    Author</span>
+                            </div>
+                            <div class="link ml-auto mr-4">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="panels mr-4 mt-4 shadow-lg mb-5 bg-white rounded">
+                        <div class="up">
+                            <div class="icon ml-2 mt-4">
+                                <i class="fas fa-quote-left text-secondary p-2"
+                                    style="font-size: 2rem; opacity:0.2"></i>
+                            </div>
+                            <p class="display-5 p-4">If I had to recommend a way of becoming a great author in the world
+                                today, it would
+                                be publishing with @scribehouse.</p>
+                        </div>
+                        <div class="down bg-warning text-white d-flex align-items-center w-auto rounded"
+                            style="height: 100px;">
+                            <div class="client_image ml-4">
+                                <img class="avatar" src="images/size3-book.jpeg" alt=""
+                                    style="height: 80px; width: 80px; border-radius: 100%">
+                            </div>
+                            <div class="info ml-2 p-2">
+                                <span class="small big">Billions,</span> <br><span class="big">
+                                    Software Eng.</span>
+                            </div>
+                            <div class="link ml-auto mr-4">
+                                <i class="fab fa-twitter"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{-- <div class="text-center">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="btn btn-lg btn-outline">Speak out too </div>
+                    </div>
+                </div>
+            </div> --}}
         </div>
     </section>
     <section class="gallery">
@@ -1291,6 +1331,7 @@
             </div>
         </div>
     </section>
+
 
 
     <footer id="dk-footer" class="dk-footer text-white">
