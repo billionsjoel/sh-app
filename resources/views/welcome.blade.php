@@ -1142,8 +1142,7 @@
                     <div class="panels ml-4 mt-4 shadow-lg mb-5 bg-white rounded">
                         <div class="up">
                             <div class="icon ml-2 mt-4">
-                                <i class="fas fa-quote-left text-secondary p-2"
-                                    style="font-size: 2rem; opacity:0.2"></i>
+                                <i class="fas fa-quote-left text-primary p-2" style="font-size: 2rem; opacity:0.3"></i>
                             </div>
                             <p class="display-5 p-4">I’ve been working with Scribe House for three years now
                                 and I am just
@@ -1176,8 +1175,7 @@
                     <div class="panels ml-4 mt-4 shadow-lg mb-5 bg-white rounded">
                         <div class="up">
                             <div class="icon ml-2 mt-4">
-                                <i class="fas fa-quote-left text-secondary p-2"
-                                    style="font-size: 2rem; opacity:0.2"></i>
+                                <i class="fas fa-quote-left text-success p-2" style="font-size: 2rem; opacity:0.3"></i>
                             </div>
                             <p class="display-5 p-4">I am so grateful to have had my book done through a professional
                                 and
@@ -1205,8 +1203,7 @@
                     <div class="panels mr-4 mt-4 shadow-lg mb-5 bg-white rounded">
                         <div class="up">
                             <div class="icon ml-2 mt-4">
-                                <i class="fas fa-quote-left text-secondary p-2"
-                                    style="font-size: 2rem; opacity:0.2"></i>
+                                <i class="fas fa-quote-left text-warning p-2" style="font-size: 2rem; opacity:0.3"></i>
                             </div>
                             <p class="display-5 p-4">If I had to recommend a way of becoming a great author in the world
                                 today, it would
