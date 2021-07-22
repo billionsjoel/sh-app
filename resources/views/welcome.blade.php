@@ -1131,7 +1131,11 @@
                 </div>
             </div>
         </div>
-
+        <div class="lead">
+            <p class="text-center p-4 lead">
+                Scribe House is recommended by hundreds <br> upon hundreds of authors.
+            </p>
+        </div>
         <div class="mt-4 mb-4 ml-2 mr-2">
             <div class="row">
                 <div class="col-sm-4">
@@ -1225,13 +1229,11 @@
                     </div>
                 </div>
             </div>
-            {{-- <div class="text-center">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="btn btn-lg btn-outline">Speak out too </div>
-                    </div>
-                </div>
-            </div> --}}
+            <div class="text-center">
+                <a class="btn btn-primary btn-lg text-white" style="width:15rem; border-radius: 100px;"
+                    href="#services">Join
+                    Others <i class="fas fa-long-arrow-alt-right ml-2"></i></a>
+            </div>
         </div>
     </section>
     <section class="gallery">
