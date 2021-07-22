@@ -1211,7 +1211,7 @@
                         <div class="down bg-warning text-white d-flex align-items-center w-auto rounded"
                             style="height: 100px;">
                             <div class="client_image ml-4">
-                                <img class="avatar" src="images/size3-book.jpeg" alt=""
+                                <img class="avatar" src="images/billions.jpeg" alt=""
                                     style="height: 80px; width: 80px; border-radius: 100%">
                             </div>
                             <div class="info ml-2 p-2">
