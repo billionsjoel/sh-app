@@ -708,6 +708,37 @@
 
         }
 
+        .card-container {
+            position: relative;
+        }
+
+        .caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 20%);
+            text-align: center;
+            font-size: 1.7rem;
+            opacity: 0;
+            transition: all .5s;
+            backface-visibility: hidden;
+        }
+
+        .card-container:hover .caption {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+
+        .card-img-top {
+            transform: translate(0rem) scale(1);
+            transition: all .5s;
+        }
+
+        .card-container:hover .card-img-top {
+            transform: translate(0rem) scale(0.98);
+            filter: blur(6px) brightness(70%);
+        }
+
         .t-cards {
             display: flex;
             justify-content: center;
@@ -1053,8 +1084,10 @@
         <div class="row">
             <div class="d-flex flex-column flex-md-row justfiy-content-center t-cards">
                 <div class="col-sm-4">
-                    <div class="card mb-4" style="width: 20rem;">
+                    <div class="card mb-4 card-container" style="width: 20rem;">
                         <img class="card-img-top" src="{{asset('images/img1.jpg')}}" alt="Card image cap">
+                        <figcaption class="caption text-white">CRYSTAL <p> Publishing Director <p>
+                        </figcaption>
                         <div class="card-body">
                             <p class="card-text text-danger">Crystal</p>
                             <p class="card-text">Publishing Director</p>
@@ -1062,8 +1095,10 @@
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <div class="card mb-4" style="width: 20rem;">
+                    <div class="card mb-4 card-container" style="width: 20rem;">
                         <img class="card-img-top" src="{{asset('images/img2.jpg')}}" alt="Card image cap">
+                        <figcaption class="caption text-white">CAROLE <p> Administrative Director <p>
+                        </figcaption>
                         <div class="card-body">
                             <p class="card-text text-danger">Carole</p>
                             <p class="card-text">Administrative Director</p>
@@ -1071,8 +1106,10 @@
                     </div>
                 </div>
                 <div class="col-sm-4">
-                    <div class="card mb-4" style="width: 20rem;">
+                    <div class="card mb-4 card-container" style="width: 20rem;">
                         <img class="card-img-top" src="{{asset('images/img3.jpg')}}" alt="Card image cap">
+                        <figcaption class="caption text-white">FAITH <p> Managing Editor <p>
+                        </figcaption>
                         <div class="card-body">
                             <p class="card-text text-danger">Faith</p>
                             <p class="card-text">Managing Editor</p>
@@ -1137,6 +1174,7 @@
             </div>
         </div>
     </section>
+
     <section class="clients mb-4 ">
         <div class="row bg-danger text-white">
             <div class="col-sm-12">
@@ -1248,6 +1286,7 @@
             </div>
         </div>
     </section>
+
     <section class="gallery" style="margin-left: 3rem;">
         <div class="title">
             <h1 class="text-center">Latest Books</h1>
@@ -1287,6 +1326,7 @@
             </div>
         </div>
     </section>
+
     <section class="home-newsletter">
         <div class="container">
             <div class="row">
@@ -1314,6 +1354,7 @@
             </div>
         </div>
     </section>
+
     <section class="contact">
         <div class="body p-4" id="contact">
             <div class="container contact-form">
@@ -1352,8 +1393,6 @@
             </div>
         </div>
     </section>
-
-
 
     <footer id="dk-footer" class="dk-footer text-white">
         <div class="container">
