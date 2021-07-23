@@ -739,6 +739,11 @@
             filter: blur(6px) brightness(70%);
         }
 
+        .card-container:hover .card-body-text {
+            transform: translate(0rem) scale(0.98);
+            filter: blur(6px) brightness(70%);
+        }
+
         .t-cards {
             display: flex;
             justify-content: center;
@@ -1088,7 +1093,7 @@
                         <img class="card-img-top" src="{{asset('images/img1.jpg')}}" alt="Card image cap">
                         <figcaption class="caption text-white">CRYSTAL <p> Publishing Director <p>
                         </figcaption>
-                        <div class="card-body">
+                        <div class="card-body card-body-text">
                             <p class="card-text text-danger">Crystal</p>
                             <p class="card-text">Publishing Director</p>
                         </div>
@@ -1099,7 +1104,7 @@
                         <img class="card-img-top" src="{{asset('images/img2.jpg')}}" alt="Card image cap">
                         <figcaption class="caption text-white">CAROLE <p> Administrative Director <p>
                         </figcaption>
-                        <div class="card-body">
+                        <div class="card-body card-body-text">
                             <p class="card-text text-danger">Carole</p>
                             <p class="card-text">Administrative Director</p>
                         </div>
@@ -1110,7 +1115,7 @@
                         <img class="card-img-top" src="{{asset('images/img3.jpg')}}" alt="Card image cap">
                         <figcaption class="caption text-white">FAITH <p> Managing Editor <p>
                         </figcaption>
-                        <div class="card-body">
+                        <div class="card-body card-body-text">
                             <p class="card-text text-danger">Faith</p>
                             <p class="card-text">Managing Editor</p>
                         </div>
