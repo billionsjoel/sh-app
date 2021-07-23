@@ -599,21 +599,31 @@
     <style>
         .services {
             min-height: 100vh;
-            background-attachment: cover;
-            background-color: #fff;
+            background-image: linear-gradient(to right, rgba(64, 186, 213, 0.85), rgba(3, 90, 166, 0.85)),
+                url('../images/service-3-bg.jpeg');
+            background-size: cover;
             display: flex;
             align-items: center;
             flex-direction: column;
             justify-content: center;
             margin-top: 2rem;
+            transform: skewY(-4deg);
+            padding-bottom: 10rem;
+
+
+        }
+
+        .services>* {
+            transform: skewY(4deg);
         }
 
         .s-border {
-            background-color: #e24d48;
+            background-color: #faf4f4;
             height: 0.3rem;
             width: 4rem;
             margin-left: 4rem;
             margin-top: 2rem;
+            margin-bottom: 2rem;
         }
 
         .service-cards {
@@ -621,11 +631,10 @@
             align-items: center;
             justify-content: center;
             margin: 1rem;
-            margin-left: 1rem;
         }
 
         .service-card {
-            background-color: rgba(241, 235, 235, 0.993);
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
             display: flex;
             justify-content: center;
@@ -633,12 +642,17 @@
             align-items: center;
             padding: 4rem 2rem;
             border: none;
-            box-shadow: #2e2e2e;
+            box-shadow: #0a0a0a;
+            transition: transform .3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-1.5rem) scale(1.03);
         }
 
         .service-card p {
             margin-top: 1rem;
-            font-size: 1.1rem !important;
+            font-size: 1.11rem !important;
             word-spacing: 0.2rem;
             line-height: 2rem;
         }
@@ -687,6 +701,9 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            padding-top: 5rem;
+            margin-top: -6rem !important;
+            padding-bottom: 10rem !important;
 
 
         }
@@ -930,9 +947,31 @@
         </nav>
     </section>
 
+    <section class="about" id="about">
+        <h1 class="text-center s-title">About Us</h1>
+        <div class="ab-border"></div>
+        <div class="about-info container">
+            <p>We love books. We love books good books. We love words, and the different ways in which words can be
+                published. That’s
+                why our mission is to help you publish your content well.</p>
+
+            <p> Recognising the scarcity of excellent, affordable editors in Uganda and Africa, Scribe House provides
+                professional
+                editing, and book production services. We offer publishing and promotional advice to firms and
+                individuals across the
+                continent. Publishing consultancies and editorial services are comfortably transacted online, making it
+                easy for us to
+                serve you wherever you are.</p>
+
+            <p>We are a home for scribes.<br>
+                A scribe’s house.<br>
+                Scribe House.</p>
+            {{-- {!! $services->about ?? "" !!} --}}
+        </div>
+    </section>
     <section class="services mb-4" id="services">
         <div class="title mt-4">
-            <h1 class="text-center mt-4">Our Services</h1>
+            <h1 class="text-center text-white mt-4">Our Services</h1>
             <div class="s-border"></div>
         </div>
 
@@ -940,7 +979,7 @@
             <div class="row">
                 <div class="d-flex justify-content-center flex-column flex-md-row">
                     <div class="col-sm-3">
-                        <div class="service-card mb-4">
+                        <div class="service-card mb-4 shadow-lg">
                             <i class="fas fa-couch s-icon"></i>
                             <h4 class="s-title">Production Management</h4>
                             <p>
@@ -961,7 +1000,7 @@
 
                     </div>
                     <div class="col-sm-3 mb-4">
-                        <div class="service-card">
+                        <div class="service-card shadow-lg">
                             <i class="fas fa-pen-nib s-icon"></i>
                             <h4 class="s-title">Editorial</h4>
                             <p>
@@ -981,7 +1020,7 @@
                         </div>
                     </div>
                     <div class="col-sm-3 mb-4">
-                        <div class="service-card">
+                        <div class="service-card shadow-lg">
                             <i class="fas fa-baby s-icon"></i>
                             <h4 class="s-title">Junior Scribes</h4>
                             <p>
@@ -1006,32 +1045,8 @@
         </div>
 
     </section>
-
-    <section class="about" id="about">
-        <h1 class="text-center s-title">About Us</h1>
-        <div class="ab-border"></div>
-        <div class="about-info container">
-            <p>We love books. We love books good books. We love words, and the different ways in which words can be
-                published. That’s
-                why our mission is to help you publish your content well.</p>
-
-            <p> Recognising the scarcity of excellent, affordable editors in Uganda and Africa, Scribe House provides
-                professional
-                editing, and book production services. We offer publishing and promotional advice to firms and
-                individuals across the
-                continent. Publishing consultancies and editorial services are comfortably transacted online, making it
-                easy for us to
-                serve you wherever you are.</p>
-
-            <p>We are a home for scribes.<br>
-                A scribe’s house.<br>
-                Scribe House.</p>
-            {{-- {!! $services->about ?? "" !!} --}}
-        </div>
-    </section>
-
     <section class="t-team mt-4 pt-4 py-4" id="team">
-        <div class="title text-white mt-4">
+        <div class="title text-white mt-4" style="padding-top: 5rem;">
             <h1 class="mt-4">Our Team</h1>
             <div class="t-border"></div>
         </div>
