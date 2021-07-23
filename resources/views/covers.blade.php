@@ -849,8 +849,8 @@
         <div class="container">
             <div class="row">
                 @forelse ($covers as $cover)
-                <div class="col-sm-6 py-2">
-                    <div class="card" style="width: 35rem;">
+                <div class="col-sm-6 py-2" style="width: 26rem;">
+                    <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">{{$cover->title}}</h4>
                         </div>

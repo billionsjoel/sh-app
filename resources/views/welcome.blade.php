@@ -1248,7 +1248,7 @@
             </div>
         </div>
     </section>
-    <section class="gallery">
+    <section class="gallery" style="margin-left: 3rem;">
         <div class="title">
             <h1 class="text-center">Latest Books</h1>
             <div class="bks-border mb-4"></div>
@@ -1257,7 +1257,7 @@
             <div class="row">
                 @forelse ($covers as $cover)
                 <div class="col-sm-4">
-                    <div class="card" style="width: 28rem;">
+                    <div class="card" style="width: 20rem; margin-bottom:3rem;">
                         <img class="card-img-top" src="{{url('images/bookcovers/'.$cover->image) }}"
                             alt="Card image cap" style="height: 100%; width: 100%; object-fit: contain">
                         <div class="card-body">
