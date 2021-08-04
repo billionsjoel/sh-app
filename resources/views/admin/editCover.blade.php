@@ -26,11 +26,10 @@
                     <label for="title">Title <span class="require">*</span></label>
                     <input type="text" class="form-control" value="{{ $bookCover->title }}" name="title" />
                 </div>
-
                 <div class="form-group">
                     <label for="description">Description</label>
-                    <textarea rows="5" class="form-control" value="{{ $bookCover->description }}" name="description"
-                        id="mytextarea"></textarea>
+                    <textarea rows="5" class="form-control" name="description"
+                        id="mytextarea">{{ $bookCover->description }}</textarea>
                 </div>
                 <div class="form-group">
                     <label for="title">Author <span class="require">*</span></label>
