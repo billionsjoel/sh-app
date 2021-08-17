@@ -35,7 +35,7 @@ Route::get('/home', function () {
 
 
 Route::get('/blogs', function () {
-    
+
     // retrieve latest blog
 
     $blogs = blog::where('id', request('id'))->get();
@@ -46,13 +46,29 @@ Route::get('/blogs', function () {
 });
 
 Route::get('/covers', function () {
-    
+
     // retrieve book covers
 
     $covers = BookCover::all();
 
     return view('covers', compact('covers'));
 });
+
+
+
+Route::post('/subscribe', [App\Http\Controllers\GuestController::class, 'subscribe']);
+Route::post('/messages', [App\Http\Controllers\GuestController::class, 'getMessages']);
+
+
+Auth::routes([
+
+  'register' => false, // Register Routes...
+
+//   'reset' => false, // Reset Password Routes...
+
+//   'verify' => false, // Email Verification Routes...
+
+]);
 
 Route::get('/create-article', function () {
 //
@@ -100,21 +116,6 @@ Route::get('/view-edit-book-cover/{id}', function ($id) {
     return view('admin.editCover', compact('bookCovers'));
 });
 
-
-
-Route::post('/subscribe', [App\Http\Controllers\GuestController::class, 'subscribe']);
-Route::post('/messages', [App\Http\Controllers\GuestController::class, 'getMessages']);
-
-
-Auth::routes([
-
-  'register' => false, // Register Routes...
-
-//   'reset' => false, // Reset Password Routes...
-
-//   'verify' => false, // Email Verification Routes...
-
-]);
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
