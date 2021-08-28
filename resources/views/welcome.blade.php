@@ -16,7 +16,7 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('js/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('fontawesome/css/all.css')}}">
+    <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -46,6 +46,7 @@
             -webkit-border-radius: 500px;
             -moz-border-radius: 500px;
         }
+
     </style>
     <style>
         html,
@@ -71,6 +72,7 @@
             -webkit-text-size-adjust: 100%;
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         }
+
     </style>
 
     <style>
@@ -594,6 +596,7 @@
             background: #FA6742;
             border-color: #FA6742;
         }
+
     </style>
 
     <style>
@@ -651,7 +654,7 @@
         }
 
         .service-card p {
-            margin-top: 1rem;
+            margin: 1.5rem;
             font-size: 1.11rem !important;
             word-spacing: 0.2rem;
             line-height: 2rem;
@@ -665,8 +668,18 @@
             font-size: 3rem;
             margin: 1rem;
             color: rgb(209, 75, 51);
-
         }
+
+        .icon-border {
+            height: 6rem;
+            width: 6rem;
+            border: 1px solid rgb(209, 75, 51);
+            border-radius: 100%;
+            padding: 1px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
     </style>
 
     <style>
@@ -691,6 +704,7 @@
             word-spacing: 0.2rem;
             line-height: 3rem;
         }
+
     </style>
 
     <style>
@@ -793,6 +807,7 @@
                 background-color: #0976B4;
             }
         } */
+
     </style>
 
     <style>
@@ -824,6 +839,7 @@
             height: 0.3rem;
             width: 3rem;
         }
+
     </style>
 
     <style>
@@ -863,6 +879,7 @@
             margin-top: 15px;
             margin-bottom: 15px;
         }
+
     </style>
 
     <style>
@@ -872,6 +889,7 @@
             right: 20px;
             z-index: 100;
         }
+
     </style>
 
     <style>
@@ -913,17 +931,18 @@
             background: #243c4f;
             color: #fff;
         }
+
     </style>
 </head>
 
 <body>
-    @if( $flash = session('message') )
+    @if ($flash = session('message'))
 
-    <div id="flash-message" class="alert alert-success flash-message mt-4" role="alert">
+        <div id="flash-message" class="alert alert-success flash-message mt-4" role="alert">
 
-        {{ $flash }}
+            {{ $flash }}
 
-    </div>
+        </div>
 
     @endif
     <header id="home">
@@ -942,8 +961,8 @@
     <section>
         <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top scrolled fixed-top shadow-lg small"
             id="header">
-            <img src="{{asset('/images/scribelogo.svg')}}" alt="" width="5%" class="ml-4">
-            <a class="navbar-brand ml-4" href="{{url('/')}}">Scribe House</a>
+            <img src="{{ asset('/images/scribelogo.svg') }}" alt="" width="5%" class="ml-4">
+            <a class="navbar-brand ml-4" href="{{ url('/') }}">Scribe House</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
                 aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -951,33 +970,33 @@
             <div class="collapse navbar-collapse" id="navbarsExample04">
                 <ul class="navbar-nav ml-auto p-3 mr-4">
                     <li class="nav-item active">
-                        <a class="nav-link ml-4" href="{{url('/#home')}}"> Home <span
+                        <a class="nav-link ml-4" href="{{ url('/#home') }}"> Home <span
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ml-4" href="{{url('/#about')}}">About <span
+                        <a class="nav-link ml-4" href="{{ url('/#about') }}">About <span
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ml-4" href="{{url('/#services')}}">Services</a>
+                        <a class="nav-link ml-4" href="{{ url('/#services') }}">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ml-4" href="{{url('/#blogs')}}">Blogs</a>
+                        <a class="nav-link ml-4" href="{{ url('/#blogs') }}">Blogs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ml-4 " href="{{url('/#team')}}">Team</a>
+                        <a class="nav-link ml-4 " href="{{ url('/#team') }}">Team</a>
                     </li>
                     <li class="nav-item mr-4 ">
-                        <a class="nav-link ml-4 " href="{{url('/#contact')}}">Contact</a>
+                        <a class="nav-link ml-4 " href="{{ url('/#contact') }}">Contact</a>
                     </li>
-                    {{--            <li class="nav-item dropdown">--}}
-                    {{--                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>--}}
-                    {{--                <div class="dropdown-menu" aria-labelledby="dropdown04">--}}
-                    {{--                    <a class="dropdown-item" href="#">Action</a>--}}
-                    {{--                    <a class="dropdown-item" href="#">Another action</a>--}}
-                    {{--                    <a class="dropdown-item" href="#">Something else here</a>--}}
-                    {{--                </div>--}}
-                    {{--            </li>--}}
+                    {{-- <li class="nav-item dropdown"> --}}
+                    {{-- <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a> --}}
+                    {{-- <div class="dropdown-menu" aria-labelledby="dropdown04"> --}}
+                    {{-- <a class="dropdown-item" href="#">Action</a> --}}
+                    {{-- <a class="dropdown-item" href="#">Another action</a> --}}
+                    {{-- <a class="dropdown-item" href="#">Something else here</a> --}}
+                    {{-- </div> --}}
+                    {{-- </li> --}}
                 </ul>
             </div>
         </nav>
@@ -1014,11 +1033,13 @@
         <div class="service-cards">
             <div class="row">
                 <div class="d-flex justify-content-center flex-column flex-md-row">
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                         <div class="service-card mb-4 shadow-lg">
-                            <i class="fas fa-couch s-icon"></i>
+                            <div class="icon-border">
+                                <i class="fas fa-couch s-icon"></i>
+                            </div>
                             <h4 class="s-title">Production Management</h4>
-                            <p>
+                            <p class="text-justify">
                                 You have written. We have edited. You would like to produce your content in the best
                                 possible format, and sell it. But
                                 you don’t know how to. Scribe House will tell you how, and do it for you even, at an
@@ -1035,11 +1056,13 @@
                         </div>
 
                     </div>
-                    <div class="col-sm-3 mb-4">
+                    <div class="col-sm-4 mb-4">
                         <div class="service-card shadow-lg">
-                            <i class="fas fa-pen-nib s-icon"></i>
+                            <div class="icon-border">
+                                <i class="fas fa-pen-nib s-icon"></i>
+                            </div>
                             <h4 class="s-title">Editorial</h4>
-                            <p>
+                            <p class="text-justify">
                                 We offer a wide range of editorial solutions for print and online copy. We edit fiction
                                 and general non-fiction trade
                                 books, short stories, magazines, poetry, reports, and academic papers. ‘Editing’
@@ -1055,11 +1078,13 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-sm-3 mb-4">
+                    <div class="col-sm-4 mb-4">
                         <div class="service-card shadow-lg">
-                            <i class="fas fa-baby s-icon"></i>
+                            <div class="icon-border">
+                                <i class="fas fa-baby s-icon"></i>
+                            </div>
                             <h4 class="s-title">Junior Scribes</h4>
-                            <p>
+                            <p class="text-justify">
                                 The cry of many over the years has been ‘Africans have a poor reading culture.’ Putting
                                 aside the arguments justifying
                                 or defying this cry, we are firm believers that charity starts at home. What better way
@@ -1090,8 +1115,9 @@
             <div class="d-flex flex-column flex-md-row justfiy-content-center t-cards">
                 <div class="col-sm-4">
                     <div class="card mb-4 card-container" style="width: 20rem;">
-                        <img class="card-img-top" src="{{asset('images/img1.jpg')}}" alt="Card image cap">
-                        <figcaption class="caption text-white">CRYSTAL <p> Publishing Director <p>
+                        <img class="card-img-top" src="{{ asset('images/img1.jpg') }}" alt="Card image cap">
+                        <figcaption class="caption text-white">CRYSTAL <p> Publishing Director
+                            <p>
                         </figcaption>
                         <div class="card-body card-body-text">
                             <p class="card-text text-danger">Crystal</p>
@@ -1101,8 +1127,9 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="card mb-4 card-container" style="width: 20rem;">
-                        <img class="card-img-top" src="{{asset('images/img2.jpg')}}" alt="Card image cap">
-                        <figcaption class="caption text-white">CAROLE <p> Administrative Director <p>
+                        <img class="card-img-top" src="{{ asset('images/img2.jpg') }}" alt="Card image cap">
+                        <figcaption class="caption text-white">CAROLE <p> Administrative Director
+                            <p>
                         </figcaption>
                         <div class="card-body card-body-text">
                             <p class="card-text text-danger">Carole</p>
@@ -1112,8 +1139,9 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="card mb-4 card-container" style="width: 20rem;">
-                        <img class="card-img-top" src="{{asset('images/img3.jpg')}}" alt="Card image cap">
-                        <figcaption class="caption text-white">FAITH <p> Managing Editor <p>
+                        <img class="card-img-top" src="{{ asset('images/img3.jpg') }}" alt="Card image cap">
+                        <figcaption class="caption text-white">FAITH <p> Managing Editor
+                            <p>
                         </figcaption>
                         <div class="card-body card-body-text">
                             <p class="card-text text-danger">Faith</p>
@@ -1131,7 +1159,7 @@
                 </div>
             </div>
         </div> --}}
-        </div>
+            </div>
 
         </div>
     </section>
@@ -1143,34 +1171,34 @@
         </div>
         <div class="row p-4 justify-content-center">
             @forelse ($blogs as $blog)
-            <div class="col-sm-2">
-                <div class="card mb-4">
-                    {{-- <img src="{{asset('images/blog1.jpeg')}}" class="card-img-top" alt="..."> --}}
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $blog->title }}</h5>
-                        <span class="posted-on small">Posted on : <br> <span
-                                class="text-danger small">{{ date("F", mktime(0, 0, 0, now()->month, 1)) }}
-                                {{  now()->weekOfYear }}, {{  now()->year }}
-                                |
-                                {{ $blog->category }}</span></span> <br>
-                        <p class="card-text">{!! \Illuminate\Support\Str::limit($blog->body, 150) !!}
-                        </p> <br>
-                        <a href="{{ url('/blogs?id='.$blog->id )}}" class="text-primary"> Read
-                            more
-                            ...</a>
+                <div class="col-sm-2">
+                    <div class="card mb-4">
+                        {{-- <img src="{{asset('images/blog1.jpeg')}}" class="card-img-top" alt="..."> --}}
+                        <div class="card-body">
+                            <h5 class="card-title">{{ $blog->title }}</h5>
+                            <span class="posted-on small">Posted on : <br> <span
+                                    class="text-danger small">{{ date('F', mktime(0, 0, 0, now()->month, 1)) }}
+                                    {{ now()->weekOfYear }}, {{ now()->year }}
+                                    |
+                                    {{ $blog->category }}</span></span> <br>
+                            <p class="card-text">{!! \Illuminate\Support\Str::limit($blog->body, 150) !!}
+                            </p> <br>
+                            <a href="{{ url('/blogs?id=' . $blog->id) }}" class="text-primary"> Read
+                                more
+                                ...</a>
+                        </div>
                     </div>
                 </div>
-            </div>
             @empty
-            <div class="col-sm-12">
-                <p>There are no blogs at the moment</p>
-            </div>
+                <div class="col-sm-12">
+                    <p>There are no blogs at the moment</p>
+                </div>
 
             @endforelse
             <div class="cta p-4 text-center w-100">
                 <div class="btn border-bottom text-center text-primary">
-                    <a href="{{url('/blogs?id=1')}}">See all our Blogs <svg width="1em" height="1em" viewBox="0 0 16 16"
-                            class="bi bi-arrow-right-circle-fill" fill="currentColor"
+                    <a href="{{ url('/blogs?id=1') }}">See all our Blogs <svg width="1em" height="1em"
+                            viewBox="0 0 16 16" class="bi bi-arrow-right-circle-fill" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8.354 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L9.793 7.5H5a.5.5 0 0 0 0 1h4.793l-2.147 2.146z" />
@@ -1202,7 +1230,7 @@
                             <div class="icon ml-2 mt-4">
                                 <i class="fas fa-quote-left text-primary p-2" style="font-size: 2rem; opacity:0.3"></i>
                             </div>
-                            <p class="display-5 p-4">I’ve been working with Scribe House for three years now
+                            <p class="p-4">I’ve been working with Scribe House for three years now
                                 and I am just
                                 thrilled,
                                 very delighted, with the thorough
@@ -1235,7 +1263,7 @@
                             <div class="icon ml-2 mt-4">
                                 <i class="fas fa-quote-left text-success p-2" style="font-size: 2rem; opacity:0.3"></i>
                             </div>
-                            <p class="display-5 p-4">I am so grateful to have had my book done through a professional
+                            <p class="p-4">I am so grateful to have had my book done through a professional
                                 and
                                 competant
                                 publisher as Scribe House.. It is
@@ -1263,7 +1291,7 @@
                             <div class="icon ml-2 mt-4">
                                 <i class="fas fa-quote-left text-warning p-2" style="font-size: 2rem; opacity:0.3"></i>
                             </div>
-                            <p class="display-5 p-4">If I had to recommend a way of becoming a great author in the world
+                            <p class="p-4">If I had to recommend a way of becoming a great author in the world
                                 today, it would
                                 be publishing with @scribehouse.</p>
                         </div>
@@ -1300,28 +1328,29 @@
         <div class="">
             <div class="row">
                 @forelse ($covers as $cover)
-                <div class="col-sm-4">
-                    <div class="card" style="width: 20rem; margin-bottom:3rem;">
-                        <img class="card-img-top" src="{{url('images/bookcovers/'.$cover->image) }}"
-                            alt="Card image cap" style="height: 100%; width: 100%; object-fit: contain">
-                        <div class="card-body">
-                            <h5 class="card-title">{{ $cover->title }}</h5>
-                            <a href="#" class="i small">Author : <span class="text-info">{{ $cover->author }}</span></a>
-                            <a href="{{ url('/covers?id='.$cover->id) }}"
-                                class="btn btn-primary btn-block">Intrested</a>
+                    <div class="col-sm-4">
+                        <div class="card" style="width: 20rem; margin-bottom:3rem;">
+                            <img class="card-img-top" src="{{ url('images/bookcovers/' . $cover->image) }}"
+                                alt="Card image cap" style="height: 100%; width: 100%; object-fit: contain">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $cover->title }}</h5>
+                                <a href="#" class="i small">Author : <span
+                                        class="text-info">{{ $cover->author }}</span></a>
+                                <a href="{{ url('/covers?id=' . $cover->id) }}"
+                                    class="btn btn-primary btn-block">Intrested</a>
+                            </div>
                         </div>
                     </div>
-                </div>
                 @empty
-                <div class="col-sm-3">
-                    There are no book covers at the moment.
-                </div>
+                    <div class="col-sm-3">
+                        There are no book covers at the moment.
+                    </div>
                 @endforelse
             </div>
 
             <div class="cta p-4 text-center w-100">
                 <div class="btn border-bottom text-center text-primary">
-                    <a href="{{url('/covers')}}">See all books <svg width="1em" height="1em" viewBox="0 0 16 16"
+                    <a href="{{ url('/covers') }}">See all books <svg width="1em" height="1em" viewBox="0 0 16 16"
                             class="bi bi-arrow-right-circle-fill" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -1366,7 +1395,7 @@
                 <div class="contact-image">
                     <img src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact" />
                 </div>
-                <form method="POST" action="{{url('/messages')}}">
+                <form method="POST" action="{{ url('/messages') }}">
                     @csrf
                     <h3>Drop Us a Message</h3>
                     <div class="row">
@@ -1405,7 +1434,8 @@
                 <div class="col-md-12 col-lg-4">
                     <div class="dk-footer-box-info">
                         <a href="index.html" class="footer-logo">
-                            <img src="{{asset('images/scribelogo.svg')}}" alt="footer_logo" class="" height="100px">
+                            <img src="{{ asset('images/scribelogo.svg') }}" alt="footer_logo" class=""
+                                height="100px">
                         </a>
                         <p class="footer-info-text">
                             Scribe House recognises the scarcity of excellent, affordable editors in Uganda and Africa,
@@ -1417,17 +1447,17 @@
                             <h3>Follow us</h3>
                             <ul>
                                 <li>
-                                    <a href="{{url('https://www.facebook.com/scribehouse')}}">
+                                    <a href="{{ url('https://www.facebook.com/scribehouse') }}">
                                         <i class="fa fa-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{url('https://twitter.com/scribehouse')}}">
+                                    <a href="{{ url('https://twitter.com/scribehouse') }}">
                                         <i class="fa fa-twitter"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{url('https://www.instagram.com/scribehouse')}}">
+                                    <a href="{{ url('https://www.instagram.com/scribehouse') }}">
                                         <i class="fa fa-instagram"></i>
                                     </a>
                                 </li>
@@ -1451,7 +1481,7 @@
                                 </div>
                                 <!-- End contact Icon -->
                                 <div class="contact-info">
-                                    {{--                                <h2>Kiira</h2>--}}
+                                    {{-- <h2>Kiira</h2> --}}
                                     <h5>Kampala, Uganda.</h5>
                                     <p> scribehouse.ug@gmail.com <br> info@scribehouse.ug</p>
                                 </div>
@@ -1468,7 +1498,7 @@
                                 <!-- End contact Icon -->
                                 <div class="contact-info">
                                     <h3>+256(0)781 887 520.</h3>
-                                    {{--                                <h3>(+256)-702-152894</h3>--}}
+                                    {{-- <h3>(+256)-702-152894</h3> --}}
                                     <p>Give us a call.</p>
                                 </div>
                                 <!-- End Contact Info -->
@@ -1487,30 +1517,30 @@
                                 </div>
                                 <ul>
                                     <li>
-                                        <a href="{{url('/#about')}}">About Us</a>
+                                        <a href="{{ url('/#about') }}">About Us</a>
                                     </li>
                                     <li>
-                                        <a href="{{url('/#services')}}">Services</a>
+                                        <a href="{{ url('/#services') }}">Services</a>
                                     </li>
                                     <li>
-                                        <a href="{{url('/#gallery')}}">Projects</a>
+                                        <a href="{{ url('/#gallery') }}">Projects</a>
                                     </li>
                                     <li>
-                                        <a href="{{url('/#team')}}">Our Team</a>
+                                        <a href="{{ url('/#team') }}">Our Team</a>
                                     </li>
                                 </ul>
                                 <ul>
                                     <li>
-                                        <a href="{{url('/#contact')}}">Contact Us</a>
+                                        <a href="{{ url('/#contact') }}">Contact Us</a>
                                     </li>
                                     <li>
-                                        <a href="{{url('/#gallery')}}">Gallery</a>
+                                        <a href="{{ url('/#gallery') }}">Gallery</a>
                                     </li>
                                     <li>
-                                        <a href="{{url('/#clients')}}">Clients</a>
+                                        <a href="{{ url('/#clients') }}">Clients</a>
                                     </li>
                                     <li>
-                                        <a href="{{('/#why')}}">Why Scribe House</a>
+                                        <a href="{{ '/#why' }}">Why Scribe House</a>
                                     </li>
                                 </ul>
                             </div>
@@ -1525,7 +1555,8 @@
                                 </div>
                                 <p>
                                     <!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
-                                    Subscribe to our news-letter to receive more updates and offers.</p>
+                                    Subscribe to our news-letter to receive more updates and offers.
+                                </p>
                                 <form method="POST" action="{{ url('/subscribe') }}">
                                     @csrf
                                     <div class="form-row">
@@ -1609,110 +1640,110 @@
 </body>
 <script>
     setTimeout(function() {
-            $('#flash-message').fadeOut('slow');
-            }, 3000);
+        $('#flash-message').fadeOut('slow');
+    }, 3000);
 </script>
 
 <script>
-    $(function () {
-            $(document).scroll(function () {
-                var $nav = $(".navbar-fixed-top");
-                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-            });
+    $(function() {
+        $(document).scroll(function() {
+            var $nav = $(".navbar-fixed-top");
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+    });
+
+    let modalId = $('#image-gallery');
+
+    $(document)
+        .ready(function() {
+
+            loadGallery(true, 'a.thumbnail');
+
+            //This function disables buttons when needed
+            function disableButtons(counter_max, counter_current) {
+                $('#show-previous-image, #show-next-image')
+                    .show();
+                if (counter_max === counter_current) {
+                    $('#show-next-image')
+                        .hide();
+                } else if (counter_current === 1) {
+                    $('#show-previous-image')
+                        .hide();
+                }
+            }
+
+            /**
+             *
+             * @param setIDs Sets IDs when DOM is loaded. If using a PHP counter, set to false.
+             * @param setClickAttr Sets the attribute for the click handler.
+             */
+
+            function loadGallery(setIDs, setClickAttr) {
+                let current_image,
+                    selector,
+                    counter = 0;
+
+                $('#show-next-image, #show-previous-image')
+                    .click(function() {
+                        if ($(this)
+                            .attr('id') === 'show-previous-image') {
+                            current_image--;
+                        } else {
+                            current_image++;
+                        }
+
+                        selector = $('[data-image-id="' + current_image + '"]');
+                        updateGallery(selector);
+                    });
+
+                function updateGallery(selector) {
+                    let $sel = selector;
+                    current_image = $sel.data('image-id');
+                    $('#image-gallery-title')
+                        .text($sel.data('title'));
+                    $('#image-gallery-image')
+                        .attr('src', $sel.data('image'));
+                    disableButtons(counter, $sel.data('image-id'));
+                }
+
+                if (setIDs == true) {
+                    $('[data-image-id]')
+                        .each(function() {
+                            counter++;
+                            $(this)
+                                .attr('data-image-id', counter);
+                        });
+                }
+                $(setClickAttr)
+                    .on('click', function() {
+                        updateGallery($(this));
+                    });
+            }
         });
 
-let modalId = $('#image-gallery');
+    // build key actions
+    $(document)
+        .keydown(function(e) {
+            switch (e.which) {
+                case 37: // left
+                    if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
+                        $('#show-previous-image')
+                            .click();
+                    }
+                    break;
 
-$(document)
-.ready(function () {
+                case 39: // right
+                    if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
+                        $('#show-next-image')
+                            .click();
+                    }
+                    break;
 
-loadGallery(true, 'a.thumbnail');
-
-//This function disables buttons when needed
-function disableButtons(counter_max, counter_current) {
-$('#show-previous-image, #show-next-image')
-.show();
-if (counter_max === counter_current) {
-$('#show-next-image')
-.hide();
-} else if (counter_current === 1) {
-$('#show-previous-image')
-.hide();
-}
-}
-
-/**
-*
-* @param setIDs Sets IDs when DOM is loaded. If using a PHP counter, set to false.
-* @param setClickAttr Sets the attribute for the click handler.
-*/
-
-function loadGallery(setIDs, setClickAttr) {
-let current_image,
-selector,
-counter = 0;
-
-$('#show-next-image, #show-previous-image')
-.click(function () {
-if ($(this)
-.attr('id') === 'show-previous-image') {
-current_image--;
-} else {
-current_image++;
-}
-
-selector = $('[data-image-id="' + current_image + '"]');
-updateGallery(selector);
-});
-
-function updateGallery(selector) {
-let $sel = selector;
-current_image = $sel.data('image-id');
-$('#image-gallery-title')
-.text($sel.data('title'));
-$('#image-gallery-image')
-.attr('src', $sel.data('image'));
-disableButtons(counter, $sel.data('image-id'));
-}
-
-if (setIDs == true) {
-$('[data-image-id]')
-.each(function () {
-counter++;
-$(this)
-.attr('data-image-id', counter);
-});
-}
-$(setClickAttr)
-.on('click', function () {
-updateGallery($(this));
-});
-}
-});
-
-// build key actions
-$(document)
-.keydown(function (e) {
-switch (e.which) {
-case 37: // left
-if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
-$('#show-previous-image')
-.click();
-}
-break;
-
-case 39: // right
-if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
-$('#show-next-image')
-.click();
-}
-break;
-
-default:
-return; // exit this handler for other keys
-}
-e.preventDefault(); // prevent the default action (scroll / move caret)
-});
+                default:
+                    return; // exit this handler for other keys
+            }
+            e.preventDefault(); // prevent the default action (scroll / move caret)
+        });
 </script>
 
 </html>

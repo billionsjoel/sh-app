@@ -23,12 +23,12 @@ class GuestController extends Controller
 
     public function getMessages(Request $request)
     {
-        $message = new Messages();
+        $message            = new Messages();
 
-        $message->name = request()->name;
-        $message->email = request()->email;
-        $message->phone = request()->phone;
-        $message->message = request()->message;
+        $message->name      = request()->name;
+        $message->email     = request()->email;
+        $message->phone     = request()->phone;
+        $message->message   = request()->message;
 
         $message->save();
 

@@ -12,10 +12,12 @@
 
     <!-- Bootstrap core CSS -->
 
-    <link href="{{asset('css/app.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="{{asset('css/blog-post.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/blog-post.css') }}" rel="stylesheet">
     <style>
         html,
         body {
@@ -36,6 +38,7 @@
         *::after {
             box-sizing: border-box;
         }
+
     </style>
     <style>
         .navbar-fixed-top.scrolled {
@@ -558,6 +561,7 @@
             background: #FA6742;
             border-color: #FA6742;
         }
+
     </style>
 </head>
 
@@ -567,8 +571,8 @@
     <section>
         <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top scrolled fixed-top shadow-lg small"
             id="header">
-            <img src="{{asset('/images/scribelogo.svg')}}" alt="" width="5%" class="ml-4">
-            <a class="navbar-brand ml-4" href="{{url('/')}}">Scribe House</a>
+            <img src="{{ asset('/images/scribelogo.svg') }}" alt="" width="5%" class="ml-4">
+            <a class="navbar-brand ml-4" href="{{ url('/') }}">Scribe House</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
                 aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -576,33 +580,33 @@
             <div class="collapse navbar-collapse" id="navbarsExample04">
                 <ul class="navbar-nav ml-auto p-3 mr-4">
                     <li class="nav-item active">
-                        <a class="nav-link ml-4" href="{{url('/#home')}}"> Home <span
+                        <a class="nav-link ml-4" href="{{ url('/#home') }}"> Home <span
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ml-4" href="{{url('/#about')}}">About <span
+                        <a class="nav-link ml-4" href="{{ url('/#about') }}">About <span
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ml-4" href="{{url('/#services')}}">Services</a>
+                        <a class="nav-link ml-4" href="{{ url('/#services') }}">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ml-4" href="{{url('/#blogs')}}">Blogs</a>
+                        <a class="nav-link ml-4" href="{{ url('/#blogs') }}">Blogs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ml-4 " href="{{url('/#team')}}">Team</a>
+                        <a class="nav-link ml-4 " href="{{ url('/#team') }}">Team</a>
                     </li>
                     <li class="nav-item mr-4 ">
-                        <a class="nav-link ml-4 " href="{{url('/#contact')}}">Contact</a>
+                        <a class="nav-link ml-4 " href="{{ url('/#contact') }}">Contact</a>
                     </li>
-                    {{--            <li class="nav-item dropdown">--}}
-                    {{--                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>--}}
-                    {{--                <div class="dropdown-menu" aria-labelledby="dropdown04">--}}
-                    {{--                    <a class="dropdown-item" href="#">Action</a>--}}
-                    {{--                    <a class="dropdown-item" href="#">Another action</a>--}}
-                    {{--                    <a class="dropdown-item" href="#">Something else here</a>--}}
-                    {{--                </div>--}}
-                    {{--            </li>--}}
+                    {{-- <li class="nav-item dropdown"> --}}
+                    {{-- <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a> --}}
+                    {{-- <div class="dropdown-menu" aria-labelledby="dropdown04"> --}}
+                    {{-- <a class="dropdown-item" href="#">Action</a> --}}
+                    {{-- <a class="dropdown-item" href="#">Another action</a> --}}
+                    {{-- <a class="dropdown-item" href="#">Something else here</a> --}}
+                    {{-- </div> --}}
+                    {{-- </li> --}}
                 </ul>
             </div>
         </nav>
@@ -613,482 +617,482 @@
 
         @forelse($blogs as $blog)
 
-        <div class="row mt-4">
+            <div class="row mt-4">
 
-            <!-- Post Content Column -->
-            <div class="col-lg-8">
+                <!-- Post Content Column -->
+                <div class="col-lg-8">
 
-                <!-- Title -->
-                <h1 class="mt-4">{{$blog->title ?? ""}}</h1>
+                    <!-- Title -->
+                    <h1 class="mt-4">{{ $blog->title ?? '' }}</h1>
 
-                <!-- Author -->
-                <p class="lead">
-                    By :
-                    <a href="#">{{$blog->author ?? ""}}</a>
-                </p>
+                    <!-- Author -->
+                    <p class="lead">
+                        By :
+                        <a href="#">{{ $blog->author ?? '' }}</a>
+                    </p>
 
-                <hr>
+                    <hr>
 
-                <!-- Date/Time -->
-                <p>Posted on :
-                    <span class="text-primary">
-                        {{ date('d-m-Y', strtotime($blog->created_at)) ?? ""}} <span class="text-dark ml-4">Category :
-                        </span>
-                        {{ $blog->category ?? ""}}</span></p>
-                </span>
-                <hr>
+                    <!-- Date/Time -->
+                    <p>Posted on :
+                        <span class="text-primary">
+                            {{ date('d-m-Y', strtotime($blog->created_at)) ?? '' }} <span
+                                class="text-dark ml-4">Category :
+                            </span>
+                            {{ $blog->category ?? '' }}</span>
+                    </p>
+                    </span>
+                    <hr>
 
-                <!-- Preview Image -->
-                <img class="img-fluid rounded" src="{{asset('/images/'.$blog->image)}}" alt="blog image">
-                <hr>
+                    <!-- Preview Image -->
+                    <img class="img-fluid rounded" src="{{ asset('/images/' . $blog->image) }}" alt="blog image">
+                    <hr>
 
-                <!-- Post Content -->
-                <p class="lead">
-                    {!! $blog->body ?? "" !!}
-                </p>
+                    <!-- Post Content -->
+                    <p class="lead">
+                        {!! $blog->body ?? '' !!}
+                    </p>
 
-                {{--                <blockquote class="blockquote">--}}
-                {{--                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>--}}
-                {{--                    <footer class="blockquote-footer">Someone famous in--}}
-                {{--                        <cite title="Source Title">Source Title</cite>--}}
-                {{--                    </footer>--}}
-                {{--                </blockquote>--}}
+                    {{-- <blockquote class="blockquote"> --}}
+                    {{-- <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p> --}}
+                    {{-- <footer class="blockquote-footer">Someone famous in --}}
+                    {{-- <cite title="Source Title">Source Title</cite> --}}
+                    {{-- </footer> --}}
+                    {{-- </blockquote> --}}
 
-                {{--                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>--}}
+                    {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p> --}}
 
-                {{--                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>--}}
-                <div class="card my-4">
-                    <h5 class="card-header">Leave a Comment:</h5>
-                    <div class="card-body">
-                        <form action="">
-                            @csrf
-                            <div class="form-group">
-                                <textarea class="form-control" rows="3"></textarea>
-                            </div>
-                            <div class="btn btn-primary">Submit</div>
-                        </form>
+                    {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p> --}}
+                    <div class="card my-4">
+                        <h5 class="card-header">Leave a Comment:</h5>
+                        <div class="card-body">
+                            <form action="">
+                                @csrf
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="3"></textarea>
+                                </div>
+                                <div class="btn btn-primary">Submit</div>
+                            </form>
+                        </div>
                     </div>
-                </div>
                 @empty
-                <div class="row mt-4">
-                    <div class="col-lg-8 mt-4">
-                        <div class="container" style="margin-top: 8%;">
+                    <div class="row mt-4">
+                        <div class="col-lg-8 mt-4">
+                            <div class="container" style="margin-top: 8%;">
 
-                            <div class="row mt-4">
+                                <div class="row mt-4">
 
-                                <!-- Post Content Column -->
-                                <div class="col-lg-8">
+                                    <!-- Post Content Column -->
+                                    <div class="col-lg-8">
 
-                                    <!-- Title -->
-                                    <h1 class="mt-4 text-center">Oops.. Sorry!</h1>
+                                        <!-- Title -->
+                                        <h1 class="mt-4 text-center">Oops.. Sorry!</h1>
 
-                                    <!-- Author -->
-                                    <p class="lead">
+                                        <!-- Author -->
+                                        <p class="lead">
 
-                                        <a href="#"></a>
-                                    </p>
-
-
-
-                                    <!-- Date/Time -->
-                                    <p>Unfortunately, there are no blogs associated with this title, id or
-                                        category.</p>
-
-                                    <hr>
-
-                                    <!-- Preview Image -->
-                                    <img class="img-fluid rounded" src="{{asset('images/sorry.png')}}" alt="blog image">
-                                    <hr>
-
-                                    <!-- Post Content -->
-                                    <p class="lead">
-                                        Please choose another blog from the featured blog panel.
-                                    </p>
-
-                                    {{--                <blockquote class="blockquote">--}}
-                                    {{--                    <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>--}}
-                                    {{--                    <footer class="blockquote-footer">Someone famous in--}}
-                                    {{--                        <cite title="Source Title">Source Title</cite>--}}
-                                    {{--                    </footer>--}}
-                                    {{--                </blockquote>--}}
-
-                                    {{--                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p>--}}
-
-                                    {{--                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p>--}}
+                                            <a href="#"></a>
+                                        </p>
 
 
 
-                                    <hr>
+                                        <!-- Date/Time -->
+                                        <p>Unfortunately, there are no blogs associated with this title, id or
+                                            category.</p>
 
-                                    <!-- Comments Form -->
+                                        <hr>
 
+                                        <!-- Preview Image -->
+                                        <img class="img-fluid rounded" src="{{ asset('images/sorry.png') }}"
+                                            alt="blog image">
+                                        <hr>
 
-                                    <!-- Single Comment -->
-                                    <div class="media mb-4">
-                                        {{--                    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">--}}
-                                        {{--                    <div class="media-body">--}}
-                                        {{--                        <h5 class="mt-0">Commenter Name</h5>--}}
-                                        {{--                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.--}}
-                                        {{--                    </div>--}}
-                                    </div>
+                                        <!-- Post Content -->
+                                        <p class="lead">
+                                            Please choose another blog from the featured blog panel.
+                                        </p>
 
-                                    <!-- Comment with nested comments -->
-                                    <div class="media mb-4">
-                                        {{--                    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">--}}
-                                        {{--                    <div class="media-body">--}}
-                                        {{--                        <h5 class="mt-0">Commenter Name</h5>--}}
-                                        {{--                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.--}}
+                                        {{-- <blockquote class="blockquote"> --}}
+                                        {{-- <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p> --}}
+                                        {{-- <footer class="blockquote-footer">Someone famous in --}}
+                                        {{-- <cite title="Source Title">Source Title</cite> --}}
+                                        {{-- </footer> --}}
+                                        {{-- </blockquote> --}}
 
-                                        {{--                        <div class="media mt-4">--}}
-                                        {{--                            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">--}}
-                                        {{--                            <div class="media-body">--}}
-                                        {{--                                <h5 class="mt-0">Commenter Name</h5>--}}
-                                        {{--                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.--}}
-                                        {{--                            </div>--}}
-                                        {{--                        </div>--}}
+                                        {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, nostrum, aliquid, animi, ut quas placeat totam sunt tempora commodi nihil ullam alias modi dicta saepe minima ab quo voluptatem obcaecati?</p> --}}
 
-                                        {{--                        <div class="media mt-4">--}}
-                                        {{--                            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">--}}
-                                        {{--                            <div class="media-body">--}}
-                                        {{--                                <h5 class="mt-0">Commenter Name</h5>--}}
-                                        {{--                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.--}}
-                                        {{--                            </div>--}}
-                                        {{--                        </div>--}}
-
-                                        {{--                    </div>--}}
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        @endforelse
-
-                        <hr>
-
-                        <!-- Comments Form -->
+                                        {{-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, dolor quis. Sunt, ut, explicabo, aliquam tenetur ratione tempore quidem voluptates cupiditate voluptas illo saepe quaerat numquam recusandae? Qui, necessitatibus, est!</p> --}}
 
 
-                        <!-- Single Comment -->
-                        <div class="media mb-4">
-                            {{--                    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">--}}
-                            {{--                    <div class="media-body">--}}
-                            {{--                        <h5 class="mt-0">Commenter Name</h5>--}}
-                            {{--                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.--}}
-                            {{--                    </div>--}}
-                        </div>
 
-                        <!-- Comment with nested comments -->
-                        <div class="media mb-4">
-                            {{--                    <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">--}}
-                            {{--                    <div class="media-body">--}}
-                            {{--                        <h5 class="mt-0">Commenter Name</h5>--}}
-                            {{--                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.--}}
+                                        <hr>
 
-                            {{--                        <div class="media mt-4">--}}
-                            {{--                            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">--}}
-                            {{--                            <div class="media-body">--}}
-                            {{--                                <h5 class="mt-0">Commenter Name</h5>--}}
-                            {{--                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.--}}
-                            {{--                            </div>--}}
-                            {{--                        </div>--}}
+                                        <!-- Comments Form -->
 
-                            {{--                        <div class="media mt-4">--}}
-                            {{--                            <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">--}}
-                            {{--                            <div class="media-body">--}}
-                            {{--                                <h5 class="mt-0">Commenter Name</h5>--}}
-                            {{--                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.--}}
-                            {{--                            </div>--}}
-                            {{--                        </div>--}}
 
-                            {{--                    </div>--}}
-                        </div>
+                                        <!-- Single Comment -->
+                                        <div class="media mb-4">
+                                            {{-- <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt=""> --}}
+                                            {{-- <div class="media-body"> --}}
+                                            {{-- <h5 class="mt-0">Commenter Name</h5> --}}
+                                            {{-- Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. --}}
+                                            {{-- </div> --}}
+                                        </div>
 
-                    </div>
+                                        <!-- Comment with nested comments -->
+                                        <div class="media mb-4">
+                                            {{-- <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt=""> --}}
+                                            {{-- <div class="media-body"> --}}
+                                            {{-- <h5 class="mt-0">Commenter Name</h5> --}}
+                                            {{-- Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. --}}
 
-                    <!-- Sidebar Widgets Column -->
-                    <div class="col-md-4 mt-4">
+                                            {{-- <div class="media mt-4"> --}}
+                                            {{-- <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt=""> --}}
+                                            {{-- <div class="media-body"> --}}
+                                            {{-- <h5 class="mt-0">Commenter Name</h5> --}}
+                                            {{-- Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. --}}
+                                            {{-- </div> --}}
+                                            {{-- </div> --}}
 
-                        <!-- Search Widget -->
-                        <div class="card my-4">
-                            <h5 class="card-header">Search</h5>
-                            <div class="card-body">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search for...">
-                                    <span class="input-group-append">
-                                        <button class="btn btn-secondary" type="button">Go!</button>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
+                                            {{-- <div class="media mt-4"> --}}
+                                            {{-- <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt=""> --}}
+                                            {{-- <div class="media-body"> --}}
+                                            {{-- <h5 class="mt-0">Commenter Name</h5> --}}
+                                            {{-- Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. --}}
+                                            {{-- </div> --}}
+                                            {{-- </div> --}}
 
-                        <!-- Categories Widget -->
-                        <div class="card my-4">
-                            <h5 class="card-header">Categories</h5>
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <ul class="list-unstyled mb-0 ">
-                                            <li class="p-2">
-                                                <a href="#">Poems</a>
-                                            </li>
-                                            <li class="p-2">
-                                                <a href="#">Publishing</a>
-                                            </li>
-                                            <li class="p-2">
-                                                <a href="#">Editing</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <ul class="list-unstyled mb-0">
-                                            <li class="p-2">
-                                                <a href="#">Fiction</a>
-                                            </li>
-                                            <li class="p-2">
-                                                <a href="#">Proof Reading</a>
-                                            </li>
-                                            <li class="p-2">
-                                                <a href="#">Journeys</a>
-                                            </li>
-                                        </ul>
+                                            {{-- </div> --}}
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
-                        </div>
+        @endforelse
 
-                        <!-- Side Widget -->
-                        <div class="card my-4 mb-4">
-                            <h5 class="card-header">Featured Blogs</h5>
-                            <div class="card-body">
-                                @forelse($titles as $title)
-                                <p><a href="{{url('blogs?id='.$title->id)}}" class="mt-4">
-                                        {{$title->title}}</a></p>
-                                <hr>
-                                @empty
-                                <p>No featured blogs at the moment!</p>
-                                @endforelse
-                            </div>
-                            {{ $titles->links() }}
-                        </div>
+        <hr>
 
-                    </div>
+        <!-- Comments Form -->
 
+
+        <!-- Single Comment -->
+        <div class="media mb-4">
+            {{-- <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt=""> --}}
+            {{-- <div class="media-body"> --}}
+            {{-- <h5 class="mt-0">Commenter Name</h5> --}}
+            {{-- Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. --}}
+            {{-- </div> --}}
+        </div>
+
+        <!-- Comment with nested comments -->
+        <div class="media mb-4">
+            {{-- <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt=""> --}}
+            {{-- <div class="media-body"> --}}
+            {{-- <h5 class="mt-0">Commenter Name</h5> --}}
+            {{-- Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. --}}
+
+            {{-- <div class="media mt-4"> --}}
+            {{-- <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt=""> --}}
+            {{-- <div class="media-body"> --}}
+            {{-- <h5 class="mt-0">Commenter Name</h5> --}}
+            {{-- Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. --}}
+            {{-- </div> --}}
+            {{-- </div> --}}
+
+            {{-- <div class="media mt-4"> --}}
+            {{-- <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt=""> --}}
+            {{-- <div class="media-body"> --}}
+            {{-- <h5 class="mt-0">Commenter Name</h5> --}}
+            {{-- Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. --}}
+            {{-- </div> --}}
+            {{-- </div> --}}
+
+            {{-- </div> --}}
+        </div>
+
+    </div>
+
+    <!-- Sidebar Widgets Column -->
+    <div class="col-md-4 mt-4">
+
+        <!-- Search Widget -->
+        <div class="card my-4">
+            <h5 class="card-header">Search</h5>
+            <div class="card-body">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-append">
+                        <button class="btn btn-secondary" type="button">Go!</button>
+                    </span>
                 </div>
-                <!-- /.row -->
-
             </div>
-            <!-- /.container -->
+        </div>
 
-            <!-- Footer -->
-            <footer id="dk-footer" class="dk-footer text-white mt-4">
-                <div class="container">
+        <!-- Categories Widget -->
+        <div class="card my-4">
+            <h5 class="card-header">Categories</h5>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <ul class="list-unstyled mb-0 ">
+                            <li class="p-2">
+                                <a href="#">Poems</a>
+                            </li>
+                            <li class="p-2">
+                                <a href="#">Publishing</a>
+                            </li>
+                            <li class="p-2">
+                                <a href="#">Editing</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6">
+                        <ul class="list-unstyled mb-0">
+                            <li class="p-2">
+                                <a href="#">Fiction</a>
+                            </li>
+                            <li class="p-2">
+                                <a href="#">Proof Reading</a>
+                            </li>
+                            <li class="p-2">
+                                <a href="#">Journeys</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Side Widget -->
+        <div class="card my-4 mb-4">
+            <h5 class="card-header">Featured Blogs</h5>
+            <div class="card-body">
+                @forelse($titles as $title)
+                    <p><a href="{{ url('blogs?id=' . $title->id) }}" class="mt-4">
+                            {{ $title->title }}</a></p>
+                    <hr>
+                @empty
+                    <p>No featured blogs at the moment!</p>
+                @endforelse
+            </div>
+            {{ $titles->links() }}
+        </div>
+
+    </div>
+
+    </div>
+    <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer id="dk-footer" class="dk-footer text-white mt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-lg-4">
+                    <div class="dk-footer-box-info">
+                        <a href="index.html" class="footer-logo">
+                            <img src="{{ asset('images/scribelogo.svg') }}" alt="footer_logo" class=""
+                                height="100px">
+                        </a>
+                        <p class="footer-info-text">
+                            Scribe House recognises the scarcity of excellent, affordable editors in Uganda and
+                            Africa,
+                            and
+                            thus
+                            offers unique and specialised editing services.
+                        </p>
+                        <div class="footer-social-link">
+                            <h3>Follow us</h3>
+                            <ul>
+                                <li>
+                                    <a href="{{ url('https://www.facebook.com/scribehouse') }}">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('https://twitter.com/scribehouse') }}">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ url('https://www.instagram.com/scribehouse') }}">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- End Social link -->
+                    </div>
+                    <!-- End Footer info -->
+                    <div class="footer-awarad">
+                        <img src="images/icon/best.png" alt="">
+                        <p>ScribeHouse 2020</p>
+                    </div>
+                </div>
+                <!-- End Col -->
+                <div class="col-md-12 col-lg-8">
                     <div class="row">
-                        <div class="col-md-12 col-lg-4">
-                            <div class="dk-footer-box-info">
-                                <a href="index.html" class="footer-logo">
-                                    <img src="{{asset('images/scribelogo.svg')}}" alt="footer_logo" class=""
-                                        height="100px">
-                                </a>
-                                <p class="footer-info-text">
-                                    Scribe House recognises the scarcity of excellent, affordable editors in Uganda and
-                                    Africa,
-                                    and
-                                    thus
-                                    offers unique and specialised editing services.
+                        <div class="col-md-6">
+                            <div class="contact-us">
+                                <div class="contact-icon">
+                                    <i class="fa fa-map-o" aria-hidden="true"></i>
+                                </div>
+                                <!-- End contact Icon -->
+                                <div class="contact-info">
+                                    {{-- <h2>Kiira</h2> --}}
+                                    <h5>Kampala, Uganda.</h5>
+                                    <p> scribehouse.ug@gmail.com.</p>
+                                </div>
+                                <!-- End Contact Info -->
+                            </div>
+                            <!-- End Contact Us -->
+                        </div>
+                        <!-- End Col -->
+                        <div class="col-md-6">
+                            <div class="contact-us contact-us-last">
+                                <div class="contact-icon">
+                                    <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+                                </div>
+                                <!-- End contact Icon -->
+                                <div class="contact-info">
+                                    <h3>(+256)782-682-678.</h3>
+                                    {{-- <h3>(+256)-702-152894</h3> --}}
+                                    <p>Give us a call.</p>
+                                </div>
+                                <!-- End Contact Info -->
+                            </div>
+                            <!-- End Contact Us -->
+                        </div>
+                        <!-- End Col -->
+                    </div>
+                    <!-- End Contact Row -->
+                    <div class="row">
+                        <div class="col-md-12 col-lg-6">
+                            <div class="footer-widget footer-left-widget">
+                                <div class="section-heading">
+                                    <h3>Useful Links</h3>
+                                    <span class="animate-border-- border-black"></span>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <a href="{{ url('/#about') }}">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url('/#services') }}">Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url('/#gallery') }}">Projects</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url('/#team') }}">Our Team</a>
+                                    </li>
+                                </ul>
+                                <ul>
+                                    <li>
+                                        <a href="{{ url('/#contact') }}">Contact Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url('/#gallery') }}">Gallery</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ url('/#clients') }}">Clients</a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ '/#why' }}">Why Scribe House</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Footer Widget -->
+                        </div>
+                        <!-- End col -->
+                        <div class="col-md-12 col-lg-6">
+                            <div class="footer-widget">
+                                <div class="section-heading">
+                                    <h3>Subscribe</h3>
+                                    <span class="animate-border-- border-black"></span>
+                                </div>
+                                <p>
+                                    <!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
+                                    Subscribe to our news-letter to receive more updates and offers.
                                 </p>
-                                <div class="footer-social-link">
-                                    <h3>Follow us</h3>
-                                    <ul>
-                                        <li>
-                                            <a href="{{url('https://www.facebook.com/scribehouse')}}">
-                                                <i class="fa fa-facebook"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{url('https://twitter.com/scribehouse')}}">
-                                                <i class="fa fa-twitter"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="{{url('https://www.instagram.com/scribehouse')}}">
-                                                <i class="fa fa-instagram"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- End Social link -->
-                            </div>
-                            <!-- End Footer info -->
-                            <div class="footer-awarad">
-                                <img src="images/icon/best.png" alt="">
-                                <p>ScribeHouse 2020</p>
-                            </div>
-                        </div>
-                        <!-- End Col -->
-                        <div class="col-md-12 col-lg-8">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="contact-us">
-                                        <div class="contact-icon">
-                                            <i class="fa fa-map-o" aria-hidden="true"></i>
+                                <form action="#">
+                                    <div class="form-row">
+                                        <div class="col dk-footer-form">
+                                            <input type="email" class="form-control" placeholder="Email Address">
+                                            <button type="submit">
+                                                <i class="fa fa-send"></i>
+                                            </button>
                                         </div>
-                                        <!-- End contact Icon -->
-                                        <div class="contact-info">
-                                            {{--                                <h2>Kiira</h2>--}}
-                                            <h5>Kampala, Uganda.</h5>
-                                            <p> scribehouse.ug@gmail.com.</p>
-                                        </div>
-                                        <!-- End Contact Info -->
                                     </div>
-                                    <!-- End Contact Us -->
-                                </div>
-                                <!-- End Col -->
-                                <div class="col-md-6">
-                                    <div class="contact-us contact-us-last">
-                                        <div class="contact-icon">
-                                            <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
-                                        </div>
-                                        <!-- End contact Icon -->
-                                        <div class="contact-info">
-                                            <h3>(+256)782-682-678.</h3>
-                                            {{--                                <h3>(+256)-702-152894</h3>--}}
-                                            <p>Give us a call.</p>
-                                        </div>
-                                        <!-- End Contact Info -->
-                                    </div>
-                                    <!-- End Contact Us -->
-                                </div>
-                                <!-- End Col -->
+                                </form>
+                                <!-- End form -->
                             </div>
-                            <!-- End Contact Row -->
-                            <div class="row">
-                                <div class="col-md-12 col-lg-6">
-                                    <div class="footer-widget footer-left-widget">
-                                        <div class="section-heading">
-                                            <h3>Useful Links</h3>
-                                            <span class="animate-border-- border-black"></span>
-                                        </div>
-                                        <ul>
-                                            <li>
-                                                <a href="{{url('/#about')}}">About Us</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{url('/#services')}}">Services</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{url('/#gallery')}}">Projects</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{url('/#team')}}">Our Team</a>
-                                            </li>
-                                        </ul>
-                                        <ul>
-                                            <li>
-                                                <a href="{{url('/#contact')}}">Contact Us</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{url('/#gallery')}}">Gallery</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{url('/#clients')}}">Clients</a>
-                                            </li>
-                                            <li>
-                                                <a href="{{('/#why')}}">Why Scribe House</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!-- End Footer Widget -->
-                                </div>
-                                <!-- End col -->
-                                <div class="col-md-12 col-lg-6">
-                                    <div class="footer-widget">
-                                        <div class="section-heading">
-                                            <h3>Subscribe</h3>
-                                            <span class="animate-border-- border-black"></span>
-                                        </div>
-                                        <p>
-                                            <!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
-                                            Subscribe to our news-letter to receive more updates and offers.</p>
-                                        <form action="#">
-                                            <div class="form-row">
-                                                <div class="col dk-footer-form">
-                                                    <input type="email" class="form-control"
-                                                        placeholder="Email Address">
-                                                    <button type="submit">
-                                                        <i class="fa fa-send"></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </form>
-                                        <!-- End form -->
-                                    </div>
-                                    <!-- End footer widget -->
-                                </div>
-                                <!-- End Col -->
-                            </div>
-                            <!-- End Row -->
+                            <!-- End footer widget -->
                         </div>
                         <!-- End Col -->
                     </div>
-                    <!-- End Widget Row -->
+                    <!-- End Row -->
                 </div>
-                <!-- End Contact Container -->
+                <!-- End Col -->
+            </div>
+            <!-- End Widget Row -->
+        </div>
+        <!-- End Contact Container -->
 
 
-                <div class="copyright">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <span>Copyright © 2020, All Right Reserved.</span>
-                            </div>
-                            <!-- End Col -->
-                            <div class="col-md-6">
-                                <div class="copyright-menu">
-                                    <ul>
-                                        <li>
-                                            <a href="#">Home</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Terms</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Privacy Policy</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Contact</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!-- End col -->
-                        </div>
-                        <!-- End Row -->
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <span>Copyright © 2020, All Right Reserved.</span>
                     </div>
-                    <!-- End Copyright Container -->
+                    <!-- End Col -->
+                    <div class="col-md-6">
+                        <div class="copyright-menu">
+                            <ul>
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
+                                <li>
+                                    <a href="#">Terms</a>
+                                </li>
+                                <li>
+                                    <a href="#">Privacy Policy</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- End col -->
                 </div>
-                <!-- End Copyright -->
-                <!-- Back to top -->
-                <div id="back-to-top" class="back-to-top">
-                    <button class="btn btn-dark" title="Back to Top" style="display: block;">
-                        <i class="fa fa-angle-up"></i>
-                    </button>
-                </div>
-                <!-- End Back to top -->
-            </footer>
+                <!-- End Row -->
+            </div>
+            <!-- End Copyright Container -->
+        </div>
+        <!-- End Copyright -->
+        <!-- Back to top -->
+        <div id="back-to-top" class="back-to-top">
+            <button class="btn btn-dark" title="Back to Top" style="display: block;">
+                <i class="fa fa-angle-up"></i>
+            </button>
+        </div>
+        <!-- End Back to top -->
+    </footer>
 
-            <!-- Bootstrap core JavaScript -->
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-                crossorigin="anonymous">
-            </script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-                crossorigin="anonymous">
-            </script>
-            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-                crossorigin="anonymous">
-            </script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 
 </body>
 
