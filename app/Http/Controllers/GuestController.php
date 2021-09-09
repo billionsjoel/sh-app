@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Messages;
+use App\Models\Comments;
 use App\Models\subscriptions;
 
 class GuestController extends Controller
@@ -32,8 +33,21 @@ class GuestController extends Controller
 
         $message->save();
 
-        session()->flash('message', 'Your Message has been sent successfully! ✅ ');
+
 
         return redirect('/');
+    }
+
+    public function postComment(Request $request, $id)
+    {
+        $comment = new Comments();
+
+        $comment->bid = $id;
+
+        $comment->comment = request()->comment;
+
+        $comment->save();
+
+        return redirect()->back()->with('message', 'Comment posted! ✅ ');
     }
 }

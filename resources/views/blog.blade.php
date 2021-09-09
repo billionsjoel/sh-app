@@ -16,6 +16,23 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/blog-post.css') }}" rel="stylesheet">
     <style>
@@ -563,14 +580,32 @@
         }
 
     </style>
+    <style>
+        .flash-message {
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            z-index: 100;
+        }
+
+    </style>
+
 </head>
 
 <body>
 
+    @if ($flash = session('message'))
+
+        <div id="flash-message" class="alert alert-success flash-message mt-4" role="alert">
+
+            {{ $flash }}
+
+        </div>
+
+    @endif
     <!-- Navigation -->
     <section>
-        <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top scrolled fixed-top shadow-lg small"
-            id="header">
+        <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top scrolled fixed-top shadow-lg small" id="header">
             <img src="{{ asset('/images/scribelogo.svg') }}" alt="" width="5%" class="ml-4">
             <a class="navbar-brand ml-4" href="{{ url('/') }}">Scribe House</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
@@ -666,12 +701,12 @@
                     <div class="card my-4">
                         <h5 class="card-header">Leave a Comment:</h5>
                         <div class="card-body">
-                            <form action="">
+                            <form action="{{ url('/comments/' . $blog->id) }}" method="POST">
                                 @csrf
                                 <div class="form-group">
-                                    <textarea class="form-control" rows="3"></textarea>
+                                    <textarea class="form-control" rows="3" name="comment"></textarea>
                                 </div>
-                                <div class="btn btn-primary">Submit</div>
+                                <input class="btn btn-primary" type="submit">
                             </form>
                         </div>
                     </div>
@@ -772,17 +807,24 @@
 
         <hr>
 
+
         <!-- Comments Form -->
 
-
         <!-- Single Comment -->
-        <div class="media mb-4">
-            {{-- <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt=""> --}}
-            {{-- <div class="media-body"> --}}
-            {{-- <h5 class="mt-0">Commenter Name</h5> --}}
-            {{-- Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus. --}}
-            {{-- </div> --}}
-        </div>
+
+        @forelse ($comments as $comment)
+            <div class="media mb-4">
+                <img class="d-flex mr-3 rounded-circle" src="http://placehold.it/50x50" alt="">
+                <div class="media-body">
+                    <h5 class="mt-0">User</h5>
+                    {{ $comment->comment }}
+                </div>
+            </div>
+            <hr>
+        @empty
+            <p>There are no comments on this blog at the moment. Be the first to comment</p>
+        @endforelse
+
 
         <!-- Comment with nested comments -->
         <div class="media mb-4">
@@ -893,8 +935,8 @@
                 <div class="col-md-12 col-lg-4">
                     <div class="dk-footer-box-info">
                         <a href="index.html" class="footer-logo">
-                            <img src="{{ asset('images/scribelogo.svg') }}" alt="footer_logo" class=""
-                                height="100px">
+                            <img src="{{ asset('images/scribelogo.svg') }}" alt="footer_logo"
+                                class="___class_+?81___" height="100px">
                         </a>
                         <p class="footer-info-text">
                             Scribe House recognises the scarcity of excellent, affordable editors in Uganda and
@@ -1082,16 +1124,10 @@
         </div>
         <!-- End Back to top -->
     </footer>
-
-    <!-- Bootstrap core JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    <script>
+        setTimeout(function() {
+            $('#flash-message').fadeOut('slow');
+        }, 3000);
     </script>
 
 </body>

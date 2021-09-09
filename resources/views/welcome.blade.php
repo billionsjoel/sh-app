@@ -959,8 +959,7 @@
         </div>
     </header>
     <section>
-        <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top scrolled fixed-top shadow-lg small"
-            id="header">
+        <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top scrolled fixed-top shadow-lg small" id="header">
             <img src="{{ asset('/images/scribelogo.svg') }}" alt="" width="5%" class="ml-4">
             <a class="navbar-brand ml-4" href="{{ url('/') }}">Scribe House</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
@@ -1197,7 +1196,7 @@
             @endforelse
             <div class="cta p-4 text-center w-100">
                 <div class="btn border-bottom text-center text-primary">
-                    <a href="{{ url('/blogs?id=1') }}">See all our Blogs <svg width="1em" height="1em"
+                    <a href="{{ url('/view-all-blogs') }}">See all our Blogs <svg width="1em" height="1em"
                             viewBox="0 0 16 16" class="bi bi-arrow-right-circle-fill" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
@@ -1248,7 +1247,8 @@
                                     style="height: 80px; width: 80px; border-radius: 100%">
                             </div>
                             <div class="info ml-2 p-2">
-                                <span class="small big">Ronald K Ssekajja,</span> <br><span class="big">Poet &
+                                <span class="small big">Ronald K Ssekajja,</span> <br><span
+                                    class="big">Poet &
                                     Author.</span>
                             </div>
                             <div class="link ml-auto mr-4">
@@ -1291,7 +1291,8 @@
                             <div class="icon ml-2 mt-4">
                                 <i class="fas fa-quote-left text-warning p-2" style="font-size: 2rem; opacity:0.3"></i>
                             </div>
-                            <p class="p-4">If I had to recommend a way of becoming a great author in the world
+                            <p class="p-4">If I had to recommend a way of becoming a great author in the
+                                world
                                 today, it would
                                 be publishing with @scribehouse.</p>
                         </div>
@@ -1325,7 +1326,7 @@
             <h1 class="text-center">Latest Books</h1>
             <div class="bks-border mb-4"></div>
         </div>
-        <div class="">
+        <div class="___class_+?161___">
             <div class="row">
                 @forelse ($covers as $cover)
                     <div class="col-sm-4">
@@ -1409,8 +1410,8 @@
                                     value="" />
                             </div>
                             <div class="form-group">
-                                <input type="text" name="phone" class="form-control" placeholder="Your Phone Number *"
-                                    value="" />
+                                <input type="text" name="phone" class="form-control"
+                                    placeholder="Your Phone Number *" value="" />
                             </div>
                         </div>
                         <div class="col-md-6">
@@ -1434,8 +1435,8 @@
                 <div class="col-md-12 col-lg-4">
                     <div class="dk-footer-box-info">
                         <a href="index.html" class="footer-logo">
-                            <img src="{{ asset('images/scribelogo.svg') }}" alt="footer_logo" class=""
-                                height="100px">
+                            <img src="{{ asset('images/scribelogo.svg') }}" alt="footer_logo"
+                                class="___class_+?210___" height="100px">
                         </a>
                         <p class="footer-info-text">
                             Scribe House recognises the scarcity of excellent, affordable editors in Uganda and Africa,

@@ -1,13 +1,17 @@
 <?php
 
+use App\Http\Controllers\GuestController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Blog;
 use App\Models\BookCover;
 use App\Models\Messages;
+use App\Models\Comments;
 use App\Models\Testimonials;
 use Carbon\Carbon;
 
 use Doctrine\DBAL\Driver\SQLSrv\LastInsertId;
+
+// use Egulias\EmailValidator\Warning\Comment;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,8 +36,17 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 });
-Route::get('/b', function () {
-    return view('b');
+Route::get('/view-all-blogs', function () {
+
+ // retrieve all blogs
+
+    $featured   = blog::where('status', 1)->first();
+    $latest     = blog::where('status', 2)->first();
+    $promoted   = blog::where('status', 3)->first();
+    $blogs      = blog::paginate(5);
+
+
+    return view('allBlogs', compact('featured', 'latest', 'promoted', 'blogs'));
 });
 
 
@@ -42,10 +55,10 @@ Route::get('/blogs', function () {
     // retrieve latest blog
 
     $blogs = blog::where('id', request('id'))->get();
-
+    $comments = Comments::where('bid', request('id'))->paginate(10);
     $titles = blog::paginate(5);
 
-    return view('blog', compact('blogs', 'titles'));
+    return view('blog', compact('blogs', 'titles', 'comments'));
 });
 
 Route::get('/covers', function () {
@@ -61,6 +74,7 @@ Route::get('/covers', function () {
 
 Route::post('/subscribe', [App\Http\Controllers\GuestController::class, 'subscribe']);
 Route::post('/messages', [App\Http\Controllers\GuestController::class, 'getMessages']);
+Route::post('/comments/{id}', [App\Http\Controllers\GuestController::class, 'postComment']);
 
 
 Auth::routes([
