@@ -1112,7 +1112,7 @@
         </div>
         <div class="row">
             <div class="d-flex flex-column flex-md-row justfiy-content-center t-cards">
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <div class="card mb-4 card-container" style="width: 20rem;">
                         <img class="card-img-top" src="{{ asset('images/img1.jpg') }}" alt="Card image cap">
                         <figcaption class="caption text-white">CRYSTAL <p> Publishing Director
@@ -1124,7 +1124,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <div class="card mb-4 card-container" style="width: 20rem;">
                         <img class="card-img-top" src="{{ asset('images/img2.jpg') }}" alt="Card image cap">
                         <figcaption class="caption text-white">CAROLE <p> Administrative Director
@@ -1136,7 +1136,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-3">
                     <div class="card mb-4 card-container" style="width: 20rem;">
                         <img class="card-img-top" src="{{ asset('images/img3.jpg') }}" alt="Card image cap">
                         <figcaption class="caption text-white">FAITH <p> Managing Editor
@@ -1149,18 +1149,80 @@
                     </div>
                 </div>
 
-                {{-- <div class="col-sm-3">
-                    <div class="card mb-4" style="width: 18rem;">
-                        <img class="card-img-top" src="{{asset('images/member3.jpeg')}}" alt="Card image cap">
-                <div class="card-body">
-                    <p class="card-text text-danger">Charles</p>
-                    <p class="card-text">Junior Scribes Coordinator</p>
+                <div class="col-sm-3">
+                    <div class="card mb-4 card-container" style="width: 20rem;">
+                        <img class="card-img-top" src="{{ asset('images/joseph.jpg') }}" alt="Card image cap">
+                        <figcaption class="caption text-white">JOSEPH <p> Consultant-Academic Publishing
+                            <p>
+                        </figcaption>
+                        <div class="card-body card-body-text">
+                            <p class="card-text text-danger">Joseph B(PhD)</p>
+                            <p class="card-text">Consultant-Academic Publishing</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div> --}}
-            </div>
 
-        </div>
+            <div class="row">
+                <div class="d-flex flex-column flex-md-row justfiy-content-center t-cards">
+                    <div class="col-sm-3">
+                        <div class="card mb-4 card-container" style="width: 20rem;">
+                            <img class="card-img-top" src="{{ asset('images/correen.jpg') }}" alt="Card image cap">
+                            <figcaption class="caption text-white">COREEN <p> (Founder of KempiihArt)
+                                    Illustrator and Book Design Partner
+                                <p>
+                            </figcaption>
+                            <div class="card-body card-body-text">
+                                <p class="card-text text-danger">COREEN</p>
+                                <p class="card-text">(Founder of KempiihArt)
+                                    Illustrator and Book Design Partner</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card mb-4 card-container" style="width: 20rem;">
+                            <img class="card-img-top" src="{{ asset('images/hassan.jpg') }}" alt="Card image cap">
+                            <figcaption class="caption text-white">HASSAN <p> Writer | Editor
+                                <p>
+                            </figcaption>
+                            <div class="card-body card-body-text">
+                                <p class="card-text text-danger">Hassan</p>
+                                <p class="card-text">Writer | Editor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card mb-4 card-container" style="width: 20rem;">
+                            <img class="card-img-top" src="{{ asset('images/patricia.jpg') }}"
+                                alt="Card image cap">
+                            <figcaption class="caption text-white">PATRICIA <p> Writer | Associate Editor | Poetry
+                                    Editor
+                                <p>
+                            </figcaption>
+                            <div class="card-body card-body-text">
+                                <p class="card-text text-danger">Patricia</p>
+                                <p class="card-text">Writer | Associate Editor | Poetry Editor</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="card mb-4 card-container" style="width: 20rem;">
+                            <img class="card-img-top" src="{{ asset('images/henry.jpg') }}" alt="Card image cap">
+                            <figcaption class="caption text-white">PATRICIA <p> (Founder of ArmUp Media)
+                                    Book Design Partner
+                                <p>
+                            </figcaption>
+                            <div class="card-body card-body-text">
+                                <p class="card-text text-danger">HENRY</p>
+                                <p class="card-text">(Founder of ArmUp Media)
+                                    Book Design Partner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
     </section>
 
     <section class="blogs mt-4" id="blogs">
