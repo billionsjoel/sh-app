@@ -1151,7 +1151,7 @@
 
                 <div class="col-sm-3">
                     <div class="card mb-4 card-container" style="width: 20rem;">
-                        <img class="card-img-top" src="{{ asset('images/joseph.jpg') }}" alt="Card image cap">
+                        <img class="card-img-top" src="{{ asset('images/joseph.jpeg') }}" alt="Card image cap">
                         <figcaption class="caption text-white">JOSEPH <p> Consultant-Academic Publishing
                             <p>
                         </figcaption>
@@ -1167,7 +1167,8 @@
                 <div class="d-flex flex-column flex-md-row justfiy-content-center t-cards">
                     <div class="col-sm-3">
                         <div class="card mb-4 card-container" style="width: 20rem;">
-                            <img class="card-img-top" src="{{ asset('images/correen.jpg') }}" alt="Card image cap">
+                            <img class="card-img-top" src="{{ asset('images/correen.jpeg') }}"
+                                alt="Card image cap">
                             <figcaption class="caption text-white">COREEN <p> (Founder of KempiihArt)
                                     Illustrator and Book Design Partner
                                 <p>
@@ -1181,7 +1182,8 @@
                     </div>
                     <div class="col-sm-3">
                         <div class="card mb-4 card-container" style="width: 20rem;">
-                            <img class="card-img-top" src="{{ asset('images/hassan.jpg') }}" alt="Card image cap">
+                            <img class="card-img-top" src="{{ asset('images/hassan.jpeg') }}"
+                                alt="Card image cap">
                             <figcaption class="caption text-white">HASSAN <p> Writer | Editor
                                 <p>
                             </figcaption>
@@ -1193,7 +1195,7 @@
                     </div>
                     <div class="col-sm-3">
                         <div class="card mb-4 card-container" style="width: 20rem;">
-                            <img class="card-img-top" src="{{ asset('images/patricia.jpg') }}"
+                            <img class="card-img-top" src="{{ asset('images/patricia.jpeg') }}"
                                 alt="Card image cap">
                             <figcaption class="caption text-white">PATRICIA <p> Writer | Associate Editor | Poetry
                                     Editor
@@ -1208,7 +1210,7 @@
 
                     <div class="col-sm-3">
                         <div class="card mb-4 card-container" style="width: 20rem;">
-                            <img class="card-img-top" src="{{ asset('images/henry.jpg') }}" alt="Card image cap">
+                            <img class="card-img-top" src="{{ asset('images/henry.jpeg') }}" alt="Card image cap">
                             <figcaption class="caption text-white">PATRICIA <p> (Founder of ArmUp Media)
                                     Book Design Partner
                                 <p>
