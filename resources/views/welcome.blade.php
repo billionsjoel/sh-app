@@ -1216,7 +1216,7 @@ E8F0F2 - very light
                         <div class="chev"><i class="fa fa-angle-right chev-color"></i></div>
                     </div>
                     <div class="inner">
-                        <div class="title">
+                        <div class="title mt-3">
                             <h5>WHISPERS</h5>
                         </div>
                         <div class="description text-center p-2">Poems during South sudan civial war.</div>
@@ -1233,7 +1233,7 @@ E8F0F2 - very light
                         <div class="chev"><i class="fa fa-angle-right chev-color"></i></div>
                     </div>
                     <div class="inner">
-                        <div class="title">
+                        <div class="title mt-3">
                             <h5>MY JESUS STORY</h5>
                         </div>
                         <div class="description text-center p-2">Dramatic tales of life, love and laughter.</div>
@@ -1250,7 +1250,7 @@ E8F0F2 - very light
                         <div class="chev"><i class="fa fa-angle-right chev-color"></i></div>
                     </div>
                     <div class="inner">
-                        <div class="title">
+                        <div class="title mt-3">
                             <h5>EMONEVATE</h5>
                         </div>
                         <div class="description text-center p-2">Prolific write, literary critic and blogger.</div>
@@ -1268,12 +1268,12 @@ E8F0F2 - very light
 
                     </div>
                     <div class="inner">
-                        <div class="title">
+                        <div class="title mt-3">
                             <h5>PUMPKIN SOUP</h5>
                         </div>
                         <div class="description text-center p-2">Tidbits of life in the eyes of Joel Benjamin Ntwatwa.
                         </div>
-                        <div class="btn btn-book shadow">&nbsp;&nbsp;Buy Book &nbsp;&nbsp;<i
+                        <div class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book &nbsp;&nbsp;<i
                                 class="fa fa-angle-right"></i>
                         </div>
                     </div>
