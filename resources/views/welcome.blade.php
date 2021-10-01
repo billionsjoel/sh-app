@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
+<!--
+Our color pallette
+
+053742- thick
+39A2DB - blue
+A2DBFA - Light blue
+E8F0F2 - very light
+  -->
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -681,6 +690,158 @@
         }
 
     </style>
+    <style>
+        .books {
+            min-height: 80vh;
+        }
+
+        .blue {
+            color: #39A2DB;
+        }
+
+        .content {
+            display: flex;
+            width: 100%;
+        }
+
+        .left {
+            width: 100%;
+            flex-basis: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .l-content {
+            max-width: 100%;
+            margin-top: 8rem;
+            margin-left: 20%;
+        }
+
+        .lb-paragraph {
+            margin-top: 4rem;
+            font-size: 1.6rem;
+        }
+
+        .right {
+            flex-basis: 100%;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+
+        .r-content {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .r-content:hover {
+            color: #071d22;
+        }
+
+        @media (min-width:572px) {
+            .r-content {
+                position: absolute;
+                left: 0%;
+                bottom: 0;
+            }
+        }
+
+        @media (min-width:992px) {
+            .r-content {
+                position: absolute;
+                left: 10%;
+                bottom: 0;
+            }
+        }
+
+        @media (min-width:1280px) {
+            .r-content {
+                position: absolute;
+                left: 100%;
+                bottom: 0;
+            }
+        }
+
+
+        .b-icon {
+            color: #39A2DB;
+            font-size: 4rem;
+            margin-right: 20px;
+        }
+
+        .b-image {
+            height: 5rem;
+            width: 5rem;
+            border-radius: 100%;
+            margin-left: 20px;
+        }
+
+        .wrapper {
+            max-width: 100%;
+            height: 400px;
+            margin-top: 10rem;
+        }
+
+        .outer {
+            max-width: 100%;
+            height: 400px;
+            width: 70%;
+            position: absolute;
+            margin-left: 2rem;
+        }
+
+        .inner {
+            width: 60%;
+            height: 200px;
+            background-color: #39A2DB;
+            position: relative;
+            left: 30%;
+            top: 60%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+
+        .inner:hover {
+            background-color: #A2DBFA;
+
+        }
+
+        .b-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .btn-book {
+            border-radius: 20px;
+            background-color: #A2DBFA;
+        }
+
+        .btn-book:hover {
+            background-color: #E8F0F2;
+        }
+
+        .chev {
+            font-size: 10rem;
+            position: relative;
+            left: 90%;
+            top: -110%;
+            opacity: 0.4;
+            background: -moz-linear-gradient(to left, #39A2DB 0%, #A2DBFA 100%);
+            background: -webkit-linear-gradient(to left, #39A2DB 0%, #A2DBFA 100%);
+            background: linear-gradient(to left, #39A2DB 0%, #A2DBFA 100%);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+    </style>
 
     <style>
         .about {
@@ -690,6 +851,7 @@
             justify-content: center;
             flex-direction: column;
             background-color: transparent;
+            margin-top: 10rem;
         }
 
         .ab-border {
@@ -933,6 +1095,7 @@
         }
 
     </style>
+
 </head>
 
 <body>
@@ -972,6 +1135,10 @@
                         <a class="nav-link ml-4" href="{{ url('/#home') }}"> Home <span
                                 class="sr-only">(current)</span></a>
                     </li>
+                    <li class="nav-item active">
+                        <a class="nav-link ml-4" href="{{ url('/#covers') }}"> Our Projects <span
+                                class="sr-only">(current)</span></a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link ml-4" href="{{ url('/#about') }}">About <span
                                 class="sr-only">(current)</span></a>
@@ -1000,6 +1167,117 @@
             </div>
         </nav>
     </section>
+
+    <section class="books" id="covers">
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-8">
+                    <div class="left">
+                        <div class="l-content">
+                            <div class="heading display-3">What do you want to <span class="blue"> achieve?
+                                </span>
+                            </div>
+                            <div class="lb-paragraph">Start with a goal, get a plan, and set targets for that goal.
+                                SCRIBE HOUSE
+                                focuses
+                                on
+                                helping you achieve your desired goal.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="right">
+                        <div class="r-content">
+                            <div class="b-icon"><a href="{{ url('/covers') }}"
+                                    class="text-decoration-none"><i class="fas fa-caret-right"></i></a></div>
+                            <div class="title">
+                                <h5> <a href="{{ url('/covers') }}" class="text-black text-decoration-none">OUR
+                                        WORKS</a> </h5>
+                            </div>
+                            <div class="image">
+                                <a href="{{ url('/covers') }}" class="text-decoration-none"><img
+                                        class="b-image" src="{{ asset('images/billions.jpeg') }}" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 mt-4">
+                <div class="wrapper">
+                    <div class="outer">
+                        <img class="b-img shadow" src="{{ asset('images/bookcovers/book4.jpeg') }}" alt="">
+                        <div class="chev"><i class="fa fa-angle-right chev-color"></i></div>
+                    </div>
+                    <div class="inner">
+                        <div class="title">
+                            <h5>WHISPERS</h5>
+                        </div>
+                        <div class="description text-center">Poems during South sudan civial war.</div>
+                        <div class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book &nbsp;&nbsp;<i
+                                class="fa fa-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mt-4">
+                <div class="wrapper">
+                    <div class="outer">
+                        <img class="b-img shadow" src="{{ asset('images/bookcovers/book1.jpeg') }}" alt="">
+                        <div class="chev"><i class="fa fa-angle-right chev-color"></i></div>
+                    </div>
+                    <div class="inner">
+                        <div class="title">
+                            <h5>MY JESUS STORY</h5>
+                        </div>
+                        <div class="description text-center">Dramatic tales of life, love and laughter.</div>
+                        <div class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book &nbsp;&nbsp;<i
+                                class="fa fa-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mt-4">
+                <div class="wrapper">
+                    <div class="outer">
+                        <img class="b-img shadow" src="{{ asset('images/bookcovers/book2.jpeg') }}" alt="">
+                        <div class="chev"><i class="fa fa-angle-right chev-color"></i></div>
+                    </div>
+                    <div class="inner">
+                        <div class="title">
+                            <h5>EMONEVATE</h5>
+                        </div>
+                        <div class="description text-center">Prolific write, literary critic and blogger.</div>
+                        <div class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book &nbsp;&nbsp;<i
+                                class="fa fa-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mt-4">
+                <div class="wrapper">
+                    <div class="outer">
+                        <img class="b-img shadow mb-3" src="{{ asset('images/bookcovers/book3.jpeg') }}" alt="">
+                        <div class="chev"><i class="fa fa-angle-right chev-color"></i></div>
+
+                    </div>
+                    <div class="inner">
+                        <div class="title">
+                            <h5>PUMPKIN SOUP</h5>
+                        </div>
+                        <div class="description text-center">Tidbits of life in the eyes of Joel Benjamin Ntwatwa.</div>
+                        <div class="btn btn-book shadow">&nbsp;&nbsp;Buy Book &nbsp;&nbsp;<i
+                                class="fa fa-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
 
     <section class="about" id="about">
         <h1 class="text-center s-title">About Us</h1>
@@ -1167,7 +1445,8 @@
                 <div class="d-flex flex-column flex-md-row justfiy-content-center t-cards">
                     <div class="col-sm-3">
                         <div class="card mb-4 card-container" style="width: 20rem;">
-                            <img class="card-img-top" src="{{ asset('images/correen.jpg') }}" alt="Card image cap">
+                            <img class="card-img-top" src="{{ asset('images/correen.jpg') }}"
+                                alt="Card image cap">
                             <figcaption class="caption text-white">COREEN <p> (Founder of KempiihArt)
                                     Illustrator and Book Design Partner
                                 <p>
