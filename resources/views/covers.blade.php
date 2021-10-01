@@ -16,7 +16,7 @@
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('js/app.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{asset('fontawesome/css/all.css')}}">
+    <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -57,6 +57,7 @@
             -webkit-text-size-adjust: 100%;
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         }
+
     </style>
 
     <style>
@@ -580,6 +581,7 @@
             background: #FA6742;
             border-color: #FA6742;
         }
+
     </style>
 
     <style>
@@ -639,6 +641,7 @@
             color: rgb(209, 75, 51);
 
         }
+
     </style>
 
     <style>
@@ -663,6 +666,7 @@
             word-spacing: 0.2rem;
             line-height: 3rem;
         }
+
     </style>
 
     <style>
@@ -726,6 +730,7 @@
                 background-color: #0976B4;
             }
         } */
+
     </style>
 
     <style>
@@ -757,6 +762,7 @@
             height: 0.3rem;
             width: 3rem;
         }
+
     </style>
 
     <style>
@@ -796,16 +802,16 @@
             margin-top: 15px;
             margin-bottom: 15px;
         }
+
     </style>
 
 </head>
 
 <body>
     <section>
-        <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top scrolled fixed-top shadow-lg small"
-            id="header">
-            <img src="{{asset('/images/scribelogo.svg')}}" alt="" width="5%" class="ml-4">
-            <a class="navbar-brand ml-4" href="{{url('/')}}">Scribe House</a>
+        <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top scrolled fixed-top shadow-lg small" id="header">
+            <img src="{{ asset('/images/scribelogo.svg') }}" alt="" width="5%" class="ml-4">
+            <a class="navbar-brand ml-4" href="{{ url('/') }}">Scribe House</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
                 aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -813,33 +819,37 @@
             <div class="collapse navbar-collapse" id="navbarsExample04">
                 <ul class="navbar-nav ml-auto p-3 mr-4">
                     <li class="nav-item active">
-                        <a class="nav-link ml-4" href="{{url('/#home')}}"> Home <span
+                        <a class="nav-link ml-4" href="{{ url('/#home') }}"> Home <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link ml-4" href="{{ url('/#covers') }}"> Our Projects <span
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ml-4" href="{{url('/#about')}}">About <span
+                        <a class="nav-link ml-4" href="{{ url('/#about') }}">About <span
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ml-4" href="{{url('/#services')}}">Services</a>
+                        <a class="nav-link ml-4" href="{{ url('/#services') }}">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ml-4" href="{{url('/#blogs')}}">Blogs</a>
+                        <a class="nav-link ml-4" href="{{ url('/#blogs') }}">Blogs</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ml-4 " href="{{url('/#team')}}">Team</a>
+                        <a class="nav-link ml-4 " href="{{ url('/#team') }}">Team</a>
                     </li>
                     <li class="nav-item mr-4 ">
-                        <a class="nav-link ml-4 " href="{{url('/#contact')}}">Contact</a>
+                        <a class="nav-link ml-4 " href="{{ url('/#contact') }}">Contact</a>
                     </li>
-                    {{--            <li class="nav-item dropdown">--}}
-                    {{--                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>--}}
-                    {{--                <div class="dropdown-menu" aria-labelledby="dropdown04">--}}
-                    {{--                    <a class="dropdown-item" href="#">Action</a>--}}
-                    {{--                    <a class="dropdown-item" href="#">Another action</a>--}}
-                    {{--                    <a class="dropdown-item" href="#">Something else here</a>--}}
-                    {{--                </div>--}}
-                    {{--            </li>--}}
+                    {{-- <li class="nav-item dropdown"> --}}
+                    {{-- <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a> --}}
+                    {{-- <div class="dropdown-menu" aria-labelledby="dropdown04"> --}}
+                    {{-- <a class="dropdown-item" href="#">Action</a> --}}
+                    {{-- <a class="dropdown-item" href="#">Another action</a> --}}
+                    {{-- <a class="dropdown-item" href="#">Something else here</a> --}}
+                    {{-- </div> --}}
+                    {{-- </li> --}}
                 </ul>
             </div>
         </nav>
@@ -849,35 +859,35 @@
         <div class="container">
             <div class="row">
                 @forelse ($covers as $cover)
-                <div class="col-sm-6 py-2" style="width: 26rem;">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">{{$cover->title}}</h4>
-                        </div>
-                        <img class="card-img-top" src="{{ asset('/images/bookcovers/'.$cover->image) }}"
-                            alt="Card image cap" style="height: 100%; width: 100%; object-fit: contain">
-                        <div class="card-body">
-                            <h5 class="card-title">Description</h5>
-                            <p class="card-text">{!! $cover->description !!}</p>
-                            <p href="#" class="small text-secondar"> <span class="text-dark">Genre :</span>
-                                {{$cover->genre}}</p>
-                            <a href="#" class="small"><span class="text-success">Author :
-                                </span><b class="text-info">{{ $cover->author }}</b></a>
-                            <br>
-                            <a href="#" class="btn btn-primary btn-block mt-2">Buy This Book</a>
+                    <div class="col-sm-6 py-2" style="width: 26rem;">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">{{ $cover->title }}</h4>
+                            </div>
+                            <img class="card-img-top" src="{{ asset('/images/bookcovers/' . $cover->image) }}"
+                                alt="Card image cap" style="height: 100%; width: 100%; object-fit: contain">
+                            <div class="card-body">
+                                <h5 class="card-title">Description</h5>
+                                <p class="card-text">{!! $cover->description !!}</p>
+                                <p href="#" class="small text-secondar"> <span class="text-dark">Genre :</span>
+                                    {{ $cover->genre }}</p>
+                                <a href="#" class="small"><span class="text-success">Author :
+                                    </span><b class="text-info">{{ $cover->author }}</b></a>
+                                <br>
+                                <a href="#" class="btn btn-primary btn-block mt-2">Buy This Book</a>
+                            </div>
                         </div>
                     </div>
-                </div>
                 @empty
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <h4>No book covers at the moment. Come back later!</h4>
-                            <img class="mt-4" src="{{url('images/sorry.png')}}" alt="No book covers"
-                                style="width: 25rem;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <h4>No book covers at the moment. Come back later!</h4>
+                                <img class="mt-4" src="{{ url('images/sorry.png') }}" alt="No book covers"
+                                    style="width: 25rem;">
+                            </div>
                         </div>
                     </div>
-                </div>
                 @endforelse
             </div>
         </div>
@@ -891,7 +901,8 @@
                 <div class="col-md-12 col-lg-4">
                     <div class="dk-footer-box-info">
                         <a href="index.html" class="footer-logo">
-                            <img src="{{asset('images/scribelogo.svg')}}" alt="footer_logo" class="" height="100px">
+                            <img src="{{ asset('images/scribelogo.svg') }}" alt="footer_logo" class="" height="
+                                100px">
                         </a>
                         <p class="footer-info-text">
                             Scribe House recognises the scarcity of excellent, affordable editors in Uganda and Africa,
@@ -903,17 +914,17 @@
                             <h3>Follow us</h3>
                             <ul>
                                 <li>
-                                    <a href="{{url('https://www.facebook.com/scribehouse')}}">
+                                    <a href="{{ url('https://www.facebook.com/scribehouse') }}">
                                         <i class="fa fa-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{url('https://twitter.com/scribehouse')}}">
+                                    <a href="{{ url('https://twitter.com/scribehouse') }}">
                                         <i class="fa fa-twitter"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{url('https://www.instagram.com/scribehouse')}}">
+                                    <a href="{{ url('https://www.instagram.com/scribehouse') }}">
                                         <i class="fa fa-instagram"></i>
                                     </a>
                                 </li>
@@ -937,7 +948,7 @@
                                 </div>
                                 <!-- End contact Icon -->
                                 <div class="contact-info">
-                                    {{--                                <h2>Kiira</h2>--}}
+                                    {{-- <h2>Kiira</h2> --}}
                                     <h5>Kampala, Uganda.</h5>
                                     <p> scribehouse.ug@gmail.com.</p>
                                 </div>
@@ -954,7 +965,7 @@
                                 <!-- End contact Icon -->
                                 <div class="contact-info">
                                     <h3>(+256)782-682-678.</h3>
-                                    {{--                                <h3>(+256)-702-152894</h3>--}}
+                                    {{-- <h3>(+256)-702-152894</h3> --}}
                                     <p>Give us a call.</p>
                                 </div>
                                 <!-- End Contact Info -->
@@ -973,30 +984,30 @@
                                 </div>
                                 <ul>
                                     <li>
-                                        <a href="{{url('/#about')}}">About Us</a>
+                                        <a href="{{ url('/#about') }}">About Us</a>
                                     </li>
                                     <li>
-                                        <a href="{{url('/#services')}}">Services</a>
+                                        <a href="{{ url('/#services') }}">Services</a>
                                     </li>
                                     <li>
-                                        <a href="{{url('/#gallery')}}">Projects</a>
+                                        <a href="{{ url('/#gallery') }}">Projects</a>
                                     </li>
                                     <li>
-                                        <a href="{{url('/#team')}}">Our Team</a>
+                                        <a href="{{ url('/#team') }}">Our Team</a>
                                     </li>
                                 </ul>
                                 <ul>
                                     <li>
-                                        <a href="{{url('/#contact')}}">Contact Us</a>
+                                        <a href="{{ url('/#contact') }}">Contact Us</a>
                                     </li>
                                     <li>
-                                        <a href="{{url('/#gallery')}}">Gallery</a>
+                                        <a href="{{ url('/#gallery') }}">Gallery</a>
                                     </li>
                                     <li>
-                                        <a href="{{url('/#clients')}}">Clients</a>
+                                        <a href="{{ url('/#clients') }}">Clients</a>
                                     </li>
                                     <li>
-                                        <a href="{{('/#why')}}">Why Scribe House</a>
+                                        <a href="{{ '/#why' }}">Why Scribe House</a>
                                     </li>
                                 </ul>
                             </div>
@@ -1011,7 +1022,8 @@
                                 </div>
                                 <p>
                                     <!-- Don’t miss to subscribe to our new feeds, kindly fill the form below. -->
-                                    Subscribe to our news-letter to receive more updates and offers.</p>
+                                    Subscribe to our news-letter to receive more updates and offers.
+                                </p>
                                 <form action="#">
                                     <div class="form-row">
                                         <div class="col dk-footer-form">
@@ -1092,105 +1104,105 @@
 </body>
 
 <script>
-    $(function () {
-            $(document).scroll(function () {
-                var $nav = $(".navbar-fixed-top");
-                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
-            });
+    $(function() {
+        $(document).scroll(function() {
+            var $nav = $(".navbar-fixed-top");
+            $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+        });
+    });
+
+    let modalId = $('#image-gallery');
+
+    $(document)
+        .ready(function() {
+
+            loadGallery(true, 'a.thumbnail');
+
+            //This function disables buttons when needed
+            function disableButtons(counter_max, counter_current) {
+                $('#show-previous-image, #show-next-image')
+                    .show();
+                if (counter_max === counter_current) {
+                    $('#show-next-image')
+                        .hide();
+                } else if (counter_current === 1) {
+                    $('#show-previous-image')
+                        .hide();
+                }
+            }
+
+            /**
+             *
+             * @param setIDs Sets IDs when DOM is loaded. If using a PHP counter, set to false.
+             * @param setClickAttr Sets the attribute for the click handler.
+             */
+
+            function loadGallery(setIDs, setClickAttr) {
+                let current_image,
+                    selector,
+                    counter = 0;
+
+                $('#show-next-image, #show-previous-image')
+                    .click(function() {
+                        if ($(this)
+                            .attr('id') === 'show-previous-image') {
+                            current_image--;
+                        } else {
+                            current_image++;
+                        }
+
+                        selector = $('[data-image-id="' + current_image + '"]');
+                        updateGallery(selector);
+                    });
+
+                function updateGallery(selector) {
+                    let $sel = selector;
+                    current_image = $sel.data('image-id');
+                    $('#image-gallery-title')
+                        .text($sel.data('title'));
+                    $('#image-gallery-image')
+                        .attr('src', $sel.data('image'));
+                    disableButtons(counter, $sel.data('image-id'));
+                }
+
+                if (setIDs == true) {
+                    $('[data-image-id]')
+                        .each(function() {
+                            counter++;
+                            $(this)
+                                .attr('data-image-id', counter);
+                        });
+                }
+                $(setClickAttr)
+                    .on('click', function() {
+                        updateGallery($(this));
+                    });
+            }
         });
 
-let modalId = $('#image-gallery');
+    // build key actions
+    $(document)
+        .keydown(function(e) {
+            switch (e.which) {
+                case 37: // left
+                    if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
+                        $('#show-previous-image')
+                            .click();
+                    }
+                    break;
 
-$(document)
-.ready(function () {
+                case 39: // right
+                    if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
+                        $('#show-next-image')
+                            .click();
+                    }
+                    break;
 
-loadGallery(true, 'a.thumbnail');
-
-//This function disables buttons when needed
-function disableButtons(counter_max, counter_current) {
-$('#show-previous-image, #show-next-image')
-.show();
-if (counter_max === counter_current) {
-$('#show-next-image')
-.hide();
-} else if (counter_current === 1) {
-$('#show-previous-image')
-.hide();
-}
-}
-
-/**
-*
-* @param setIDs Sets IDs when DOM is loaded. If using a PHP counter, set to false.
-* @param setClickAttr Sets the attribute for the click handler.
-*/
-
-function loadGallery(setIDs, setClickAttr) {
-let current_image,
-selector,
-counter = 0;
-
-$('#show-next-image, #show-previous-image')
-.click(function () {
-if ($(this)
-.attr('id') === 'show-previous-image') {
-current_image--;
-} else {
-current_image++;
-}
-
-selector = $('[data-image-id="' + current_image + '"]');
-updateGallery(selector);
-});
-
-function updateGallery(selector) {
-let $sel = selector;
-current_image = $sel.data('image-id');
-$('#image-gallery-title')
-.text($sel.data('title'));
-$('#image-gallery-image')
-.attr('src', $sel.data('image'));
-disableButtons(counter, $sel.data('image-id'));
-}
-
-if (setIDs == true) {
-$('[data-image-id]')
-.each(function () {
-counter++;
-$(this)
-.attr('data-image-id', counter);
-});
-}
-$(setClickAttr)
-.on('click', function () {
-updateGallery($(this));
-});
-}
-});
-
-// build key actions
-$(document)
-.keydown(function (e) {
-switch (e.which) {
-case 37: // left
-if ((modalId.data('bs.modal') || {})._isShown && $('#show-previous-image').is(":visible")) {
-$('#show-previous-image')
-.click();
-}
-break;
-
-case 39: // right
-if ((modalId.data('bs.modal') || {})._isShown && $('#show-next-image').is(":visible")) {
-$('#show-next-image')
-.click();
-}
-break;
-
-default:
-return; // exit this handler for other keys
-}
-e.preventDefault(); // prevent the default action (scroll / move caret)
-});
+                default:
+                    return; // exit this handler for other keys
+            }
+            e.preventDefault(); // prevent the default action (scroll / move caret)
+        });
 </script>
 
 </html>

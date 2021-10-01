@@ -696,7 +696,11 @@ E8F0F2 - very light
         }
 
         .blue {
-            color: #39A2DB;
+            color: #39A2DB !important;
+        }
+
+        .light-blue {
+            color: #A2DBFA !important;
         }
 
         .content {
@@ -855,7 +859,7 @@ E8F0F2 - very light
         }
 
         .ab-border {
-            background-color: #e24d48;
+            background-color: #A2DBFA;
             height: 0.3rem;
             width: 4rem;
         }
@@ -1215,7 +1219,7 @@ E8F0F2 - very light
                         <div class="title">
                             <h5>WHISPERS</h5>
                         </div>
-                        <div class="description text-center">Poems during South sudan civial war.</div>
+                        <div class="description text-center p-2">Poems during South sudan civial war.</div>
                         <div class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book &nbsp;&nbsp;<i
                                 class="fa fa-angle-right"></i>
                         </div>
@@ -1232,7 +1236,7 @@ E8F0F2 - very light
                         <div class="title">
                             <h5>MY JESUS STORY</h5>
                         </div>
-                        <div class="description text-center">Dramatic tales of life, love and laughter.</div>
+                        <div class="description text-center p-2">Dramatic tales of life, love and laughter.</div>
                         <div class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book &nbsp;&nbsp;<i
                                 class="fa fa-angle-right"></i>
                         </div>
@@ -1249,7 +1253,7 @@ E8F0F2 - very light
                         <div class="title">
                             <h5>EMONEVATE</h5>
                         </div>
-                        <div class="description text-center">Prolific write, literary critic and blogger.</div>
+                        <div class="description text-center p-2">Prolific write, literary critic and blogger.</div>
                         <div class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book &nbsp;&nbsp;<i
                                 class="fa fa-angle-right"></i>
                         </div>
@@ -1267,7 +1271,8 @@ E8F0F2 - very light
                         <div class="title">
                             <h5>PUMPKIN SOUP</h5>
                         </div>
-                        <div class="description text-center">Tidbits of life in the eyes of Joel Benjamin Ntwatwa.</div>
+                        <div class="description text-center p-2">Tidbits of life in the eyes of Joel Benjamin Ntwatwa.
+                        </div>
                         <div class="btn btn-book shadow">&nbsp;&nbsp;Buy Book &nbsp;&nbsp;<i
                                 class="fa fa-angle-right"></i>
                         </div>
@@ -1280,8 +1285,8 @@ E8F0F2 - very light
 
 
     <section class="about" id="about">
-        <h1 class="text-center s-title">About Us</h1>
-        <div class="ab-border"></div>
+        <h1 class="text-center s-title blue">About Us</h1>
+        <div class="ab-border light-blue"></div>
         <div class="about-info container">
             <p>We love books. We love books good books. We love words, and the different ways in which words can be
                 published. That’s
