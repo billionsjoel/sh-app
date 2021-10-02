@@ -4,11 +4,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="description" content="Scribe house publishing agency Africa">
+    <meta name="author" content="Scribe house, Crystal butungi, and Publishing in uganda">
     <meta name="generator" content="Hugo 0.84.0">
     <title>Blogs</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96832486-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-96832486-1');
+    </script>
 
     <style>
         .bd-placeholder-img {
