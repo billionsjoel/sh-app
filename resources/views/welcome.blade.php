@@ -1149,7 +1149,7 @@ E8F0F2 - very light
                 </div>
                 <div class="modal-body">
                     <div class="card mb-3">
-                        <img src="{{ asset('images/event.jpeg') }}" class="card-img-top" alt="...">
+                        <img src="{{ asset('images/event.jpg') }}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">Event:</h5>
                             <p class="card-text">To order for a copy, click on the link below:
