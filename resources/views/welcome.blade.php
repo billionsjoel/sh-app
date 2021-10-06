@@ -1154,8 +1154,9 @@ E8F0F2 - very light
                             <h5 class="card-title">Event:</h5>
                             <p class="card-text">To order for a copy, click on the link below:
                             </p>
-                            <a class="btn btn-primary btn-block" href="
-https://docs.google.com/forms/d/e/1FAIpQLSeIp1nBkDo-BokCh-fv_Mu8EsEZoGQKs-92_yPu5jMnXzE9bw/viewform?usp=pp_url">Order
+                            <a class="btn btn-primary btn-block"
+                                href="
+{{ url('https://docs.google.com/forms/d/e/1FAIpQLSeIp1nBkDo-BokCh-fv_Mu8EsEZoGQKs-92_yPu5jMnXzE9bw/viewform?usp=pp_url') }}" target="_blank">Order
                                 Now</a>
                             <p class="card-text">
                             <p class="text-muted">To attend the book launch, register
