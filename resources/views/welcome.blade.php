@@ -1168,7 +1168,7 @@ E8F0F2 - very light
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <a type="button"
                         href="https://us06web.zoom.us/meeting/register/tZYtcuihqzIqGNSpJaIqdTTiWbrSojtoszyg"
-                        class="btn btn-primary">Attend</a>
+                        target="_blank" class="btn btn-primary">Attend</a>
                 </div>
             </div>
         </div>
