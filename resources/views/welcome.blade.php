@@ -24,24 +24,19 @@ E8F0F2 - very light
         rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('js/app.css') }}" rel="stylesheet">
+    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
+
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"
-        integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96832486-1"></script>
     <script>
@@ -54,6 +49,13 @@ E8F0F2 - very light
 
         gtag('config', 'UA-96832486-1');
     </script>
+
+    <script type="text/javascript">
+        $(window).on('load', function() {
+            $('#staticBackdrop').modal('show');
+        });
+    </script>
+
     <!-- Styles -->
     <style>
         a {
@@ -764,6 +766,16 @@ E8F0F2 - very light
                 left: 0%;
                 bottom: 0;
             }
+
+        }
+
+        @media (max-width:572px) {
+            .l-content {
+                text-align: center;
+                margin: 0;
+                padding: 1rem;
+            }
+
         }
 
         @media (min-width:992px) {
@@ -780,6 +792,8 @@ E8F0F2 - very light
                 left: 100%;
                 bottom: 0;
             }
+
+
         }
 
 
@@ -1116,6 +1130,49 @@ E8F0F2 - very light
 </head>
 
 <body>
+    <!-- Button trigger modal -->
+    {{-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+        Launch static backdrop modal
+    </button> --}}
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header d-flex justify-content-center">
+                    <h5 class="modal-title" id="staticBackdropLabel">Online Book Launch of 'Dreaming of a
+                        New
+                        Africa -
+                        Questions or Answers?'</h5>
+                    {{-- <button data-bs-dismiss="modal" aria-label="Close">X</button> --}}
+                </div>
+                <div class="modal-body">
+                    <div class="card mb-3">
+                        <img src="{{ asset('images/event.jpeg') }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Event:</h5>
+                            <p class="card-text">To order for a copy, click on the link below:
+                            </p>
+                            <p class="card-text">
+                            <p class="text-muted">To attend the book launch, register
+                                via the Zoom link below</p>
+                            <a
+                                href="{{ url('https://us06web.zoom.us/meeting/register/tZYtcuihqzIqGNSpJaIqdTTiWbrSojtoszyg') }}">Register
+                                Now</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <a type="button"
+                        href="https://us06web.zoom.us/meeting/register/tZYtcuihqzIqGNSpJaIqdTTiWbrSojtoszyg"
+                        class="btn btn-primary">Attend</a>
+                </div>
+            </div>
+        </div>
+    </div>
     @if ($flash = session('message'))
 
         <div id="flash-message" class="alert alert-success flash-message mt-4" role="alert">
@@ -1125,6 +1182,10 @@ E8F0F2 - very light
         </div>
 
     @endif
+
+
+
+
     <header id="home">
         <div class="row header" id="home">
             <div class="col-sm-12">
@@ -1139,7 +1200,8 @@ E8F0F2 - very light
         </div>
     </header>
     <section>
-        <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top scrolled fixed-top shadow-lg small" id="header">
+        <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top scrolled fixed-top shadow-lg small"
+            id="header">
             <img src="{{ asset('/images/scribelogo.svg') }}" alt="" width="5%" class="ml-4">
             <a class="navbar-brand ml-4" href="{{ url('/') }}">Scribe House</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
@@ -1185,8 +1247,11 @@ E8F0F2 - very light
         </nav>
     </section>
 
+
+
+
     <section class="books" id="covers">
-        <div class="content">
+        <div class="content ">
             <div class="row">
                 <div class="col-sm-8">
                     <div class="left">
@@ -1406,7 +1471,9 @@ E8F0F2 - very light
             <h1 class="mt-4">Our Team</h1>
             <div class="t-border"></div>
         </div>
-        <div class="row">
+        <div class="row" style="align-content: center;
+    display: flex;
+    justify-content: center;">
             <div class="d-flex flex-column flex-md-row justfiy-content-center t-cards">
                 <div class="col-sm-3">
                     <div class="card mb-4 card-container" style="width: 20rem;">
@@ -1471,7 +1538,7 @@ E8F0F2 - very light
                             </figcaption>
                             <div class="card-body card-body-text">
                                 <p class="card-text text-danger">COREEN</p>
-                                <p class="card-text">(Founder of KempiihArt)
+                                <p class="card-text">
                                     Illustrator and Book Design Partner</p>
                             </div>
                         </div>
@@ -1506,13 +1573,13 @@ E8F0F2 - very light
                     <div class="col-sm-3">
                         <div class="card mb-4 card-container" style="width: 20rem;">
                             <img class="card-img-top" src="{{ asset('images/henry.jpg') }}" alt="Card image cap">
-                            <figcaption class="caption text-white">PATRICIA <p> (Founder of ArmUp Media)
+                            <figcaption class="caption text-white">HENRY <p> (Founder of ArmUp Media)
                                     Book Design Partner
                                 <p>
                             </figcaption>
                             <div class="card-body card-body-text">
                                 <p class="card-text text-danger">HENRY</p>
-                                <p class="card-text">(Founder of ArmUp Media)
+                                <p class="card-text">
                                     Book Design Partner</p>
                             </div>
                         </div>
@@ -1985,16 +2052,16 @@ E8F0F2 - very light
         <!-- End Back to top -->
     </footer>
 
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
+    {{-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 </body>
