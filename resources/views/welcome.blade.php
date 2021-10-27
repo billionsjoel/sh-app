@@ -1146,7 +1146,7 @@ E8F0F2 - very light
                         Africa -
                         Questions or Answers?'</h5>
                     {{-- <button data-bs-dismiss="modal" aria-label="Close">X</button> --}}
-    </div>
+    {{-- </div>
     <div class="modal-body">
         <div class="card mb-3">
             <img src="{{ asset('images/event.jpeg') }}" class="card-img-top" alt="...">
@@ -1175,7 +1175,7 @@ E8F0F2 - very light
     </div>
     </div>
     </div>
-    </div>
+    </div> --}}
     @if ($flash = session('message'))--}}
 
         <div id="flash-message" class="alert alert-success flash-message mt-4" role="alert">
@@ -1203,8 +1203,7 @@ E8F0F2 - very light
         </div>
     </header>
     <section>
-        <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top scrolled fixed-top shadow-lg small"
-            id="header">
+        <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top scrolled fixed-top shadow-lg small" id="header">
             <img src="{{ asset('/images/scribelogo.svg') }}" alt="" width="5%" class="ml-4">
             <a class="navbar-brand ml-4" href="{{ url('/') }}">Scribe House</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
