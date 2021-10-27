@@ -1205,7 +1205,7 @@ E8F0F2 - very light
     <section>
         <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top scrolled fixed-top shadow-lg small" id="header">
             <img src="{{ asset('/images/scribelogo.svg') }}" alt="" width="5%" class="ml-4">
-            <a class="navbar-brand ml-4" href="{{ url('/') }}">Scribe House</a>
+            {{-- <a class="navbar-brand ml-4" href="{{ url('/') }}">Scribe House</a> --}}
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
                 aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -1217,15 +1217,16 @@ E8F0F2 - very light
                                 class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link ml-4" href="{{ url('/#covers') }}"> Our Projects <span
-                                class="sr-only">(current)</span></a>
+                        <a class="nav-link ml-4" href="{{ url('/#covers') }}">Our Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ml-4" href="{{ url('/#about') }}">About <span
-                                class="sr-only">(current)</span></a>
+                        <a class="nav-link ml-4" href="{{ url('/#about') }}">About</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link ml-4" href="{{ url('/#services') }}">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link ml-4" href="{{ url('/covers') }}">Book Covers</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link ml-4" href="{{ url('/#blogs') }}">Blogs</a>
@@ -1297,12 +1298,12 @@ E8F0F2 - very light
                     </div>
                     <div class="inner">
                         <div class="title mt-3">
-                            <h5>WHISPERS</h5>
+                            <h5 class="text-white">WHISPERS</h5>
                         </div>
                         <div class="description text-center p-2">Poems during South sudan civial war.</div>
-                        <div class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book &nbsp;&nbsp;<i
-                                class="fa fa-angle-right"></i>
-                        </div>
+                        <a href="{{ url('covers') }}" class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book
+                            &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1314,12 +1315,12 @@ E8F0F2 - very light
                     </div>
                     <div class="inner">
                         <div class="title mt-3">
-                            <h5>MY JESUS STORY</h5>
+                            <h5 class="text-white">MY JESUS STORY</h5>
                         </div>
                         <div class="description text-center p-2">Dramatic tales of life, love and laughter.</div>
-                        <div class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book &nbsp;&nbsp;<i
-                                class="fa fa-angle-right"></i>
-                        </div>
+                        <a href="{{ url('covers') }}" class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book
+                            &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1331,12 +1332,12 @@ E8F0F2 - very light
                     </div>
                     <div class="inner">
                         <div class="title mt-3">
-                            <h5>EMONEVATE</h5>
+                            <h5 class="text-white">EMONEVATE</h5>
                         </div>
                         <div class="description text-center p-2">Prolific write, literary critic and blogger.</div>
-                        <div class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book &nbsp;&nbsp;<i
-                                class="fa fa-angle-right"></i>
-                        </div>
+                        <a href="{{ url('covers') }}" class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book
+                            &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1349,13 +1350,13 @@ E8F0F2 - very light
                     </div>
                     <div class="inner">
                         <div class="title mt-3">
-                            <h5>PUMPKIN SOUP</h5>
+                            <h5 class="text-white">PUMPKIN SOUP</h5>
                         </div>
                         <div class="description text-center p-2">Tidbits of life in the eyes of Joel Benjamin Ntwatwa.
                         </div>
-                        <div class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book &nbsp;&nbsp;<i
-                                class="fa fa-angle-right"></i>
-                        </div>
+                        <a href="{{ url('covers') }}" class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book
+                            &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
+                        </a>
                     </div>
                 </div>
             </div>

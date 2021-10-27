@@ -195,7 +195,7 @@
                     </div>
 
                     <div class="p-4">
-                        <h4 class="fst-italic">Archives</h4>
+                        <h4 class="fst-italic">Blogs</h4>
                         <ol class="list-unstyled mb-0">
                             <li><a href="#">March 2021</a></li>
                             <li><a href="#">February 2021</a></li>
@@ -213,7 +213,7 @@
                     </div>
 
                     <div class="p-4">
-                        <h4 class="fst-italic">Elsewhere</h4>
+                        <h4 class="fst-italic">Book Covers</h4>
                         <ol class="list-unstyled">
                             <li><a href="#">GitHub</a></li>
                             <li><a href="#">Twitter</a></li>
