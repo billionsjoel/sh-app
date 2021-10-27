@@ -1692,7 +1692,7 @@ E8F0F2 - very light
                             <div class="icon ml-2 mt-4">
                                 <i class="fas fa-quote-left text-success p-2" style="font-size: 2rem; opacity:0.3"></i>
                             </div>
-                            <p class="p-4">I am so grateful to have had my book done through a professional
+                            <p class="p-4 mt-5 mb-4">I am so grateful to have had my book done through a professional
                                 and
                                 competant
                                 publisher as Scribe House.. It is
@@ -1720,10 +1720,13 @@ E8F0F2 - very light
                             <div class="icon ml-2 mt-4">
                                 <i class="fas fa-quote-left text-warning p-2" style="font-size: 2rem; opacity:0.3"></i>
                             </div>
-                            <p class="p-4">If I had to recommend a way of becoming a great author in the
+                            <p>&nbsp;</p>
+
+                            <p class="p-4 mt-3 mb-2">If I had to recommend a way of becoming a great author in the
                                 world
                                 today, it would
                                 be publishing with @scribehouse.</p>
+                            <p>&nbsp;</p>
                         </div>
                         <div class="down bg-warning text-white d-flex align-items-center w-auto rounded"
                             style="height: 100px;">
