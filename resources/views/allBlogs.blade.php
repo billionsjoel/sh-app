@@ -200,7 +200,7 @@
                         <h4 class="fst-italic">Blogs</h4>
                         <ol class="list-unstyled mb-0">
                             @forelse ($blogs as $blog)
-                                <li><a href="#">{{ $blog->title }}</a></li>
+                                <li><a href="{{ url('/blogs?id=' . $blog->id) }}">{{ $blog->title }}</a></li>
                             @empty
                                 <li>There are currently no blogs at the moment. come back later</li>
                             @endforelse
@@ -211,7 +211,7 @@
                         <h4 class="fst-italic">Book Covers</h4>
                         <ol class="list-unstyled">
                             @forelse ($covers as $cover)
-                                <li><a href="#">{{ $cover->title }}</a></li>
+                                <li><a href="{{ url('/covers?id=' . $cover->id) }}">{{ $cover->title }}</a></li>
                             @empty
                                 <li>There are currently no blogs at the moment. come back later</li>
                             @endforelse
