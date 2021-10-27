@@ -191,33 +191,30 @@
                             and Africa, Scribe House provides professional editing, and book production services. We
                             offer publishing and promotional advice to firms and individuals across the continent.
                             Publishing consultancies and editorial services are comfortably transacted online, making it
-                            easy for us to serve you wherever you are. </p>
+                            easy for us to serve you wherever you are.</p>
+                        <p class="mt-1">Write to us @ <span class="text-danger">info@scribehouse.ug.</span>
+                        </p>
                     </div>
 
                     <div class="p-4">
                         <h4 class="fst-italic">Blogs</h4>
                         <ol class="list-unstyled mb-0">
-                            <li><a href="#">March 2021</a></li>
-                            <li><a href="#">February 2021</a></li>
-                            <li><a href="#">January 2021</a></li>
-                            <li><a href="#">December 2020</a></li>
-                            <li><a href="#">November 2020</a></li>
-                            <li><a href="#">October 2020</a></li>
-                            <li><a href="#">September 2020</a></li>
-                            <li><a href="#">August 2020</a></li>
-                            <li><a href="#">July 2020</a></li>
-                            <li><a href="#">June 2020</a></li>
-                            <li><a href="#">May 2020</a></li>
-                            <li><a href="#">April 2020</a></li>
+                            @forelse ($blogs as $blog)
+                                <li><a href="#">{{ $blog->title }}</a></li>
+                            @empty
+                                <li>There are currently no blogs at the moment. come back later</li>
+                            @endforelse
                         </ol>
                     </div>
 
                     <div class="p-4">
                         <h4 class="fst-italic">Book Covers</h4>
                         <ol class="list-unstyled">
-                            <li><a href="#">GitHub</a></li>
-                            <li><a href="#">Twitter</a></li>
-                            <li><a href="#">Facebook</a></li>
+                            @forelse ($covers as $cover)
+                                <li><a href="#">{{ $cover->title }}</a></li>
+                            @empty
+                                <li>There are currently no blogs at the moment. come back later</li>
+                            @endforelse
                         </ol>
                     </div>
                 </div>

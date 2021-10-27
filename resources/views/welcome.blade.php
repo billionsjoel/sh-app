@@ -1186,9 +1186,6 @@ E8F0F2 - very light
 
     @endif
 
-
-
-
     <header id="home">
         <div class="row header" id="home">
             <div class="col-sm-12">
@@ -1216,7 +1213,7 @@ E8F0F2 - very light
                         <a class="nav-link ml-4" href="{{ url('/#home') }}"> Home <span
                                 class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link ml-4" href="{{ url('/#covers') }}">Our Projects</a>
                     </li>
                     <li class="nav-item">
@@ -1229,7 +1226,7 @@ E8F0F2 - very light
                         <a class="nav-link ml-4" href="{{ url('/covers') }}">Book Covers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link ml-4" href="{{ url('/#blogs') }}">Blogs</a>
+                        <a class="nav-link ml-4" href="{{ url('/view-all-blogs') }}">Blogs</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link ml-4 " href="{{ url('/#team') }}">Team</a>
@@ -1249,9 +1246,6 @@ E8F0F2 - very light
             </div>
         </nav>
     </section>
-
-
-
 
     <section class="books" id="covers">
         <div class="content ">
@@ -1364,7 +1358,6 @@ E8F0F2 - very light
 
     </section>
 
-
     <section class="about" id="about">
         <h1 class="text-center s-title blue">About Us</h1>
         <div class="ab-border light-blue"></div>
@@ -1474,9 +1467,7 @@ E8F0F2 - very light
             <h1 class="mt-4">Our Team</h1>
             <div class="t-border"></div>
         </div>
-        <div class="row" style="align-content: center;
-    display: flex;
-    justify-content: center;">
+        <div class="row" style="align-content: center;display: flex;justify-content: center;">
             <div class="d-flex flex-column flex-md-row justfiy-content-center t-cards">
                 <div class="col-sm-3">
                     <div class="card mb-4 card-container" style="width: 20rem;">

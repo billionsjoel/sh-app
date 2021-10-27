@@ -10,6 +10,7 @@ use App\Models\Testimonials;
 use Carbon\Carbon;
 
 use Doctrine\DBAL\Driver\SQLSrv\LastInsertId;
+use phpDocumentor\Reflection\DocBlock\Tags\Covers;
 
 // use Egulias\EmailValidator\Warning\Comment;
 
@@ -43,10 +44,11 @@ Route::get('/view-all-blogs', function () {
     $featured   = blog::where('status', 1)->first();
     $latest     = blog::where('status', 2)->first();
     $promoted   = blog::where('status', 3)->first();
-    $blogs      = blog::paginate(5);
+    $blogs      = blog::paginate(15);
+    $covers     = BookCover::paginate(15);
 
 
-    return view('allBlogs', compact('featured', 'latest', 'promoted', 'blogs'));
+    return view('allBlogs', compact('featured', 'latest', 'promoted', 'blogs', 'covers'));
 });
 
 
