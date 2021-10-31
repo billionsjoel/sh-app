@@ -34,6 +34,8 @@
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96832486-1"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
+        crossorigin="anonymous"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -831,7 +833,6 @@
                     {{ $comment->comment }}
                 </div>
             </div>
-            <hr>
         @empty
             <p>There are no comments on this blog at the moment. Be the first to comment</p>
         @endforelse
@@ -921,9 +922,11 @@
             <h5 class="card-header">Featured Blogs</h5>
             <div class="card-body">
                 @forelse($titles as $title)
-                    <p><a href="{{ url('blogs?id=' . $title->id) }}" class="mt-4">
-                            {{ $title->title }}</a></p>
-                    <hr>
+                    <p>
+                        <a href="{{ url('blogs?id=' . $title->id) }}">
+                            {{ $title->title }}
+                        </a>
+                    </p>
                 @empty
                     <p>No featured blogs at the moment!</p>
                 @endforelse

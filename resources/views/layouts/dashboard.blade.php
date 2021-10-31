@@ -10,7 +10,7 @@
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
     <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="{{asset('css/app.css')}}" rel="stylesheet" />
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet" />
 
     <!-- Scripts -->
     <!-- Fonts -->
@@ -41,6 +41,7 @@
         .tox-notification {
             display: none !important
         }
+
     </style>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.25/b-1.7.1/datatables.min.js"></script>
@@ -52,6 +53,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.7.1/js/buttons.html5.min.js"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
+        crossorigin="anonymous"></script>
     {{-- <script src="https://cdn.datatables.net/buttons/1.2.2/js/buttons.print.min.js"></script> --}}
     <script src="https://cdn.tiny.cloud/1/ta3av7a1vaj8pa9dkb4lf9biy3nwnolyoj14hxzlzye3hn3p/tinymce/5/tinymce.min.js"
         referrerpolicy="origin"></script>
@@ -68,13 +71,13 @@
 
             <div class="container-fluid">
 
-                @if( $flash = session('message') )
+                @if ($flash = session('message'))
 
-                <div id="flash-message" class="alert alert-success flash-message mt-4" role="alert">
+                    <div id="flash-message" class="alert alert-success flash-message mt-4" role="alert">
 
-                    {{ $flash }}
+                        {{ $flash }}
 
-                </div>
+                    </div>
 
                 @endif
 
@@ -95,17 +98,17 @@
     <script>
         setTimeout(function() {
             jQuery('#flash-message').fadeOut('slow');
-            }, 3000);
+        }, 3000);
     </script>
     <script>
         $(document).ready(function() {
-    $('#example').DataTable( {
-    dom: 'Bfrtip',
-    buttons: [
-    'copy', 'csv', 'excel', 'pdf'
-    ]
-    } );
-    } );
+            $('#example').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copy', 'csv', 'excel', 'pdf'
+                ]
+            });
+        });
     </script>
 </body>
 
