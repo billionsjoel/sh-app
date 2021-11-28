@@ -828,7 +828,7 @@ E8F0F2 - very light
 
         .wrapper:hover .outer {
             animation-name: outerAnimation;
-            animation-duration: 1s;
+            animation-duration: 3s;
             animation-fill-mode: backwards;
         }
 
