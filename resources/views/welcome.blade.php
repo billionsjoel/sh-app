@@ -905,7 +905,7 @@ E8F0F2 - very light
 
         .wrapper:hover .chev {
             animation-name: chevAnimation;
-            animation-duration: 1s;
+            animation-duration: 3s;
             animation-fill-mode: backwards;
         }
 
