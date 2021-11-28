@@ -826,10 +826,27 @@ E8F0F2 - very light
             margin-left: 2rem;
         }
 
+        .wrapper:hover .outer {
+            animation-name: outerAnimation;
+            animation-duration: 1s;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes outerAnimation {
+            from {
+                top: 150px;
+            }
+
+            to {
+                top: 120px;
+            }
+        }
+
         .inner {
             width: 60%;
             height: 200px;
             background-color: #39A2DB;
+            color: #fff;
             position: relative;
             left: 30%;
             top: 60%;
@@ -839,9 +856,21 @@ E8F0F2 - very light
             flex-direction: column;
         }
 
-        .inner:hover {
+        .wrapper:hover .inner {
             background-color: #A2DBFA;
+            animation-name: innerAnimation;
+            animation-duration: 3s;
+            animation-fill-mode: backwards;
+        }
 
+        @keyframes innerAnimation {
+            from {
+                top: 60%;
+            }
+
+            to {
+                top: 70%;
+            }
         }
 
         .b-img {
@@ -872,6 +901,22 @@ E8F0F2 - very light
             -moz-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
+        }
+
+        .wrapper:hover .chev {
+            animation-name: chevAnimation;
+            animation-duration: 1s;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes chevAnimation {
+            from {
+                left: 90%;
+            }
+
+            to {
+                left: 95%;
+            }
         }
 
     </style>
@@ -1277,7 +1322,9 @@ E8F0F2 - very light
                             </div>
                             <div class="image">
                                 <a href="{{ url('/covers') }}" class="text-decoration-none"><img
-                                        class="b-image" src="{{ asset('images/billions.jpeg') }}" alt=""></a>
+                                        class="b-image" src="{{ asset('images/bookcovers/book3.jpeg') }}"
+                                        alt="">
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -1289,14 +1336,16 @@ E8F0F2 - very light
             <div class="col-md-3 mt-4">
                 <div class="wrapper">
                     <div class="outer">
-                        <img class="b-img shadow" src="{{ asset('images/bookcovers/book4.jpeg') }}" alt="">
+                        <img class="b-img shadow" src="{{ asset('images/bookcovers/One-last-smoke.jpg') }}" alt="">
                         <div class="chev"><i class="fa fa-angle-right chev-color"></i></div>
                     </div>
                     <div class="inner">
                         <div class="title mt-3">
-                            <h5 class="text-white">WHISPERS</h5>
+                            <h5 class="text-white">ONE LAST SMOKE</h5>
                         </div>
-                        <div class="description text-center p-2">Poems during South sudan civial war.</div>
+                        <div class="description  text-center p-2">It is only through death that once can seize
+                            life.
+                        </div>
                         <a href="{{ url('covers') }}" class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book
                             &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
                         </a>
@@ -1306,14 +1355,15 @@ E8F0F2 - very light
             <div class="col-md-3 mt-4">
                 <div class="wrapper">
                     <div class="outer">
-                        <img class="b-img shadow" src="{{ asset('images/bookcovers/book1.jpeg') }}" alt="">
+                        <img class="b-img shadow" src="{{ asset('images/bookcovers/Truck-driver.jpg') }}" alt="">
                         <div class="chev"><i class="fa fa-angle-right chev-color"></i></div>
                     </div>
                     <div class="inner">
                         <div class="title mt-3">
-                            <h5 class="text-white">MY JESUS STORY</h5>
+                            <h5 class="text-white">TRUCK DRIVER</h5>
                         </div>
-                        <div class="description text-center p-2">Dramatic tales of life, love and laughter.</div>
+                        <div class="description text-center p-2">Every action has its consequences, and so do these
+                            relationships.</div>
                         <a href="{{ url('covers') }}" class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book
                             &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
                         </a>
@@ -1323,14 +1373,16 @@ E8F0F2 - very light
             <div class="col-md-3 mt-4">
                 <div class="wrapper">
                     <div class="outer">
-                        <img class="b-img shadow" src="{{ asset('images/bookcovers/book2.jpeg') }}" alt="">
+                        <img class="b-img shadow"
+                            src="{{ asset('images/bookcovers/Dreaming-of-a-new-africa.jpg') }}" alt="">
                         <div class="chev"><i class="fa fa-angle-right chev-color"></i></div>
                     </div>
                     <div class="inner">
                         <div class="title mt-3">
-                            <h5 class="text-white">EMONEVATE</h5>
+                            <h5 class="text-white text-center">DREAMING OF A NEW AFRICA</h5>
                         </div>
-                        <div class="description text-center p-2">Prolific write, literary critic and blogger.</div>
+                        <div class="description text-center p-2">Africa's past, present and likely future conditions.
+                        </div>
                         <a href="{{ url('covers') }}" class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book
                             &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
                         </a>
@@ -1340,15 +1392,16 @@ E8F0F2 - very light
             <div class="col-md-3 mt-4">
                 <div class="wrapper">
                     <div class="outer">
-                        <img class="b-img shadow mb-3" src="{{ asset('images/bookcovers/book3.jpeg') }}" alt="">
+                        <img class="b-img shadow mb-3" src="{{ asset('images/bookcovers/im-only-size-3.jpg') }}"
+                            alt="im-only-size-3">
                         <div class="chev"><i class="fa fa-angle-right chev-color"></i></div>
 
                     </div>
                     <div class="inner">
                         <div class="title mt-3">
-                            <h5 class="text-white">PUMPKIN SOUP</h5>
+                            <h5 class="text-white">I'M ONLY SIZE 3</h5>
                         </div>
-                        <div class="description text-center p-2">Tidbits of life in the eyes of Joel Benjamin Ntwatwa.
+                        <div class="description text-center p-2">Journey of a wandrous poet.
                         </div>
                         <a href="{{ url('covers') }}" class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book
                             &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
