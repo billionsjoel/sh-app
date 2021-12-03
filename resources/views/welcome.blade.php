@@ -672,7 +672,7 @@ E8F0F2 - very light
             padding: 4rem 2rem;
             border: none;
             box-shadow: #0a0a0a;
-            transition: transform .3s;
+            transition: all .3s ease-in-out;
         }
 
         .service-card:hover {
@@ -828,8 +828,10 @@ E8F0F2 - very light
 
         .wrapper:hover .outer {
             animation-name: outerAnimation;
-            animation-duration: 3s;
-            animation-fill-mode: backwards;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+            -webkit-animation-timing-function: linear;
+            animation-fill-mode: forwards;
         }
 
         @keyframes outerAnimation {
@@ -859,8 +861,10 @@ E8F0F2 - very light
         .wrapper:hover .inner {
             background-color: #A2DBFA;
             animation-name: innerAnimation;
-            animation-duration: 3s;
-            animation-fill-mode: backwards;
+            animation-duration: 0.5s;
+            animation-timing-function: linear;
+            -webkit-animation-timing-function: linear;
+            animation-fill-mode: forwards;
         }
 
         @keyframes innerAnimation {
@@ -905,8 +909,10 @@ E8F0F2 - very light
 
         .wrapper:hover .chev {
             animation-name: chevAnimation;
-            animation-duration: 3s;
-            animation-fill-mode: backwards;
+            animation-duration: 0.5s;
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
         }
 
         @keyframes chevAnimation {
