@@ -72,7 +72,6 @@ E8F0F2 - very light
             -webkit-border-radius: 500px;
             -moz-border-radius: 500px;
         }
-
     </style>
     <style>
         html,
@@ -98,7 +97,6 @@ E8F0F2 - very light
             -webkit-text-size-adjust: 100%;
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         }
-
     </style>
 
     <style>
@@ -622,7 +620,6 @@ E8F0F2 - very light
             background: #FA6742;
             border-color: #FA6742;
         }
-
     </style>
 
     <style>
@@ -705,7 +702,6 @@ E8F0F2 - very light
             margin-bottom: 2rem;
             text-align: center;
         }
-
     </style>
     <style>
         .books {
@@ -924,7 +920,6 @@ E8F0F2 - very light
                 left: 95%;
             }
         }
-
     </style>
 
     <style>
@@ -950,7 +945,6 @@ E8F0F2 - very light
             word-spacing: 0.2rem;
             line-height: 3rem;
         }
-
     </style>
 
     <style>
@@ -1053,7 +1047,6 @@ E8F0F2 - very light
                 background-color: #0976B4;
             }
         } */
-
     </style>
 
     <style>
@@ -1085,7 +1078,6 @@ E8F0F2 - very light
             height: 0.3rem;
             width: 3rem;
         }
-
     </style>
 
     <style>
@@ -1125,7 +1117,6 @@ E8F0F2 - very light
             margin-top: 15px;
             margin-bottom: 15px;
         }
-
     </style>
 
     <style>
@@ -1135,7 +1126,6 @@ E8F0F2 - very light
             right: 20px;
             z-index: 100;
         }
-
     </style>
 
     <style>
@@ -1177,7 +1167,6 @@ E8F0F2 - very light
             background: #243c4f;
             color: #fff;
         }
-
     </style>
 
 </head>
@@ -1229,14 +1218,14 @@ E8F0F2 - very light
     </div>
     </div>
     </div> --}}
-    @if ($flash = session('message'))--}}
+    @if ($flash = session('message'))
+        --}}
 
         <div id="flash-message" class="alert alert-success flash-message mt-4" role="alert">
 
             {{ $flash }}
 
         </div>
-
     @endif
 
     <header id="home">
@@ -1253,7 +1242,8 @@ E8F0F2 - very light
         </div>
     </header>
     <section>
-        <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top scrolled fixed-top shadow-lg small" id="header">
+        <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top scrolled fixed-top shadow-lg small"
+            id="header">
             <img src="{{ asset('/images/scribelogo.svg') }}" alt="" width="5%" class="ml-4">
             {{-- <a class="navbar-brand ml-4" href="{{ url('/') }}">Scribe House</a> --}}
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
@@ -1309,27 +1299,26 @@ E8F0F2 - very light
                             <div class="heading display-3">In the beginning was the <span class="blue"> word ...
                                 </span>
                             </div>
-                            <div class="lb-paragraph">Start with a goal, get a plan, and set targets for that goal.
+                            {{-- <div class="lb-paragraph">Start with a goal, get a plan, and set targets for that goal.
                                 SCRIBE HOUSE
                                 focuses
                                 on
-                                helping you achieve your desired goal.</div>
+                                helping you achieve your desired goal.</div> --}}
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-4">
                     <div class="right">
                         <div class="r-content">
-                            <div class="b-icon"><a href="{{ url('/covers') }}"
-                                    class="text-decoration-none"><i class="fas fa-caret-right"></i></a></div>
+                            <div class="b-icon"><a href="{{ url('/covers') }}" class="text-decoration-none"><i
+                                        class="fas fa-caret-right"></i></a></div>
                             <div class="title">
                                 <h5> <a href="{{ url('/covers') }}" class="text-black text-decoration-none">OUR
                                         WORKS</a> </h5>
                             </div>
                             <div class="image">
-                                <a href="{{ url('/covers') }}" class="text-decoration-none"><img
-                                        class="b-image" src="{{ asset('images/bookcovers/book3.jpeg') }}"
-                                        alt="">
+                                <a href="{{ url('/covers') }}" class="text-decoration-none"><img class="b-image"
+                                        src="{{ asset('images/bookcovers/book3.jpeg') }}" alt="">
                                 </a>
                             </div>
                         </div>
@@ -1342,7 +1331,8 @@ E8F0F2 - very light
             <div class="col-md-3 mt-4">
                 <div class="wrapper">
                     <div class="outer">
-                        <img class="b-img shadow" src="{{ asset('images/bookcovers/One-last-smoke.jpg') }}" alt="">
+                        <img class="b-img shadow" src="{{ asset('images/bookcovers/One-last-smoke.jpg') }}"
+                            alt="">
                         <div class="chev"><i class="fa fa-angle-right chev-color"></i></div>
                     </div>
                     <div class="inner">
@@ -1361,7 +1351,8 @@ E8F0F2 - very light
             <div class="col-md-3 mt-4">
                 <div class="wrapper">
                     <div class="outer">
-                        <img class="b-img shadow" src="{{ asset('images/bookcovers/Truck-driver.jpg') }}" alt="">
+                        <img class="b-img shadow" src="{{ asset('images/bookcovers/Truck-driver.jpg') }}"
+                            alt="">
                         <div class="chev"><i class="fa fa-angle-right chev-color"></i></div>
                     </div>
                     <div class="inner">
@@ -1379,8 +1370,8 @@ E8F0F2 - very light
             <div class="col-md-3 mt-4">
                 <div class="wrapper">
                     <div class="outer">
-                        <img class="b-img shadow"
-                            src="{{ asset('images/bookcovers/Dreaming-of-a-new-africa.jpg') }}" alt="">
+                        <img class="b-img shadow" src="{{ asset('images/bookcovers/Dreaming-of-a-new-africa.jpg') }}"
+                            alt="">
                         <div class="chev"><i class="fa fa-angle-right chev-color"></i></div>
                     </div>
                     <div class="inner">
@@ -1585,8 +1576,7 @@ E8F0F2 - very light
                 <div class="d-flex flex-column flex-md-row justfiy-content-center t-cards">
                     <div class="col-sm-3">
                         <div class="card mb-4 card-container" style="width: 20rem;">
-                            <img class="card-img-top" src="{{ asset('images/correen.jpg') }}"
-                                alt="Card image cap">
+                            <img class="card-img-top" src="{{ asset('images/correen.jpg') }}" alt="Card image cap">
                             <figcaption class="caption text-white">COREEN <p> (Founder of KempiihArt)
                                     Illustrator and Book Design Partner
                                 <p>
@@ -1612,8 +1602,7 @@ E8F0F2 - very light
                     </div>
                     <div class="col-sm-3">
                         <div class="card mb-4 card-container" style="width: 20rem;">
-                            <img class="card-img-top" src="{{ asset('images/patricia.jpg') }}"
-                                alt="Card image cap">
+                            <img class="card-img-top" src="{{ asset('images/patricia.jpg') }}" alt="Card image cap">
                             <figcaption class="caption text-white">PATRICIA <p> Writer | Associate Editor | Poetry
                                     Editor
                                 <p>
@@ -1673,7 +1662,6 @@ E8F0F2 - very light
                 <div class="col-sm-12">
                     <p>There are no blogs at the moment</p>
                 </div>
-
             @endforelse
             <div class="cta p-4 text-center w-100">
                 <div class="btn border-bottom text-center text-primary">
@@ -1708,7 +1696,8 @@ E8F0F2 - very light
                     <div class="panels ml-4 mt-4 shadow-lg mb-5 bg-white rounded">
                         <div class="up">
                             <div class="icon ml-2 mt-4">
-                                <i class="fas fa-quote-left text-primary p-2" style="font-size: 2rem; opacity:0.3"></i>
+                                <i class="fas fa-quote-left text-primary p-2"
+                                    style="font-size: 2rem; opacity:0.3"></i>
                             </div>
                             <p class="p-4">I’ve been working with Scribe House for three years now
                                 and I am just
@@ -1728,8 +1717,7 @@ E8F0F2 - very light
                                     style="height: 80px; width: 80px; border-radius: 100%">
                             </div>
                             <div class="info ml-2 p-2">
-                                <span class="small big">Ronald K Ssekajja,</span> <br><span
-                                    class="big">Poet &
+                                <span class="small big">Ronald K Ssekajja,</span> <br><span class="big">Poet &
                                     Author.</span>
                             </div>
                             <div class="link ml-auto mr-4">
@@ -1742,7 +1730,8 @@ E8F0F2 - very light
                     <div class="panels ml-4 mt-4 shadow-lg mb-5 bg-white rounded">
                         <div class="up">
                             <div class="icon ml-2 mt-4">
-                                <i class="fas fa-quote-left text-success p-2" style="font-size: 2rem; opacity:0.3"></i>
+                                <i class="fas fa-quote-left text-success p-2"
+                                    style="font-size: 2rem; opacity:0.3"></i>
                             </div>
                             <p class="p-4 mt-5 mb-4">I am so grateful to have had my book done through a professional
                                 and
@@ -1770,7 +1759,8 @@ E8F0F2 - very light
                     <div class="panels mr-4 mt-4 shadow-lg mb-5 bg-white rounded">
                         <div class="up">
                             <div class="icon ml-2 mt-4">
-                                <i class="fas fa-quote-left text-warning p-2" style="font-size: 2rem; opacity:0.3"></i>
+                                <i class="fas fa-quote-left text-warning p-2"
+                                    style="font-size: 2rem; opacity:0.3"></i>
                             </div>
                             <p>&nbsp;</p>
 
@@ -1835,8 +1825,8 @@ E8F0F2 - very light
 
             <div class="cta p-4 text-center w-100">
                 <div class="btn border-bottom text-center text-primary">
-                    <a href="{{ url('/covers') }}">See all books <svg width="1em" height="1em" viewBox="0 0 16 16"
-                            class="bi bi-arrow-right-circle-fill" fill="currentColor"
+                    <a href="{{ url('/covers') }}">See all books <svg width="1em" height="1em"
+                            viewBox="0 0 16 16" class="bi bi-arrow-right-circle-fill" fill="currentColor"
                             xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd"
                                 d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-8.354 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L9.793 7.5H5a.5.5 0 0 0 0 1h4.793l-2.147 2.146z" />
@@ -1900,8 +1890,7 @@ E8F0F2 - very light
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <textarea name="message" class="form-control" placeholder="Your Message *"
-                                    style="width: 100%; height: 150px;"></textarea>
+                                <textarea name="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
                             </div>
                         </div>
                         <div class="form-group">
