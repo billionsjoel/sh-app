@@ -1306,7 +1306,7 @@ E8F0F2 - very light
                 <div class="col-sm-8">
                     <div class="left">
                         <div class="l-content">
-                            <div class="heading display-3">What do you want to <span class="blue"> achieve?
+                            <div class="heading display-3">In the beginning was the <span class="blue"> word ...
                                 </span>
                             </div>
                             <div class="lb-paragraph">Start with a goal, get a plan, and set targets for that goal.
