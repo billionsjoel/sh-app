@@ -1687,7 +1687,7 @@ E8F0F2 - very light
         </div>
         <div class="lead">
             <p class="text-center p-4 lead">
-                Scribe House is recommended by hundreds <br> upon hundreds of authors.
+                Scribe House is recommended by <br> many authors.
             </p>
         </div>
         <div class="mt-4 mb-4 ml-2 mr-2">
