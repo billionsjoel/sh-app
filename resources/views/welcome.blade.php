@@ -97,6 +97,10 @@ E8F0F2 - very light
             -webkit-text-size-adjust: 100%;
             -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
         }
+
+        ul>li>a> {
+            bg-color: #fff !important;
+        }
     </style>
 
     <style>
@@ -372,13 +376,14 @@ E8F0F2 - very light
             border-radius: 50%;
             text-align: center;
             line-height: 40px;
-            background: #000;
             margin-right: 5px;
-            color: #fff;
+            color: #fff !important;
         }
 
         .dk-footer-box-info .footer-social-link a i.fa-facebook {
             background-color: #3B5998;
+            color: white;
+            z-index: 10000;
         }
 
         .dk-footer-box-info .footer-social-link a i.fa-twitter {
@@ -1922,17 +1927,17 @@ E8F0F2 - very light
                             <ul>
                                 <li>
                                     <a href="{{ url('https://www.facebook.com/scribehouse') }}">
-                                        <i class="fa fa-facebook"></i>
+                                        <i class="fa fa-facebook white"></i>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="{{ url('https://twitter.com/scribehouse') }}">
-                                        <i class="fa fa-twitter"></i>
+                                        <i class="fa fa-twitter white"></i>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="{{ url('https://www.instagram.com/scribehouse') }}">
-                                        <i class="fa fa-instagram"></i>
+                                        <i class="fa fa-instagram white"></i>
                                     </a>
                                 </li>
                             </ul>
@@ -1940,10 +1945,10 @@ E8F0F2 - very light
                         <!-- End Social link -->
                     </div>
                     <!-- End Footer info -->
-                    <div class="footer-awarad">
+                    {{-- <div class="footer-awarad" style="margin-top:-2rem ">
                         <img src="images/icon/best.png" alt="">
                         <p>ScribeHouse 2020</p>
-                    </div>
+                    </div> --}}
                 </div>
                 <!-- End Col -->
                 <div class="col-md-12 col-lg-8">
