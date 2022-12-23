@@ -121,6 +121,15 @@ Route::get('/view-messages', function () {
     return view('admin.viewMessages', compact('messages', 'count'));
 });
 
+Route::get('/view-comments', function () {
+//
+    $comments = Comments::all();
+
+    $count = Comments::count();
+
+    return view('admin.viewComments', compact('comments', 'count'));
+})->name('viewComments');
+
 Route::get('/view-edit-blog/{id}', function ($id) {
 //
     $blogs = Blog::where('id', $id)->get();
@@ -154,6 +163,8 @@ Route::post('/edit-book-cover/{id}', [App\Http\Controllers\AdminController::clas
 
 Route::get('/delete-testimonial/{id}', [App\Http\Controllers\AdminController::class, 'deleteTestimony']);
 Route::get('/delete-message/{id}', [App\Http\Controllers\AdminController::class, 'deleteMessage']);
+
+Route::get('/delete-comment/{id}', [App\Http\Controllers\AdminController::class, 'deleteComment']);
 
 
 

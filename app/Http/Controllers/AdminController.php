@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Blog;
 use App\Models\BookCover;
+use App\Models\Comments;
 use App\Models\Messages;
 use App\Models\subscriptions;
 use App\Models\Testimonials;
@@ -195,5 +196,14 @@ class AdminController extends Controller
         session()->flash('message', 'Message deleted successfully! ✅ ');
 
         return redirect('/view-messages');
+    }
+
+    public function deleteComment($id)
+    {
+        Comments::destroy($id);
+
+        session()->flash('comment', 'comment deleted successfully! ✅ ');
+
+        return redirect('/view-comments');
     }
 }
