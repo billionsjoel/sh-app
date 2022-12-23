@@ -44,6 +44,7 @@ class GuestController extends Controller
 
         $comment->bid = $id;
 
+        $comment->username = request()->username;
         $comment->comment = request()->comment;
 
         $comment->save();
