@@ -67,8 +67,9 @@
                                 </div>
                                 <!-- End contact Icon -->
                                 <div class="contact-info">
-                                    <h3>+256 (0)781 915759.</h3>
-                                    <h3>+256 (0)705 522273.</h3>
+                                    <h3> Kaddu Road, Kisaasi, Kampala.</h3>
+                                    <p class="mt-2">+256 (0)781 915759.</p>
+                                    <p>+256 (0)705 522273.</p>
                                     <p>Give us a call.</p>
                                 </div>
                                 <!-- End Contact Info -->
