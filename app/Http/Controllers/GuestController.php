@@ -40,6 +40,11 @@ class GuestController extends Controller
 
     public function postComment(Request $request, $id)
     {
+         $request->validate([
+                'username' => 'required|max:10',
+                'comment' => 'required',
+            ]);
+
         $comment = new Comments();
 
         $comment->bid = $id;

@@ -611,6 +611,15 @@
 
         </div>
     @endif
+    @if ($errors->any())
+        <div id="flash-message" class="alert alert-danger flash-message mt-4" role="alert">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li class="p-1">{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <!-- Navigation -->
     <section>
         <nav class="navbar navbar-expand-md navbar-dark navbar-fixed-top scrolled fixed-top shadow-lg small"
