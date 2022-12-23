@@ -1817,7 +1817,7 @@ E8F0F2 - very light
                                 <a href="#" class="i small">Author : <span
                                         class="text-info">{{ $cover->author }}</span></a>
                                 <a href="{{ url('/covers?id=' . $cover->id) }}"
-                                    class="btn btn-primary btn-block">Intrested</a>
+                                    class="btn btn-primary btn-block">Interested</a>
                             </div>
                         </div>
                     </div>
