@@ -32,7 +32,7 @@ class AdminController extends Controller
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');
-            $name = time().'.'.$image->getClientOriginalExtension();
+            $name = time() . '.' . $image->getClientOriginalExtension();
             $destinationPath = public_path('/images');
             $image->move($destinationPath, $name);
             $blog->image = $name;
@@ -50,12 +50,12 @@ class AdminController extends Controller
         $blog = Blog::find($id);
 
         Blog::where('id', $id)
-      ->update([
+            ->update([
                 'title' => request()->title,
                 'body' => request()->body,
                 'author' => request()->author,
                 'category' => request()->category,
-                ]);
+            ]);
 
 
         session()->flash('message', 'Blog Updated Successfully! ✅');
@@ -67,12 +67,12 @@ class AdminController extends Controller
         $bookCover = BookCover::find($id);
 
         BookCover::where('id', $id)
-      ->update([
+            ->update([
                 'title' => request()->title,
                 'description' => request()->description,
                 'author' => request()->author,
                 'genre' => request()->genre,
-                ]);
+            ]);
 
 
         session()->flash('message', 'Book Cover Updated Successfully! ✅');
@@ -83,15 +83,24 @@ class AdminController extends Controller
 
     public function publishBookCover(Request $request)
     {
+
+        $request->validate([
+            'title' => ['required', 'max:200'],
+            'description' => ['required'],
+            'genre' => ['required'],
+            'design' => ['required'],
+            'publisher' => ['required'],
+            'author' => ['required'],
+        ]);
+
         $bookCover = new BookCover;
 
         $bookCover->title = request()->title;
-
         $bookCover->description = request()->description;
-
-        $bookCover->author = request()->author;
-
         $bookCover->genre = request()->genre;
+        $bookCover->design = request()->design;
+        $bookCover->publisher = request()->publisher;
+        $bookCover->author = request()->author;
 
         $this->validate($request, [
 
@@ -102,7 +111,7 @@ class AdminController extends Controller
         if ($request->hasFile('image')) {
             $image = $request->file('image');
 
-            $name = time().'.'.$image->getClientOriginalExtension();
+            $name = time() . '.' . $image->getClientOriginalExtension();
 
             $destinationPath = public_path('/images/bookcovers');
 
@@ -164,7 +173,7 @@ class AdminController extends Controller
         if ($request->hasFile('image')) {
             $image = $request->file('image');
 
-            $name = time().'.'.$image->getClientOriginalExtension();
+            $name = time() . '.' . $image->getClientOriginalExtension();
 
             $destinationPath = public_path('/images');
 
