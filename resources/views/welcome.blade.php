@@ -1619,7 +1619,7 @@ E8F0F2 - very light
 
                     <div class="col-sm-3">
                         <div class="card mb-4 card-container" style="width: 20rem;">
-                            <img class="card-img-top" src="{{ asset('images/lule.jpeg') }}" alt="lule's image">
+                            <img class="card-img-top" src="{{ asset('images/Lule.jpg') }}" alt="lule's image">
                             <figcaption class="caption text-white">SSEBO LULE <p>Poetry Editor </p>
                             </figcaption>
                             <div class="card-body card-body-text">
