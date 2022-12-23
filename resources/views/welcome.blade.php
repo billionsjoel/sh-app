@@ -1565,18 +1565,72 @@ E8F0F2 - very light
 
                 <div class="col-sm-3">
                     <div class="card mb-4 card-container" style="width: 20rem;">
-                        <img class="card-img-top" src="{{ asset('images/joseph.jpg') }}" alt="Card image cap">
-                        <figcaption class="caption text-white">JOSEPH <p> Consultant-Academic Publishing
+                        <img class="card-img-top" src="{{ asset('https://picsum.photos/200/300/?blur') }}"
+                            alt="Card image cap">
+                        <figcaption class="caption text-white">Jane <p> Administrative Assistant
                             <p>
                         </figcaption>
                         <div class="card-body card-body-text">
-                            <p class="card-text text-danger">Joseph B(PhD)</p>
-                            <p class="card-text">Consultant-Academic Publishing</p>
+                            <p class="card-text text-danger">Jane</p>
+                            <p class="card-text">Administrative Assistant</p>
                         </div>
                     </div>
                 </div>
             </div>
 
+            <div class="row">
+                <div class="d-flex flex-column flex-md-row justfiy-content-center t-cards">
+                    <div class="col-sm-3">
+                        <div class="card mb-4 card-container" style="width: 20rem;">
+                            <img class="card-img-top" src="{{ asset('images/joseph.jpg') }}" alt="Card image cap">
+                            <figcaption class="caption text-white">JOSEPH (PhD) <p> Academic Publishing Consultant </p>
+                            </figcaption>
+                            <div class="card-body card-body-text">
+                                <p class="card-text text-danger">Joseph (PhD)</p>
+                                <p class="card-text"> Academic Publishing Consultant</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card mb-4 card-container" style="width: 20rem;">
+                            <img class="card-img-top" src="{{ asset('images/patricia.jpg') }}" alt="Card image cap">
+                            <figcaption class="caption text-white">PATRICIA <p>Writer | Associate Editor | Poetry
+                                    Editor
+                                <p>
+                            </figcaption>
+                            <div class="card-body card-body-text">
+                                <p class="card-text text-danger">Patricia</p>
+                                <p class="card-text">Writer | Associate Editor | Poetry Editor</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card mb-4 card-container" style="width: 20rem;">
+                            <img class="card-img-top" src="{{ asset('images/hassan.jpg') }}" alt="Card image cap">
+                            <figcaption class="caption text-white"> HASSAN<p> Writer | Editor
+                                </p>
+                            </figcaption>
+                            <div class="card-body card-body-text">
+                                <p class="card-text text-danger">Hassan</p>
+                                <p class="card-text">Writer | Editor</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div class="card mb-4 card-container" style="width: 20rem;">
+                            <img class="card-img-top" src="{{ asset('images/lule.jpeg') }}" alt="Card image cap">
+                            <figcaption class="caption text-white">SSEBO LULE <p>Poetry Editor </p>
+                            </figcaption>
+                            <div class="card-body card-body-text">
+                                <p class="card-text text-danger">Ssebo Lule</p>
+                                <p class="card-text">Poetry Editor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
             <div class="row">
                 <div class="d-flex flex-column flex-md-row justfiy-content-center t-cards">
                     <div class="col-sm-3">
@@ -1587,14 +1641,14 @@ E8F0F2 - very light
                                 <p>
                             </figcaption>
                             <div class="card-body card-body-text">
-                                <p class="card-text text-danger">COREEN</p>
+                                <p class="card-text text-danger">Coreen</p>
                                 <p class="card-text">
                                     Illustrator and Book Design Partner</p>
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-3">
-                        <div class="card mb-4 card-container" style="width: 20rem;">
+                        {{-- <div class="card mb-4 card-container" style="width: 20rem;">
                             <img class="card-img-top" src="{{ asset('images/hassan.jpg') }}" alt="Card image cap">
                             <figcaption class="caption text-white">HASSAN <p> Writer | Editor
                                 <p>
@@ -1603,24 +1657,25 @@ E8F0F2 - very light
                                 <p class="card-text text-danger">Hassan</p>
                                 <p class="card-text">Writer | Editor</p>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="col-sm-3">
                         <div class="card mb-4 card-container" style="width: 20rem;">
-                            <img class="card-img-top" src="{{ asset('images/patricia.jpg') }}" alt="Card image cap">
-                            <figcaption class="caption text-white">PATRICIA <p> Writer | Associate Editor | Poetry
-                                    Editor
+                            <img class="card-img-top" src="{{ asset('images/henry.jpg') }}" alt="Card image cap">
+                            <figcaption class="caption text-white">HENRY <p> (Founder of ArmUp Media)
+                                    Book Design Partner
                                 <p>
                             </figcaption>
                             <div class="card-body card-body-text">
-                                <p class="card-text text-danger">Patricia</p>
-                                <p class="card-text">Writer | Associate Editor | Poetry Editor</p>
+                                <p class="card-text text-danger">Henry</p>
+                                <p class="card-text">
+                                    Book Design Partner</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="col-sm-3">
-                        <div class="card mb-4 card-container" style="width: 20rem;">
+                        {{-- <div class="card mb-4 card-container" style="width: 20rem;">
                             <img class="card-img-top" src="{{ asset('images/henry.jpg') }}" alt="Card image cap">
                             <figcaption class="caption text-white">HENRY <p> (Founder of ArmUp Media)
                                     Book Design Partner
@@ -1631,7 +1686,7 @@ E8F0F2 - very light
                                 <p class="card-text">
                                     Book Design Partner</p>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
 
@@ -1907,7 +1962,7 @@ E8F0F2 - very light
         </div>
     </section>
 
-@include('layouts.footer')
+    @include('layouts.footer')
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
