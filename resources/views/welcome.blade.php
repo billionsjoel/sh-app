@@ -1710,7 +1710,7 @@ E8F0F2 - very light
                         <div class="card-body">
                             <h5 class="card-title">{{ $blog->title }}</h5>
                             <span class="posted-on small">Posted on : <br> <span
-                                    class="text-danger small">{{ Carbon::now()->toDayDateTimeString() }}
+                                    class="text-danger small">{{ $blog->created_at }}
                                     |
                                     {{ $blog->category }}</span></span> <br>
                             <p class="card-text">{!! \Illuminate\Support\Str::limit($blog->body, 150) !!}
