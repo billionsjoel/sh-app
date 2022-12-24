@@ -1340,17 +1340,15 @@ E8F0F2 - very light
             <div class="col-md-3 mt-4">
                 <div class="wrapper">
                     <div class="outer">
-                        <img class="b-img shadow" src="{{ asset('images/bookcovers/One-last-smoke.jpg') }}"
-                            alt="">
+                        <img class="b-img shadow" src="{{ asset('images/bookcovers/bishop-luke-orombi.jpeg') }}"
+                            alt="Bishop Luke Orombi">
                         <div class="chev"><i class="fa fa-angle-right chev-color"></i></div>
                     </div>
                     <div class="inner">
                         <div class="title mt-3">
-                            <h5 class="text-white">ONE LAST SMOKE</h5>
+                            <h5 class="text-white">His Grace</h5>
                         </div>
-                        <div class="description  text-center p-2">It is only through death that once can seize
-                            life.
-                        </div>
+                        <div class="description  text-center p-2">The autobiography of Bishop Henry Luke Orombi.</div>
                         <a href="{{ url('covers') }}" class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book
                             &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
                         </a>
@@ -1360,16 +1358,15 @@ E8F0F2 - very light
             <div class="col-md-3 mt-4">
                 <div class="wrapper">
                     <div class="outer">
-                        <img class="b-img shadow" src="{{ asset('images/bookcovers/Truck-driver.jpg') }}"
-                            alt="">
+                        <img class="b-img shadow" src="{{ asset('images/bookcovers/kiima.jpeg') }}"
+                            alt="Say No To Fear">
                         <div class="chev"><i class="fa fa-angle-right chev-color"></i></div>
                     </div>
                     <div class="inner">
                         <div class="title mt-3">
-                            <h5 class="text-white">TRUCK DRIVER</h5>
+                            <h5 class="text-white">Say No to Fear</h5>
                         </div>
-                        <div class="description text-center p-2">Every action has its consequences, and so do these
-                            relationships.</div>
+                        <div class="description text-center p-2">Learn to overcome five of our most common fears.</div>
                         <a href="{{ url('covers') }}" class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book
                             &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
                         </a>
@@ -1379,16 +1376,16 @@ E8F0F2 - very light
             <div class="col-md-3 mt-4">
                 <div class="wrapper">
                     <div class="outer">
-                        <img class="b-img shadow" src="{{ asset('images/bookcovers/Dreaming-of-a-new-africa.jpg') }}"
-                            alt="">
+                        <img class="b-img shadow" src="{{ asset('images/bookcovers/benjamin.png') }}"
+                            alt="Benjamin photo">
                         <div class="chev"><i class="fa fa-angle-right chev-color"></i></div>
                     </div>
                     <div class="inner">
                         <div class="title mt-3">
-                            <h5 class="text-white text-center">DREAMING OF A NEW AFRICA</h5>
+                            <h5 class="text-white text-center">Emonevate</h5>
                         </div>
-                        <div class="description text-center p-2">Africa's past, present and likely future conditions.
-                        </div>
+                        <div class="description text-center p-2">A poetry collection that will move you from an
+                            emotional rollercoaster to faith in God.</div>
                         <a href="{{ url('covers') }}" class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book
                             &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
                         </a>
@@ -1398,16 +1395,17 @@ E8F0F2 - very light
             <div class="col-md-3 mt-4">
                 <div class="wrapper">
                     <div class="outer">
-                        <img class="b-img shadow mb-3" src="{{ asset('images/bookcovers/im-only-size-3.jpg') }}"
-                            alt="im-only-size-3">
+                        <img class="b-img shadow mb-3" src="{{ asset('images/bookcovers/truck-driver.png') }}"
+                            alt="truck-driver">
                         <div class="chev"><i class="fa fa-angle-right chev-color"></i></div>
 
                     </div>
                     <div class="inner">
                         <div class="title mt-3">
-                            <h5 class="text-white">I'M ONLY SIZE 3</h5>
+                            <h5 class="text-white">Truck Driver</h5>
                         </div>
-                        <div class="description text-center p-2">Journey of a wandrous poet.
+                        <div class="description text-center p-2">A creative non-fictional story of the life of an East
+                            African truck driver.
                         </div>
                         <a href="{{ url('covers') }}" class="btn btn-book shadow mb-3">&nbsp;&nbsp;Buy Book
                             &nbsp;&nbsp;<i class="fa fa-angle-right"></i>
