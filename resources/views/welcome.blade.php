@@ -58,6 +58,10 @@ E8F0F2 - very light
         });
     </script>
 
+    <?php
+    use Carbon\Carbon;
+    ?>
+
     <!-- Styles -->
     <style>
         a {
@@ -1700,14 +1704,13 @@ E8F0F2 - very light
         </div>
         <div class="row p-4 justify-content-center">
             @forelse ($blogs as $blog)
-                <div class="col-sm-2">
+                <div class="col-md-2">
                     <div class="card mb-4">
                         {{-- <img src="{{asset('images/blog1.jpeg')}}" class="card-img-top" alt="..."> --}}
                         <div class="card-body">
                             <h5 class="card-title">{{ $blog->title }}</h5>
                             <span class="posted-on small">Posted on : <br> <span
-                                    class="text-danger small">{{ date('F', mktime(0, 0, 0, now()->month, 1)) }}
-                                    {{ now()->weekOfYear }}, {{ now()->year }}
+                                    class="text-danger small">{{ Carbon::now()->toDayDateTimeString() }}
                                     |
                                     {{ $blog->category }}</span></span> <br>
                             <p class="card-text">{!! \Illuminate\Support\Str::limit($blog->body, 150) !!}
