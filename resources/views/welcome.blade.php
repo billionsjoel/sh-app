@@ -1340,7 +1340,7 @@ E8F0F2 - very light
             <div class="col-md-3 mt-4">
                 <div class="wrapper">
                     <div class="outer">
-                        <img class="b-img shadow" src="{{ asset('images/bookcovers/bishop-luke-orombi.jpeg') }}"
+                        <img class="b-img shadow" src="{{ asset('images/bookcovers/bishop-luke-orombi.jpg') }}"
                             alt="Bishop Luke Orombi">
                         <div class="chev"><i class="fa fa-angle-right chev-color"></i></div>
                     </div>
@@ -1358,7 +1358,7 @@ E8F0F2 - very light
             <div class="col-md-3 mt-4">
                 <div class="wrapper">
                     <div class="outer">
-                        <img class="b-img shadow" src="{{ asset('images/bookcovers/kiima.jpeg') }}"
+                        <img class="b-img shadow" src="{{ asset('images/bookcovers/kiima.jpg') }}"
                             alt="Say No To Fear">
                         <div class="chev"><i class="fa fa-angle-right chev-color"></i></div>
                     </div>
