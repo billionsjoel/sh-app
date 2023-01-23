@@ -1925,7 +1925,7 @@ E8F0F2 - very light
         </div>
     </section>
 
-    <section class="contact">
+    <section class="contact mb-0">
         <div class="body p-4" id="contact">
             <div class="container contact-form">
                 <div class="contact-image">
@@ -1962,7 +1962,6 @@ E8F0F2 - very light
             </div>
         </div>
     </section>
-
     @include('layouts.footer')
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
