@@ -17,17 +17,18 @@
                             <h3>Follow us</h3>
                             <ul>
                                 <li>
-                                    <a href="{{ url('https://www.facebook.com/scribehouse') }}">
+                                    <a href="{{ url('https://www.facebook.com/scribehouse.ug?mibextid=ZbWKwL') }}">
                                         <i class="fa fa-facebook white"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ url('https://twitter.com/scribehouse') }}">
+                                    <a href="{{ url('https://twitter.com/scribehouseUg') }}">
                                         <i class="fa fa-twitter white"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="{{ url('https://www.instagram.com/scribehouse') }}">
+                                    <a
+                                        href="{{ url('https://www.instagram.com/invites/contact/?i=47c6iqcb3hxl&utm_content=3gyudoj') }}">
                                         <i class="fa fa-instagram white"></i>
                                     </a>
                                 </li>
