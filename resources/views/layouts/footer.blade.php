@@ -17,6 +17,13 @@
         .mob-ml {
             margin-left: -3rem;
         }
+
+        .mob-sub-left {
+            display: flex;
+            justify-content: center;
+            align-items: items;
+            margin-top: 1rem;
+        }
     }
 </style>
 
@@ -143,7 +150,7 @@
                     <!-- End col -->
                     <div class="col-md-12 col-lg-6">
                         <div class="footer-widget">
-                            <div class="section-heading">
+                            <div class="section-heading mob-sub-left">
                                 <h3>Subscribe</h3>
                                 <span class="animate-border-- border-black"></span>
                             </div>
