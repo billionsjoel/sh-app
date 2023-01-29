@@ -13,6 +13,10 @@
         .mob-mg-l {
             margin-left: 2rem !important;
         }
+
+        .mob-ml {
+            margin-left: -3rem;
+        }
     }
 </style>
 
@@ -63,7 +67,7 @@
             <!-- End Col -->
             <div class="col-md-12 col-lg-8">
                 <div class="row">
-                    <div class="col-md-6 c-mt">
+                    <div class="col-md-6 c-mt mob-ml">
                         <div class="contact-us">
                             <div class="contact-icon">
                                 <i class="fa fa-map-o" aria-hidden="true"></i>
