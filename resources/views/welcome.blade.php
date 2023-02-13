@@ -105,6 +105,12 @@ E8F0F2 - very light
         ul>li>a> {
             bg-color: #fff !important;
         }
+
+        .push-right {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
     </style>
 
     <style>
@@ -1954,8 +1960,13 @@ E8F0F2 - very light
                                 <textarea name="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <input type="submit" id="sendMessage" class=i small"" Authour - value="Send Message" />
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-12">
+                            <div class="form-group push-right">
+                                <input type="submit" id="sendMessage" class="btn btn-primary mt-4 ml-2 btn-rounded"
+                                    value="Send Message" />
+                            </div>
                         </div>
                     </div>
                 </form>
