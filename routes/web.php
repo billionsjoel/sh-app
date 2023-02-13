@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\GuestController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Models\Blog;
 use App\Models\BookCover;
 use App\Models\Messages;
@@ -26,7 +27,7 @@ use phpDocumentor\Reflection\DocBlock\Tags\Covers;
 */
 
 Route::get('/', function () {
-//
+    //
     $covers = BookCover::all()->take(3);
     $blogs = blog::all()->take(3);
     $now = Carbon::now();
@@ -39,16 +40,22 @@ Route::get('/home', function () {
 });
 Route::get('/view-all-blogs', function () {
 
- // retrieve all blogs
-
+    // retrieve all blogs
     $featured   = blog::where('status', 1)->first();
     $latest     = blog::where('status', 2)->first();
     $promoted   = blog::where('status', 3)->first();
+
+    if($featured && $latest && $promoted){
+
     $blogs      = blog::paginate(15);
     $covers     = BookCover::paginate(15);
-
-
     return view('allBlogs', compact('featured', 'latest', 'promoted', 'blogs', 'covers'));
+
+    }
+    else {
+         return view('not-found');
+    }
+
 });
 
 
@@ -81,16 +88,16 @@ Route::post('/comments/{id}', [App\Http\Controllers\GuestController::class, 'pos
 
 Auth::routes([
 
-  'register' => true, // Register Routes...
+    'register' => true, // Register Routes...
 
-//   'reset' => false, // Reset Password Routes...
+    //   'reset' => false, // Reset Password Routes...
 
-//   'verify' => false, // Email Verification Routes...
+    //   'verify' => false, // Email Verification Routes...
 
 ]);
 
 Route::get('/create-article', function () {
-//
+    //
     $blogs = Blog::paginate(5);
 
     return view('admin.createBlog', compact('blogs'));
@@ -98,14 +105,14 @@ Route::get('/create-article', function () {
 
 
 Route::get('/create-book-cover', function () {
-//
+    //
     $covers = BookCover::paginate(5);
 
     return view('admin.createCover', compact('covers'));
 });
 
 Route::get('/create-testimonial', function () {
-//
+    //
     $testimonials = Testimonials::paginate(5);
 
     return view('admin.createTestimonial', compact('testimonials'));
@@ -113,7 +120,7 @@ Route::get('/create-testimonial', function () {
 
 
 Route::get('/view-messages', function () {
-//
+    //
     $messages = Messages::all();
 
     $count = Messages::count();
@@ -122,7 +129,7 @@ Route::get('/view-messages', function () {
 });
 
 Route::get('/view-comments', function () {
-//
+    //
     $comments = Comments::all();
 
     $count = Comments::count();
@@ -131,14 +138,14 @@ Route::get('/view-comments', function () {
 })->name('viewComments');
 
 Route::get('/view-edit-blog/{id}', function ($id) {
-//
+    //
     $blogs = Blog::where('id', $id)->get();
 
     return view('admin.editBlog', compact('blogs'));
 });
 
 Route::get('/view-edit-book-cover/{id}', function ($id) {
-//
+    //
     $bookCovers = BookCover::where('id', $id)->get();
 
     return view('admin.editCover', compact('bookCovers'));
