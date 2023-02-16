@@ -47,7 +47,9 @@
                                 value="{{ $bookCover->publisher }}" />
                         </div>
                         <div class="form-group">
-                            <label for="image">Choose Book Image</label>
+                            <label for="image"> <img src="{{ asset('images/bookcovers/' . $bookCover->image) }}"
+                                    alt="{{ $bookCover->title }} Book Cover" width="100">
+                            </label>
                             <input id="image" type="file" name="image">
                         </div>
 
