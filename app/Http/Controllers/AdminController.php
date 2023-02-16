@@ -210,9 +210,25 @@ class AdminController extends Controller
 
     public function deleteBlog($id)
     {
-        Blog::destroy($id);
+    $blog = Blog::find($id);
 
-        session()->flash('message', 'Blog deleted successfully! ✅ ');
+        // Check if the book cover exists
+        if (!$blog) {
+            session()->flash('message', 'Blog Not Found ❌');
+            return redirect('/create-article');
+        }
+
+        $imagePath = public_path('/images/articles/' . $blog->image);
+
+        // Remove the image file from the server
+        if ($blog->image && file_exists($imagePath)) {
+            unlink($imagePath);
+        }
+
+        // Delete the book cover from the database
+        $blog->delete();
+
+        session()->flash('message', 'Blog Deleted Successfully! ✅');
 
         return redirect('/create-article');
     }
