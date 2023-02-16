@@ -21,19 +21,24 @@ class AdminController extends Controller
     public function publishBlog(Request $request)
     {
         $blog = new Blog;
+
+        $request->validate([
+            'title' => ['required', 'max:200'],
+            'body' => ['required'],
+            'author' => ['required'],
+            'category' => ['required'],
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
         $blog->title = request()->title;
         $blog->body = request()->body;
         $blog->author = request()->author;
         $blog->category = request()->category;
 
-        $this->validate($request, [
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        ]);
-
         if ($request->hasFile('image')) {
             $image = $request->file('image');
             $name = time() . '.' . $image->getClientOriginalExtension();
-            $destinationPath = public_path('/images');
+            $destinationPath = public_path('/images/articles');
             $image->move($destinationPath, $name);
             $blog->image = $name;
 
@@ -45,23 +50,50 @@ class AdminController extends Controller
         return redirect('/create-article');
     }
 
+
     public function editBlog(Request $request, $id)
     {
         $blog = Blog::find($id);
 
-        Blog::where('id', $id)
-            ->update([
-                'title' => request()->title,
-                'body' => request()->body,
-                'author' => request()->author,
-                'category' => request()->category,
-            ]);
+        $request->validate([
+            'title' => ['required', 'max:200'],
+            'body' => ['required'],
+            'author' => ['required'],
+            'category' => ['required'],
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
 
+
+        $blog->title = request()->title;
+        $blog->body = request()->body;
+        $blog->author = request()->author;
+        $blog->category = request()->category;
+
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
+
+            $name = time() . '.' . $image->getClientOriginalExtension();
+
+            $destinationPath = public_path('/images/articles');
+
+            $image->move($destinationPath, $name);
+
+            // Remove the old image file from the server
+            if ($blog->image && file_exists($destinationPath . '/' . $blog->image)) {
+                unlink($destinationPath . '/' . $blog->image);
+            }
+
+            $blog->image = $name;
+        }
+
+        $blog->save();
 
         session()->flash('message', 'Blog Updated Successfully! ✅');
 
         return redirect('/create-article');
     }
+
+
     public function editBookCover(Request $request, $id)
     {
         $bookCover = BookCover::find($id);
@@ -119,7 +151,6 @@ class AdminController extends Controller
             'publisher' => ['required'],
             'author' => ['required'],
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
-
         ]);
 
         $bookCover = new BookCover;
