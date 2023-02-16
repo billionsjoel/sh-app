@@ -80,6 +80,7 @@
                         <th scope="col">#</th>
                         <th scope="col">Title</th>
                         <th scope="col">Author</th>
+                        <th scope="col">Image</th>
                         <th scope="col">Action</th>
                     </tr>
                 </thead>
@@ -89,10 +90,11 @@
                             <th scope="row">{{ $cover->id }}</th>
                             <td>{{ $cover->title }}</td>
                             <td>{{ $cover->author }}</td>
-                            <td><span class="btn btn-sm bg-info"><a class="text-white"
-                                        href="{{ url('view-edit-blog/' . $cover->id) }}"> Change Image <i
-                                            class="fa fa-user"></i></a></span> <span class="btn btn-sm bg-warning"><a
-                                        class="text-dark" href="{{ url('view-edit-book-cover/' . $cover->id) }}">
+                            <td> <img src="{{ asset('images/bookcovers/' . $cover->image) }}"
+                                    alt="{{ $cover->title }} Book Cover" width="45" height="45">
+                            </td>
+                            <td><span class="btn btn-sm bg-warning"><a class="text-dark"
+                                        href="{{ url('view-edit-book-cover/' . $cover->id) }}">
                                         Edit <i class="fa fa-pen"></i> </a></span>
                                 <span class="btn btn-sm bg-danger"> <a class="text-white"
                                         href="{{ url('delete-cover/' . $cover->id) }}">

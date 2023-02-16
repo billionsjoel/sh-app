@@ -66,45 +66,45 @@ class AdminController extends Controller
     {
         $bookCover = BookCover::find($id);
 
-    $request->validate([
-        'title' => ['required', 'max:200'],
-        'description' => ['required'],
-        'genre' => ['required'],
-        'design' => ['required'],
-        'publisher' => ['required'],
-        'author' => ['required'],
-        'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
-    ]);
+        $request->validate([
+            'title' => ['required', 'max:200'],
+            'description' => ['required'],
+            'genre' => ['required'],
+            'design' => ['required'],
+            'publisher' => ['required'],
+            'author' => ['required'],
+            'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
 
-    $bookCover->title = $request->title;
-    $bookCover->description = $request->description;
-    $bookCover->genre = $request->genre;
-    $bookCover->design = $request->design;
-    $bookCover->publisher = $request->publisher;
-    $bookCover->author = $request->author;
+        $bookCover->title = $request->title;
+        $bookCover->description = $request->description;
+        $bookCover->genre = $request->genre;
+        $bookCover->design = $request->design;
+        $bookCover->publisher = $request->publisher;
+        $bookCover->author = $request->author;
 
-    if ($request->hasFile('image')) {
-        $image = $request->file('image');
+        if ($request->hasFile('image')) {
+            $image = $request->file('image');
 
-        $name = time() . '.' . $image->getClientOriginalExtension();
+            $name = time() . '.' . $image->getClientOriginalExtension();
 
-        $destinationPath = public_path('/images/bookcovers');
+            $destinationPath = public_path('/images/bookcovers');
 
-        $image->move($destinationPath, $name);
+            $image->move($destinationPath, $name);
 
-        // Remove the old image file from the server
-        if ($bookCover->image && file_exists($destinationPath . '/' . $bookCover->image)) {
-            unlink($destinationPath . '/' . $bookCover->image);
+            // Remove the old image file from the server
+            if ($bookCover->image && file_exists($destinationPath . '/' . $bookCover->image)) {
+                unlink($destinationPath . '/' . $bookCover->image);
+            }
+
+            $bookCover->image = $name;
         }
 
-        $bookCover->image = $name;
-    }
+        $bookCover->save();
 
-    $bookCover->save();
+        session()->flash('message', 'Book Cover Updated Successfully! ✅');
 
-    session()->flash('message', 'Book Cover Updated Successfully! ✅');
-
-    return redirect('/create-article');
+        return redirect('/create-book-cover');
     }
 
 
@@ -118,7 +118,7 @@ class AdminController extends Controller
             'design' => ['required'],
             'publisher' => ['required'],
             'author' => ['required'],
-             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
 
         ]);
 
@@ -154,9 +154,25 @@ class AdminController extends Controller
 
     public function deleteCover($id)
     {
-        BookCover::destroy($id);
+        $bookCover = BookCover::find($id);
 
-        session()->flash('message', 'Book Cover deleted! ✅ ');
+        // Check if the book cover exists
+        if (!$bookCover) {
+            session()->flash('message', 'Book Cover Not Found ❌');
+            return redirect('/create-book-cover');
+        }
+
+        $imagePath = public_path('/images/bookcovers/' . $bookCover->image);
+
+        // Remove the image file from the server
+        if ($bookCover->image && file_exists($imagePath)) {
+            unlink($imagePath);
+        }
+
+        // Delete the book cover from the database
+        $bookCover->delete();
+
+        session()->flash('message', 'Book Cover Deleted Successfully! ✅');
 
         return redirect('/create-book-cover');
     }
