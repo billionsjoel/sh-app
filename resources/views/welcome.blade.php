@@ -79,19 +79,19 @@ E8F0F2 - very light
 
         </div>
     @endif
-    @include('components.modal')
-    @include('components.header')
-    @include('components.navbar')
-    @include('components.book-section')
-    @include('components.about-section')
-    @include('components.services-section')
-    @include('components.teams-section')
-    @include('components.blogs-section')
-    @include('components.clients-section')
-    @include('components.books-section')
-    @include('components.newsletter-section')
-    @include('components.contact-section')
-    {{--@include('components.footer')--}}
+    @include('components.welcomePage.modal')
+    @include('components.welcomePage.header')
+    @include('components.welcomePage.navbar')
+    @include('components.welcomePage.book-section')
+    @include('components.welcomePage.about-section')
+    @include('components.welcomePage.services-section')
+    @include('components.welcomePage.teams-section')
+    @include('components.welcomePage.blogs-section')
+    @include('components.welcomePage.clients-section')
+    @include('components.welcomePage.books-section')
+    @include('components.welcomePage.newsletter-section')
+    @include('components.welcomePage.contact-section')
+    {{-- @include('components.footer') --}}
     @include('layouts.footer')
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
