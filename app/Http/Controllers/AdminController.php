@@ -66,18 +66,45 @@ class AdminController extends Controller
     {
         $bookCover = BookCover::find($id);
 
-        BookCover::where('id', $id)
-            ->update([
-                'title' => request()->title,
-                'description' => request()->description,
-                'author' => request()->author,
-                'genre' => request()->genre,
-            ]);
+    $request->validate([
+        'title' => ['required', 'max:200'],
+        'description' => ['required'],
+        'genre' => ['required'],
+        'design' => ['required'],
+        'publisher' => ['required'],
+        'author' => ['required'],
+        'image' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+    ]);
 
+    $bookCover->title = $request->title;
+    $bookCover->description = $request->description;
+    $bookCover->genre = $request->genre;
+    $bookCover->design = $request->design;
+    $bookCover->publisher = $request->publisher;
+    $bookCover->author = $request->author;
 
-        session()->flash('message', 'Book Cover Updated Successfully! ✅');
+    if ($request->hasFile('image')) {
+        $image = $request->file('image');
 
-        return redirect('/create-article');
+        $name = time() . '.' . $image->getClientOriginalExtension();
+
+        $destinationPath = public_path('/images/bookcovers');
+
+        $image->move($destinationPath, $name);
+
+        // Remove the old image file from the server
+        if ($bookCover->image && file_exists($destinationPath . '/' . $bookCover->image)) {
+            unlink($destinationPath . '/' . $bookCover->image);
+        }
+
+        $bookCover->image = $name;
+    }
+
+    $bookCover->save();
+
+    session()->flash('message', 'Book Cover Updated Successfully! ✅');
+
+    return redirect('/create-article');
     }
 
 
