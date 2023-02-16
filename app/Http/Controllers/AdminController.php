@@ -91,6 +91,8 @@ class AdminController extends Controller
             'design' => ['required'],
             'publisher' => ['required'],
             'author' => ['required'],
+             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+
         ]);
 
         $bookCover = new BookCover;
@@ -101,12 +103,6 @@ class AdminController extends Controller
         $bookCover->design = request()->design;
         $bookCover->publisher = request()->publisher;
         $bookCover->author = request()->author;
-
-        $this->validate($request, [
-
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-
-        ]);
 
         if ($request->hasFile('image')) {
             $image = $request->file('image');

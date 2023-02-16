@@ -17,14 +17,11 @@ E8F0F2 - very light
     <meta name="author" content="Scribe house, Crystal butungi, and Publishing in uganda">
     <title>Scribehouse</title>
 
-    <!-- Fonts -->
-    {{-- <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet"> --}}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
         rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
 
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
     <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
@@ -63,22 +60,19 @@ E8F0F2 - very light
     use Carbon\Carbon;
     ?>
 
-    <!-- Styles -->
-
 
 </head>
 
 <body>
 
     @if ($flash = session('message'))
-        --}}
-
         <div id="flash-message" class="alert alert-success flash-message mt-4" role="alert">
 
             {{ $flash }}
 
         </div>
     @endif
+
     @include('components.welcomePage.modal')
     @include('components.welcomePage.header')
     @include('components.welcomePage.navbar')
@@ -91,7 +85,6 @@ E8F0F2 - very light
     @include('components.welcomePage.books-section')
     @include('components.welcomePage.newsletter-section')
     @include('components.welcomePage.contact-section')
-    {{-- @include('components.footer') --}}
     @include('layouts.footer')
 
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
