@@ -824,7 +824,7 @@
         <div class="container">
             <div class="row">
                 @forelse ($covers as $cover)
-                    <div class="col-sm-6 py-2" style="width: 26rem;">
+                    <div class="col-md-4 py-2" style="width: 26rem;">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">{{ $cover->title }}</h4>
@@ -832,10 +832,14 @@
                             <img class="card-img-top" src="{{ asset('/images/bookcovers/' . $cover->image) }}"
                                 alt="Card image cap" style="height: 100%; width: 100%; object-fit: contain">
                             <div class="card-body">
-                                <h5 class="card-title">Description</h5>
+                                <h5 class="card-title">Book Description</h5>
                                 <p class="card-text">{!! $cover->description !!}</p>
-                                <p href="#" class="small text-secondar"> <span class="text-dark">Genre :</span>
+                                <p class="small text-secondary"> <span class="text-dark">Genre :</span>
                                     {{ $cover->genre }}</p>
+                                <p class="small text-secondary"> <span class="text-dark">Publisher :</span>
+                                    {{ $cover->publisher }}</p>
+                                <p class="small text-secondary"> <span class="text-dark">Book Cover designed by :</span>
+                                    {{ $cover->design }}</p>
                                 <a href="#" class="small"><span class="text-success">Author :
                                     </span><b class="text-info">{{ $cover->author }}</b></a>
                                 <br>
