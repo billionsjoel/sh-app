@@ -70,22 +70,25 @@
                             <div class="card-body">
                                 <h5 class="card-title">Book Description</h5>
                                 <p class="card-text">{!! ucfirst(strtolower($cover->description)) !!}</p>
-                                <div class="small text-info lead d-flex justify-content-center align-items-center">
+                                <div
+                                    class="small text-info lead d-flex justify-content-center align-items-center border-bottom border-top">
                                     <p class="text-success me-2 p-2 flex-fill">Genre :</p>
                                     <p>{{ ucfirst(strtolower($cover->genre)) }}</p>
                                 </div>
-                                <div class="small text-info lead d-flex justify-content-center align-items-center">
+                                <div
+                                    class="small text-info lead d-flex justify-content-center align-items-center border-bottom">
                                     <p class="text-success me-2 p-2 flex-fill">Publisher :</p>
                                     <p>
                                         {{ ucfirst(strtolower($cover->publisher)) }}</p>
                                 </div>
-                                <div class="small text-info lead d-flex justify-content-center align-items-center">
+                                <div
+                                    class="small text-info lead d-flex justify-content-center align-items-center border-bottom">
                                     <p class="text-success me-2 p-2 flex-fill">Book Cover :
                                     </p>
                                     <p>
                                         {{ ucfirst(strtolower($cover->design)) }}</p>
                                 </div>
-                                <div class="small lead d-flex justify-content-center align-items-center">
+                                <div class="small lead d-flex justify-content-center align-items-center border-bottom">
                                     <p class="text-success me-2 p-2 flex-fill">Author :
                                     </p>
                                     <p class="text-info">{{ ucfirst(strtolower($cover->author)) }}</p>
