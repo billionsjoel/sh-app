@@ -1,7 +1,9 @@
-@extends('layouts.app')
+@extends('../layouts.dashboard')
 
 @section('content')
-    <div class="container">
+    <div class="container mt-4">
+
+        <p class="lead display-6 d-flex justify-content-center mt-4">Add new user</p>
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
