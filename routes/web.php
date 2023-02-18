@@ -171,6 +171,9 @@ Route::post('/edit-book-cover/{id}', [App\Http\Controllers\AdminController::clas
 Route::get('/delete-testimonial/{id}', [App\Http\Controllers\AdminController::class, 'deleteTestimony']);
 Route::get('/delete-message/{id}', [App\Http\Controllers\AdminController::class, 'deleteMessage']);
 
+Route::get('create-user-account', [App\Http\Controllers\AdminController::class, 'createUserAccount']);
+Route::post('create-user-account', [App\Http\Controllers\AdminController::class, 'saveUserAccount'])->name('createUserAccount');
+
 Route::get('/delete-comment/{id}', [App\Http\Controllers\AdminController::class, 'deleteComment']);
 
 

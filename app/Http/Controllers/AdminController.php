@@ -9,6 +9,9 @@ use App\Models\Comments;
 use App\Models\Messages;
 use App\Models\subscriptions;
 use App\Models\Testimonials;
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
+
 
 class AdminController extends Controller
 {
@@ -210,7 +213,7 @@ class AdminController extends Controller
 
     public function deleteBlog($id)
     {
-    $blog = Blog::find($id);
+        $blog = Blog::find($id);
 
         // Check if the book cover exists
         if (!$blog) {
@@ -300,5 +303,27 @@ class AdminController extends Controller
         session()->flash('comment', 'comment deleted successfully! ✅ ');
 
         return redirect('/view-comments');
+    }
+
+    public function saveUserAccount(Request $request)
+    {
+        $user = new User();
+
+        $user->name = request()->name;
+
+        $user->email = request()->email;
+
+        $user->password = Hash::make(request()->password);
+
+        $user->save();
+
+        session()->flash('message', 'User Account Created Successfully! ✅');
+
+        return redirect('/home');
+    }
+
+    public function createUserAccount()
+    {
+        return view('admin.newUserAccount');
     }
 }

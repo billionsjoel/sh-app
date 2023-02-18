@@ -16,7 +16,8 @@
             class="fa fa-envelope"></i> &nbsp;Messages</a>
     <a class="list-group-item list-group-item-action bg-light" href="{{ url('view-comments') }}"><i
             class="fa fa-comment"></i> &nbsp;Comments</a>
-    <a class="list-group-item list-group-item-action bg-light" href="#!"><i class="fa fa-user"></i> &nbsp; Add User
+    <a class="list-group-item list-group-item-action bg-light" href="{{ url('create-user-account') }}"><i
+            class="fa fa-user"></i> &nbsp; Add User
         Account
     </a>
     <li class="list-group-item list-group-item-action bg-light mt-4">
