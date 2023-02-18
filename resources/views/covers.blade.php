@@ -69,15 +69,27 @@
                                 alt="Card image cap" style="height: 100%; width: 100%; object-fit: contain">
                             <div class="card-body">
                                 <h5 class="card-title">Book Description</h5>
-                                <p class="card-text">{!! $cover->description !!}</p>
-                                <p class="small text-secondary"> <span class="text-dark">Genre :</span>
-                                    {{ $cover->genre }}</p>
-                                <p class="small text-secondary"> <span class="text-dark">Publisher :</span>
-                                    {{ $cover->publisher }}</p>
-                                <p class="small text-secondary"> <span class="text-dark">Book Cover designed by :</span>
-                                    {{ $cover->design }}</p>
-                                <a href="#" class="small"><span class="text-success">Author :
-                                    </span><b class="text-info">{{ $cover->author }}</b></a>
+                                <p class="card-text">{!! ucfirst(strtolower($cover->description)) !!}</p>
+                                <div class="small text-info lead d-flex justify-content-center align-items-center">
+                                    <p class="text-success me-2 p-2 flex-fill">Genre :</p>
+                                    <p>{{ ucfirst(strtolower($cover->genre)) }}</p>
+                                </div>
+                                <div class="small text-info lead d-flex justify-content-center align-items-center">
+                                    <p class="text-success me-2 p-2 flex-fill">Publisher :</p>
+                                    <p>
+                                        {{ ucfirst(strtolower($cover->publisher)) }}</p>
+                                </div>
+                                <div class="small text-info lead d-flex justify-content-center align-items-center">
+                                    <p class="text-success me-2 p-2 flex-fill">Book Cover :
+                                    </p>
+                                    <p>
+                                        {{ ucfirst(strtolower($cover->design)) }}</p>
+                                </div>
+                                <div class="small lead d-flex justify-content-center align-items-center">
+                                    <p class="text-success me-2 p-2 flex-fill">Author :
+                                    </p>
+                                    <p class="text-info">{{ ucfirst(strtolower($cover->author)) }}</p>
+                                </div>
                                 <br>
                                 <a href="#" class="btn btn-primary btn-block mt-2">Buy This Book</a>
                             </div>
