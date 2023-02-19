@@ -46,13 +46,19 @@
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
     <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
+
+    <style>
+        .mg-top {
+            margin-top: 6rem;
+        }
+    </style>
 </head>
 
 <body>
     @include('components.welcomePage.navbar')
 
-    <main class="container">
-        <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+    <main class="container mb-4">
+        <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark mg-top">
             <div class="col-md-12 px-0">
                 <h1 class="display-4 fst-italic">{{ $featured->title }}</h1>
                 <p class="lead my-3">{!! \Illuminate\Support\Str::limit($featured->body, 500) !!}</p>
