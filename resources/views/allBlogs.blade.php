@@ -103,7 +103,7 @@
                     </div>
                     <div class="col-auto d-none d-lg-block">
                         <div class="col-auto d-none d-lg-block">
-                            <img class="article-img" src="{{ asset('images/articles' . $promoted->image) }}"
+                            <img class="article-img" src="{{ asset('images/articles/' . $promoted->image) }}"
                                 alt="" height="100" width="100">
                         </div>
                     </div>
