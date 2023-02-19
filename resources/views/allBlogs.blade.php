@@ -90,7 +90,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-5">
+            <div class="col-md-6">
                 <div
                     class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative d-flex justify-content-center align-items-center">
                     <div class="col p-3 d-flex flex-column position-static">
