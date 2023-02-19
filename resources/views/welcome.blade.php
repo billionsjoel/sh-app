@@ -83,6 +83,13 @@ E8F0F2 - very light
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script>
     @include('components.welcomePage.navbar')
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
+        crossorigin="anonymous"></script>
+    <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed" data-ad-client="ca-pub-6271400531285389"
+        data-ad-slot="4676939541"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
     @include('components.welcomePage.book-section')
     @include('components.welcomePage.about-section')
     @include('components.welcomePage.services-section')

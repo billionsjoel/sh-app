@@ -75,6 +75,14 @@
                             <div class="card-body">
                                 <h5 class="card-title">Book Description</h5>
                                 <p class="card-text">{!! ucfirst(strtolower($cover->description)) !!}</p>
+                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
+                                    crossorigin="anonymous"></script>
+                                <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed"
+                                    data-ad-client="ca-pub-6271400531285389" data-ad-slot="4676939541"></ins>
+                                <script>
+                                    (adsbygoogle = window.adsbygoogle || [])
+                                    .push({});
+                                </script>
                                 <div
                                     class="small text-info lead d-flex justify-content-center align-items-center border-bottom border-top">
                                     <p class="text-success me-2 p-2 flex-fill pt-3">Genre :</p>

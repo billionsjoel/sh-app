@@ -82,6 +82,13 @@
                         <h3 class="mb-0">{{ $latest->title }}</h3>
                         <div class="mb-1 text-muted">{{ $latest->created_at }}</div>
                         <p class="card-text mb-auto">{!! \Illuminate\Support\Str::limit($latest->body, 100) !!}</p>
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
+                            crossorigin="anonymous"></script>
+                        <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed"
+                            data-ad-client="ca-pub-6271400531285389" data-ad-slot="4676939541"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
                         <a href="{{ url('/blogs?id=' . $latest->id) }}" class="stretched-link">Continue reading</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
