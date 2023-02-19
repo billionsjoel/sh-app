@@ -7,6 +7,7 @@
 
     <title>Scribehouse | Book Covers</title>
 
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap"
@@ -61,6 +62,8 @@
 </head>
 
 <body>
+    <amp-auto-ads type="adsense" data-ad-client="ca-pub-6271400531285389">
+    </amp-auto-ads>
     @include('components.welcomePage.navbar')
 
     <main class="container mb-4">

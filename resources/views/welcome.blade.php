@@ -35,6 +35,7 @@ E8F0F2 - very light
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
+    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96832486-1"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
@@ -64,7 +65,8 @@ E8F0F2 - very light
 </head>
 
 <body>
-
+    <amp-auto-ads type="adsense" data-ad-client="ca-pub-6271400531285389">
+    </amp-auto-ads>
     @if ($flash = session('message'))
         <div id="flash-message" class="alert alert-success flash-message mt-4" role="alert">
 
