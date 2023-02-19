@@ -96,8 +96,8 @@
                     <div class="col p-3 d-flex flex-column position-static">
                         <strong class="d-inline-block mb-2 text-success">Promoted</strong>
                         <h3 class="mb-0">{{ $promoted->title }}</h3>
-                        <div class="text-muted">{{ $promoted->created_at }}</div>
-                        <p class="mb-auto">{!! \Illuminate\Support\Str::limit($promoted->body, 100) !!}</p>
+                        <div class="mb-1 text-muted">{{ $promoted->created_at }}</div>
+                        <p class="card-text mb-auto">{!! \Illuminate\Support\Str::limit($promoted->body, 100) !!}</p>
                         <a href="{{ url('/blogs?id=' . $promoted->id) }}" class="stretched-link">Continue
                             reading</a>
                     </div>
