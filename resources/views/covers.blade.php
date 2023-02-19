@@ -43,8 +43,7 @@
 
         gtag('config', 'UA-96832486-1');
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
-        crossorigin="anonymous"></script>
+
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
     <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
@@ -58,6 +57,8 @@
     <section style="margin-top:150px; margin-bottom:150px;">
         <div class="container">
             <div class="row">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
+                    crossorigin="anonymous"></script>
                 <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
                     data-ad-format="fluid" data-ad-client="ca-pub-6271400531285389" data-ad-slot="7003719981"></ins>
                 <script>

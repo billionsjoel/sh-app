@@ -43,8 +43,6 @@
 
         gtag('config', 'UA-96832486-1');
     </script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
-        crossorigin="anonymous"></script>
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
     <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
@@ -124,6 +122,8 @@
                         <h2 class="blog-post-title">{{ $blog->title }}</h2>
                         <p class="blog-post-meta">{{ date('d-m-Y', strtotime($blog->created_at)) ?? '' }} <a
                                 href="#">{{ $blog->author }}</a></p>
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
+                            crossorigin="anonymous"></script>
                         <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
                             data-ad-format="fluid" data-ad-client="ca-pub-6271400531285389"
                             data-ad-slot="7003719981"></ins>
