@@ -65,8 +65,8 @@ E8F0F2 - very light
 </head>
 
 <body>
-    <amp-auto-ads type="adsense" data-ad-client="ca-pub-6271400531285389">
-    </amp-auto-ads>
+    {{-- <amp-auto-ads type="adsense" data-ad-client="ca-pub-6271400531285389">
+    </amp-auto-ads> --}}
     @if ($flash = session('message'))
         <div id="flash-message" class="alert alert-success flash-message mt-4" role="alert">
 
