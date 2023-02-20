@@ -183,6 +183,14 @@
     </main>
 
     <footer>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
+            crossorigin="anonymous"></script>
+        <!-- web hosting and programming -->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6271400531285389"
+            data-ad-slot="9100247633" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
         @include('layouts.footer')
     </footer>
 
