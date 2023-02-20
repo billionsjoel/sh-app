@@ -56,16 +56,19 @@
         @include('components.welcomePage.navbar')
     </section>
 
+    {{-- code ads --}}
+    {{-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
+                                    crossorigin="anonymous"></script>
+                                <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed"
+                                    data-ad-client="ca-pub-6271400531285389" data-ad-slot="4676939541"></ins>
+                                <script>
+                                    (adsbygoogle = window.adsbygoogle || [])
+                                    .push({});
+                                </script> --}}
+
     <section style="margin-top:150px; margin-bottom:150px;">
         <div class="container">
             <div class="row">
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
-                    crossorigin="anonymous"></script>
-                <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
-                    data-ad-format="fluid" data-ad-client="ca-pub-6271400531285389" data-ad-slot="7003719981"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
                 @forelse ($covers as $cover)
                     <div class="col-md-4 py-2" style="width: 26rem;">
                         <div class="card">
@@ -77,14 +80,6 @@
                             <div class="card-body">
                                 <h5 class="card-title">Book Description</h5>
                                 <p class="card-text">{!! ucfirst(strtolower($cover->description)) !!}</p>
-                                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
-                                    crossorigin="anonymous"></script>
-                                <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed"
-                                    data-ad-client="ca-pub-6271400531285389" data-ad-slot="4676939541"></ins>
-                                <script>
-                                    (adsbygoogle = window.adsbygoogle || [])
-                                    .push({});
-                                </script>
                                 <div
                                     class="small text-info lead d-flex justify-content-center align-items-center border-bottom border-top">
                                     <p class="text-success me-2 p-2 flex-fill pt-3">Genre :</p>
