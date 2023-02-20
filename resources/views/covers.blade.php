@@ -79,29 +79,29 @@
                                 alt="Card image cap" style="height: 100%; width: 100%; object-fit: contain">
                             <div class="card-body">
                                 <h5 class="card-title">Book Description</h5>
-                                <p class="card-text">{!! ucfirst(strtolower($cover->description)) !!}</p>
+                                <p class="card-text">{!! ucwords(strtolower($cover->description)) !!}</p>
                                 <div
                                     class="small text-info lead d-flex justify-content-center align-items-center border-bottom border-top">
                                     <p class="text-success me-2 p-2 flex-fill pt-3">Genre :</p>
-                                    <p class="pt-1">{{ ucfirst(strtolower($cover->genre)) }}</p>
+                                    <p class="pt-1">{{ ucwords(strtolower($cover->genre)) }}</p>
                                 </div>
                                 <div
                                     class="small text-info lead d-flex justify-content-center align-items-center border-bottom">
                                     <p class="text-success me-2 p-2 pt-3 flex-fill">Publisher :</p>
                                     <p class="pt-2">
-                                        {{ ucfirst(strtolower($cover->publisher)) }}</p>
+                                        {{ ucwords(strtolower($cover->publisher)) }}</p>
                                 </div>
                                 <div
                                     class="small text-info lead d-flex justify-content-center align-items-center border-bottom">
                                     <p class="text-success me-2 p-2 pt-2 flex-fill">Book Cover :
                                     </p>
                                     <p class="pt-2">
-                                        {{ ucfirst(strtolower($cover->design)) }}</p>
+                                        {{ ucwords(strtolower($cover->design)) }}</p>
                                 </div>
                                 <div class="small lead d-flex justify-content-center align-items-center border-bottom">
                                     <p class="text-success me-2 p-2 pt-2 flex-fill">Author :
                                     </p>
-                                    <p class="text-info pt-2">{{ ucfirst(strtolower($cover->author)) }}</p>
+                                    <p class="text-info pt-2">{{ ucwords(strtolower($cover->author)) }}</p>
                                 </div>
                                 <br>
                                 <a href="#" class="btn btn-primary btn-block mt-2">Buy This Book</a>
