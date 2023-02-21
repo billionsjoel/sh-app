@@ -38,25 +38,49 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('home');
 });
+
+//Route::get('/view-all-blogs', function () {
+
+//    // retrieve all blogs
+//    $featured   = blog::where('status', 1)->first();
+//    $latest     = blog::where('status', 2)->first();
+//    $promoted   = blog::where('status', 3)->first();
+
+//    if($featured && $latest && $promoted){
+
+//    $blogs      = blog::paginate(15);
+//    $covers     = BookCover::paginate(15);
+//    return view('allBlogs', compact('featured', 'latest', 'promoted', 'blogs', 'covers'));
+
+//    }
+//    else {
+//         return view('not-found');
+//    }
+
+//});
+
+// <====== second refactor =====>
+
+//Route::get('/view-all-blogs', function () {
+//    return Blog::whereIn('status', [1, 2, 3])->exists() ?
+//        view('allBlogs', ['featured' => Blog::where('status', 1)->first()] +
+//                          ['latest' => Blog::where('status', 2)->first()] +
+//                          ['promoted' => Blog::where('status', 3)->first()] +
+//                          ['blogs' => Blog::paginate(15)] +
+//                          ['covers' => BookCover::paginate(15)]) :
+//        view('not-found');
+//})->name('view-all-blogs');
+
 Route::get('/view-all-blogs', function () {
-
-    // retrieve all blogs
-    $featured   = blog::where('status', 1)->first();
-    $latest     = blog::where('status', 2)->first();
-    $promoted   = blog::where('status', 3)->first();
-
-    if($featured && $latest && $promoted){
-
-    $blogs      = blog::paginate(15);
-    $covers     = BookCover::paginate(15);
-    return view('allBlogs', compact('featured', 'latest', 'promoted', 'blogs', 'covers'));
-
-    }
-    else {
-         return view('not-found');
-    }
-
-});
+    $result = Blog::whereIn('status', [1, 2, 3])->exists();
+    return view($result ? 'allBlogs' : 'not-found', [
+        'featured' => Blog::where('status', 1)->first(),
+        'latest' => Blog::where('status', 2)->first(),
+        'promoted' => Blog::where('status', 3)->first(),
+        'blogs' => Blog::paginate(15),
+        'covers' => BookCover::paginate(15)
+    ]);
+})->name('view-all-blogs');
 
 
 Route::get('/blogs', function () {

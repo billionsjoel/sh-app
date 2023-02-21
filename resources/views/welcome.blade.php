@@ -72,7 +72,7 @@ E8F0F2 - very light
 
             {{ $flash }}
 
-        </div>
+        </div> 
     @endif
 
     @include('components.welcomePage.modal')

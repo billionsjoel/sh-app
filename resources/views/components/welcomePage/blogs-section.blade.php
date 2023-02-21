@@ -14,7 +14,7 @@
                                     class="text-danger small">{{ $blog->created_at }}
                                     |
                                     {{ $blog->category }}</span></span> <br>
-                            <p class="card-text">{!! \Illuminate\Support\Str::limit($blog->body, 150) !!}
+                            <p class="card-text">{!! \Illuminate\Support\Str::limit($blog->body, 50) !!}
                             </p> <br>
                             <a href="{{ url('/blogs?id=' . $blog->id) }}" class="text-primary"> Read
                                 more
