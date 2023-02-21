@@ -84,7 +84,7 @@
                         <strong class="d-inline-block mb-2 text-primary">Latest</strong>
                         <h3 class="mb-0">{{ $latest->title }}</h3>
                         <div class="mb-1 text-muted">{{ $latest->created_at }}</div>
-                        <p class="card-text mb-auto">{!! \Illuminate\Support\Str::limit($latest->body, 100) !!}</p>
+                        <p class="card-text mb-auto">{!! \Illuminate\Support\Str::limit($latest->body, 50) !!}</p>
                         <a href="{{ url('/blogs?id=' . $latest->id) }}" class="stretched-link">Continue reading</a>
                     </div>
                     <div class="col-auto d-none d-lg-block">
@@ -100,7 +100,7 @@
                         <strong class="d-inline-block mb-2 text-success">Promoted</strong>
                         <h3 class="mb-0">{{ $promoted->title }}</h3>
                         <div class="mb-1 text-muted">{{ $promoted->created_at }}</div>
-                        <p class="card-text mb-auto">{!! \Illuminate\Support\Str::limit($promoted->body, 100) !!}</p>
+                        <p class="card-text mb-auto">{!! \Illuminate\Support\Str::limit($promoted->body, 50) !!}</p>
                         <a href="{{ url('/blogs?id=' . $promoted->id) }}" class="stretched-link">Continue
                             reading</a>
                     </div>
