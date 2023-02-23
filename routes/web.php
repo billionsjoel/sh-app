@@ -59,17 +59,8 @@ Route::get('/home', function () {
 
 //});
 
-// <====== second refactor =====>
-
-//Route::get('/view-all-blogs', function () {
-//    return Blog::whereIn('status', [1, 2, 3])->exists() ?
-//        view('allBlogs', ['featured' => Blog::where('status', 1)->first()] +
-//                          ['latest' => Blog::where('status', 2)->first()] +
-//                          ['promoted' => Blog::where('status', 3)->first()] +
-//                          ['blogs' => Blog::paginate(15)] +
-//                          ['covers' => BookCover::paginate(15)]) :
-//        view('not-found');
-//})->name('view-all-blogs');
+Route::get('/view-all-blogs', [\App\Http\Controllers\BlogController::class, 'viewAllBlogs'])
+    ->name('view-all-blogs');
 
 Route::get('/view-all-blogs', function () {
     $result = Blog::whereIn('status', [1, 2, 3])->exists();
