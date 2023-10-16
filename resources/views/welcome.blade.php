@@ -37,7 +37,7 @@ E8F0F2 - very light
 
     {{-- <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script> --}}
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96832486-1"></script>
+    {{--<script async src="https://www.googletagmanager.com/gtag/js?id=UA-96832486-1"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
         crossorigin="anonymous"></script>
     <script>
@@ -49,7 +49,7 @@ E8F0F2 - very light
         gtag('js', new Date());
 
         gtag('config', 'UA-96832486-1');
-    </script>
+    </script>--}}
 
     <script type="text/javascript">
         $(window).on('load', function() {
@@ -72,7 +72,7 @@ E8F0F2 - very light
 
             {{ $flash }}
 
-        </div> 
+        </div>
     @endif
 
     @include('components.welcomePage.modal')

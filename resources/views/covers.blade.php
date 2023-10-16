@@ -28,7 +28,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-    <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
+    {{-- <script async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96832486-1"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
@@ -42,7 +42,7 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-96832486-1');
-    </script>
+    </script> --}}
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
@@ -50,8 +50,8 @@
 </head>
 
 <body>
-    <amp-auto-ads type="adsense" data-ad-client="ca-pub-6271400531285389">
-    </amp-auto-ads>
+    {{-- <amp-auto-ads type="adsense" data-ad-client="ca-pub-6271400531285389">
+    </amp-auto-ads> --}}
     <section>
         @include('components.welcomePage.navbar')
     </section>

@@ -33,7 +33,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96832486-1"></script>
+    {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96832486-1"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
         crossorigin="anonymous"></script>
     <script>
@@ -45,7 +45,7 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-96832486-1');
-    </script>
+    </script> --}}
     <!-- Custom styles for this template -->
     <link href="{{ asset('css/blog-post.css') }}" rel="stylesheet">
     <style>
@@ -76,7 +76,7 @@
         }
 
         section {
-            font-family: "Poppins", sans-serif,  !important;
+            font-family: "Poppins", sans-serif, !important;
             font-size: 0.9rem;
             font-weight: lighter;
             font-size: 20px;
@@ -603,8 +603,8 @@
 </head>
 
 <body>
-    <amp-auto-ads type="adsense" data-ad-client="ca-pub-6271400531285389">
-    </amp-auto-ads>
+    {{-- <amp-auto-ads type="adsense" data-ad-client="ca-pub-6271400531285389">
+    </amp-auto-ads> --}}
 
     @if ($flash = session('message'))
         <div id="flash-message" class="alert alert-success flash-message mt-4" role="alert">
@@ -705,14 +705,14 @@
 
                     <!-- Post Content -->
                     <p class="lead">
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
+                        {{-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
                             crossorigin="anonymous"></script>
                         <ins class="adsbygoogle" style="display:block" data-ad-format="autorelaxed"
                             data-ad-client="ca-pub-6271400531285389" data-ad-slot="4676939541"></ins>
                         <script>
                             (adsbygoogle = window.adsbygoogle || [])
                             .push({});
-                        </script>
+                        </script> --}}
                         {!! $blog->body ?? '' !!}
                     </p>
 

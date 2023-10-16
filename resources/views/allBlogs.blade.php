@@ -31,7 +31,7 @@
     </script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96832486-1"></script>
+    {{-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-96832486-1"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
         crossorigin="anonymous"></script>
     <script>
@@ -43,7 +43,7 @@
         gtag('js', new Date());
 
         gtag('config', 'UA-96832486-1');
-    </script>
+    </script> --}}
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('fontawesome/css/all.css') }}">
     <link rel="stylesheet" href="{{ asset('css/welcome.css') }}">
@@ -62,8 +62,8 @@
 </head>
 
 <body>
-    <amp-auto-ads type="adsense" data-ad-client="ca-pub-6271400531285389">
-    </amp-auto-ads>
+    {{-- <amp-auto-ads type="adsense" data-ad-client="ca-pub-6271400531285389">
+    </amp-auto-ads> --}}
     @include('components.welcomePage.navbar')
 
     <main class="container mb-4">
@@ -183,14 +183,14 @@
     </main>
 
     <footer>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
+        {{-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6271400531285389"
             crossorigin="anonymous"></script>
         <!-- web hosting and programming -->
         <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6271400531285389"
             data-ad-slot="9100247633" data-ad-format="auto" data-full-width-responsive="true"></ins>
         <script>
             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        </script> --}}
         @include('layouts.footer')
     </footer>
 
