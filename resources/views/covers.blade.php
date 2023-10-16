@@ -79,7 +79,7 @@
                                 alt="Card image cap" style="height: 100%; width: 100%; object-fit: contain">
                             <div class="card-body">
                                 <h5 class="card-title">Book Description</h5>
-                                <p class="card-text">{!! ucwords(strtolower($cover->description)) !!}</p>
+                                <p class="card-text">{!! $cover->description !!}</p>
                                 <div
                                     class="small text-info lead d-flex justify-content-center align-items-center border-bottom border-top">
                                     <p class="text-success me-2 p-2 flex-fill pt-3">Genre </p>
